@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://chumzygood.github.io/wa-folders/sitemap.xml

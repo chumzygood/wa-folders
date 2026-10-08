@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WA Folders: folders, search and export for WhatsApp Web (Chrome extension)</title>
+<meta name="description" content="Chrome extension for WhatsApp Web: folder tabs, message search, chat export, follow-ups and privacy blur. Free plan. Data stays in your browser.">
+<link rel="canonical" href="https://chumzygood.github.io/wa-folders/">
+<meta property="og:url" content="https://chumzygood.github.io/wa-folders/">
+<meta property="og:image" content="https://chumzygood.github.io/wa-folders/assets/og-image.jpg">
+<meta name="twitter:image" content="https://chumzygood.github.io/wa-folders/assets/og-image.jpg">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="WA Folders">
+<meta property="og:title" content="WA Folders: folders, search and export for WhatsApp Web">
+<meta property="og:description" content="Folder tabs, message search, chat export and a daily follow-up line for WhatsApp Web in Chrome. Free plan. No WA Folders server.">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="WA Folders panel on WhatsApp Web with folder tabs and demo chats">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="WA Folders: folders, search and export for WhatsApp Web">
+<meta name="twitter:description" content="Folder tabs, message search, chat export and a daily follow-up line for WhatsApp Web in Chrome. Free plan.">
+<meta name="theme-color" content="#008069">
+<link rel="icon" type="image/png" sizes="128x128" href="assets/icon-128.png">
+<link rel="apple-touch-icon" href="assets/icon-128.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "WA Folders",
+  "applicationCategory": "BrowserApplication",
+  "applicationSubCategory": "Productivity",
+  "operatingSystem": "Google Chrome (desktop)",
+  "softwareVersion": "1.2.4",
+  "description": "Chrome extension for WhatsApp Web (web.whatsapp.com). Adds folder tabs, search, chat export, a Today line with Waiting on them and Questions for me lists, private notes, reminders and privacy blur. Data is stored in chrome.storage.local in the browser. There is no WA Folders server. It does not work in the WhatsApp phone app.",
+  "installUrl": "https://chromewebstore.google.com/detail/hahfpdlfieloofgjhanljbbnakinfhil",
+  "downloadUrl": "https://chromewebstore.google.com/detail/hahfpdlfieloofgjhanljbbnakinfhil",
+  "privacyPolicy": "https://docs.google.com/document/d/e/2PACX-1vQN_YtNbLysl_tnmwefXKMtEm1V9wEoix6lwcEt_bPAR70F18GtbPPG4qgW9XqSkMOlqt8bKtt0vScU/pub",
+  "featureList": [
+    "Folder tabs above the WhatsApp Web chat list",
+    "Search chat names, private notes and messages WA Folders has seen",
+    "Export the open chat to HTML, CSV, Markdown or JSON",
+    "Today line with Waiting on them and Questions for me lists",
+    "Private notes and follow-up reminders",
+    "Privacy blur (default shortcut Alt+Shift+U)"
+  ],
+  "offers": [
+    {
+      "@type": "Offer",
+      "name": "Free",
+      "price": "0",
+      "priceCurrency": "USD",
+      "description": "5 folders, 5 search results and 3 exports a day. No time limit.",
+      "url": "https://chromewebstore.google.com/detail/hahfpdlfieloofgjhanljbbnakinfhil"
+    },
+    {
+      "@type": "Offer",
+      "name": "Pro (monthly)",
+      "price": "9.99",
+      "priceCurrency": "USD",
+      "description": "No plan limits. Billed monthly through Polar.",
+      "url": "https://buy.polar.sh/polar_cl_G9whvyGzkqeyynwPWBNIqmGZQ8Jvvu6MSDcom3jXKd0",
+      "priceSpecification": {
+        "@type": "UnitPriceSpecification",
+        "price": "9.99",
+        "priceCurrency": "USD",
+        "unitText": "MONTH"
+      }
+    },
+    {
+      "@type": "Offer",
+      "name": "Pro (lifetime)",
+      "price": "99",
+      "priceCurrency": "USD",
+      "description": "No plan limits. One payment through Polar.",
+      "url": "https://buy.polar.sh/polar_cl_G9whvyGzkqeyynwPWBNIqmGZQ8Jvvu6MSDcom3jXKd0"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I make folders in WhatsApp Web?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Install the WA Folders extension from the Chrome Web Store and open web.whatsapp.com. In the WA Folders panel, type a folder name and press Add. Then open a chat and press Add chat on that folder. Each folder appears as a tab above your chat list. The free plan includes 5 folders." }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I search WhatsApp Web messages?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. WA Folders searches chat names (including chats you haven't opened yet), your private notes, and messages in chats you have opened while it was running. You can filter by folder, notes or links. The free plan shows 5 results per search. Pro shows all results, and after Load whole chat it searches that chat's full history." }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I find chats where I'm waiting on a reply?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Open the WA Folders panel on WhatsApp Web and click \"waiting\" in the Today line at the top. The Waiting on them list shows one-to-one chats where you sent the last message and got no reply. Next to it, Questions for me lists chats whose last message asks you something." }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I export a WhatsApp Web chat?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Open the chat and press HTML, CSV, Markdown or JSON in the WA Folders panel. The file holds the messages loaded on screen, and photos, files and voice messages show as labels such as [photo] and [voice message]. The free plan allows 3 exports a day. Pro has no daily cap and can export the whole chat from the start, a whole folder in one file, or a password-protected file." }
+    },
+    {
+      "@type": "Question",
+      "name": "Is it free?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. The free plan has no time limit and includes 5 folders, 5 search results and 3 exports a day, plus small allowances for reminders, quick replies, rules, AI answers and the deal board. Pro has no plan limits and costs $9.99 a month or $99 for lifetime, paid through Polar." }
+    },
+    {
+      "@type": "Question",
+      "name": "Does it work on the phone app?",
+      "acceptedAnswer": { "@type": "Answer", "text": "No. WA Folders is a Chrome extension that runs only on WhatsApp Web (web.whatsapp.com) in Chrome on a computer. Your folders and notes do not appear in the WhatsApp phone app." }
+    },
+    {
+      "@type": "Question",
+      "name": "Where is my data stored?",
+      "acceptedAnswer": { "@type": "Answer", "text": "In your browser, in chrome.storage.local on your computer. WA Folders has no server and no account. Data leaves the browser only for features you turn on: Chrome Sync if you enable sync (Pro), the AI provider you chose if you add your own API key, and Polar when it checks a Pro license key." }
+    },
+    {
+      "@type": "Question",
+      "name": "Does it send messages for me?",
+      "acceptedAnswer": { "@type": "Answer", "text": "No. WA Folders never presses Send. Quick replies and AI drafts go into the message box and you press Enter yourself. It does no bulk sending or auto-replies, and it does not use the WhatsApp Business API." }
+    },
+    {
+      "@type": "Question",
+      "name": "Is WA Folders made by WhatsApp?",
+      "acceptedAnswer": { "@type": "Answer", "text": "No. WA Folders is an independent extension. It is not affiliated with WhatsApp or Meta." }
+    }
+  ]
+}
+</script>
+<style>
+:root{
+  --green:#008069; --green-d:#006652; --green-l:#e7f5f1;
+  --ink:#111b21; --muted:#54656f; --line:#e3e8ea; --bg:#ffffff; --soft:#f6f8f9;
+  --r:14px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font:17px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,"Noto Sans",Arial,sans-serif;color:var(--ink);background:var(--bg);-webkit-text-size-adjust:100%}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--green-d)}
+a:hover{color:var(--ink)}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+.skip{position:absolute;left:-999px}
+.skip:focus{left:12px;top:12px;background:#fff;padding:8px;z-index:9}
+
+/* header */
+.top{position:sticky;top:0;z-index:5;background:rgba(255,255,255,.94);border-bottom:1px solid var(--line);backdrop-filter:saturate(1.4) blur(6px)}
+.top .wrap{display:flex;align-items:center;gap:18px;height:62px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:18px;color:var(--ink);text-decoration:none}
+.brand img{width:30px;height:30px;border-radius:7px}
+.nav{display:flex;gap:18px;margin-left:auto;font-size:15px}
+.nav a{color:var(--muted);text-decoration:none}
+.nav a:hover{color:var(--ink)}
+.btn{display:inline-block;background:var(--green);color:#fff;text-decoration:none;font-weight:650;border-radius:999px;padding:12px 22px;line-height:1.2;border:2px solid var(--green)}
+.btn:hover{background:var(--green-d);border-color:var(--green-d);color:#fff}
+.btn.ghost{background:transparent;color:var(--green-d)}
+.btn.ghost:hover{background:var(--green-l);color:var(--green-d)}
+.btn.sm{padding:8px 16px;font-size:15px}
+
+/* hero */
+.hero{padding:56px 0 36px;background:linear-gradient(180deg,var(--green-l),#fff 70%)}
+.hero h1{font-size:clamp(32px,5vw,52px);line-height:1.1;letter-spacing:-.02em;margin:0 0 16px;max-width:820px}
+.hero .lede{font-size:clamp(17px,2vw,20px);color:var(--muted);max-width:720px;margin:0 0 26px}
+.cta{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.fine{font-size:14px;color:var(--muted);margin:14px 0 0}
+.shot{margin:36px 0 0;border-radius:var(--r);overflow:hidden;border:1px solid var(--line);box-shadow:0 18px 50px rgba(17,27,33,.12);background:#fff}
+figcaption,.cap{font-size:13px;color:var(--muted);margin-top:8px}
+
+/* sections */
+section{padding:64px 0}
+section.alt{background:var(--soft)}
+h2{font-size:clamp(26px,3.4vw,36px);line-height:1.15;letter-spacing:-.01em;margin:0 0 12px}
+.intro{color:var(--muted);max-width:700px;margin:0 0 36px}
+h3{font-size:22px;line-height:1.25;margin:0 0 10px}
+
+.feat{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;padding:36px 0;border-top:1px solid var(--line)}
+.feat:first-of-type{border-top:0}
+.feat.flip .txt{order:2}
+.feat p{margin:0 0 12px}
+.tag{display:inline-block;font-size:13px;font-weight:650;color:var(--green-d);background:var(--green-l);border-radius:999px;padding:3px 10px;margin-bottom:10px}
+.pic{border-radius:var(--r);overflow:hidden;border:1px solid var(--line);background:#fff;box-shadow:0 8px 28px rgba(17,27,33,.08)}
+.pic.narrow{max-width:420px;margin:0 auto}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.keys{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;align-items:center;padding:34px 20px;border-radius:var(--r);background:var(--ink);color:#e9edef}
+.keys div{text-align:center;font-size:14px;color:#aebac1}
+kbd{display:inline-block;font:600 15px/1 ui-monospace,SFMono-Regular,Consolas,monospace;background:#fff;color:var(--ink);border-radius:7px;padding:8px 10px;margin:2px;box-shadow:0 2px 0 #8696a0}
+.keys .row{margin-bottom:6px}
+.nw{white-space:nowrap}
+p kbd{font-size:13px;padding:2px 6px;margin:0 1px;box-shadow:0 1px 0 #8696a0;background:#eef1f2;vertical-align:1px}
+code{font:15px ui-monospace,SFMono-Regular,Consolas,monospace;background:#eef1f2;border-radius:5px;padding:1px 5px}
+.also{margin-top:28px;padding:22px 24px;border:1px solid var(--line);border-radius:var(--r);background:#fff}
+.also p{margin:0}
+
+/* pricing */
+.plans{display:grid;grid-template-columns:1fr 1fr;gap:22px;max-width:900px}
+.plan{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:28px}
+.plan.pro{border:2px solid var(--green)}
+.price{font-size:34px;font-weight:750;margin:4px 0 2px}
+.price small{font-size:16px;font-weight:500;color:var(--muted)}
+.plan ul{padding-left:20px;margin:16px 0 22px}
+.plan li{margin:5px 0}
+.small{font-size:14px;color:var(--muted);max-width:900px;margin-top:18px}
+
+/* privacy */
+.priv{display:grid;grid-template-columns:repeat(2,1fr);gap:16px 28px;padding:0;list-style:none;margin:0 0 24px}
+.priv li{padding-left:30px;position:relative}
+.priv li::before{content:"";position:absolute;left:0;top:7px;width:16px;height:9px;border-left:3px solid var(--green);border-bottom:3px solid var(--green);transform:rotate(-45deg)}
+
+/* faq */
+.faq{max-width:820px}
+.faq .q{padding:20px 0;border-top:1px solid var(--line)}
+.faq h3{font-size:19px;margin:0 0 6px}
+.faq p{margin:0;color:#2a3942}
+
+/* footer */
+footer{background:var(--ink);color:#aebac1;padding:44px 0 36px;font-size:15px}
+footer .cols{display:grid;grid-template-columns:1.3fr 1fr 1.6fr;gap:28px}
+footer h4{color:#fff;font-size:15px;margin:0 0 10px}
+footer ul{list-style:none;padding:0;margin:0}
+footer li{margin:6px 0}
+footer a{color:#d1f4cc}
+footer a:hover{color:#fff}
+footer .legal{border-top:1px solid #2a3942;margin-top:30px;padding-top:18px;font-size:13px}
+
+@media (max-width:860px){
+  .nav{display:none}
+  .top .btn{margin-left:auto}
+  .feat{grid-template-columns:1fr;gap:20px}
+  .feat.flip .txt{order:0}
+  .plans{grid-template-columns:1fr}
+  .priv{grid-template-columns:1fr}
+  footer .cols{grid-template-columns:1fr}
+  section{padding:48px 0}
+  .hero{padding:40px 0 28px}
+}
+@media (max-width:420px){
+  body{font-size:16px}
+  .pair{grid-template-columns:1fr}
+  .brand span{display:none}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#features">Skip to content</a>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top"><img src="assets/icon-128.png" alt="" width="30" height="30"><span>WA Folders</span></a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#features">Features</a>
+      <a href="#pricing">Free vs Pro</a>
+      <a href="#privacy">Privacy</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a class="btn sm" href="https://chromewebstore.google.com/detail/hahfpdlfieloofgjhanljbbnakinfhil">Add to Chrome</a>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <div class="wrap">
+      <h1>Folders, search and follow-ups for WhatsApp Web</h1>
+      <p class="lede">WA Folders is a Chrome extension for web.whatsapp.com. It adds folder tabs above your chat list, search across chats and notes, chat export, and one line each morning that shows who you owe a reply and who owes you one. Everything is kept in your browser. There is no WA Folders account or server.</p>
+      <div class="cta">
+        <a class="btn" href="https://chromewebstore.google.com/detail/hahfpdlfieloofgjhanljbbnakinfhil">Add to Chrome, free</a>
+        <a class="btn ghost" href="#pricing">Free vs Pro</a>
+      </div>
+      <p class="fine">Works on WhatsApp Web in Chrome on a computer. It does not work in the WhatsApp phone app. Current version: 1.2.4.</p>
+      <figure class="shot" style="margin-left:0;margin-right:0">
+        <img src="assets/hero-folders-panel.webp" width="1400" height="917" alt="WhatsApp Web with WA Folders: folder tabs Family, Work, Clients and Home above the chat list, and the WA Folders panel showing the Today line, a private note and export buttons. All chats are demo contacts.">
+      </figure>
+      <p class="cap">Demo chats with made-up names.</p>
+    </div>
+  </div>
+
+  <section id="features">
+    <div class="wrap">
+      <h2>What it adds to WhatsApp Web</h2>
+      <p class="intro">The WA Folders panel sits in the conversation area, so it doesn't cover your chat list. On a narrow window it folds into a tab.</p>
+
+      <article class="feat" id="folders">
+        <div class="txt">
+          <span class="tag">Folders</span>
+          <h3>Folder tabs above your chat list</h3>
+          <p>Make folders like Family, Work or Clients, with your own colours and emoji. They show up as tabs above the chat list, with unread, reply, question and due markers. Click a chat in a folder and it opens.</p>
+          <p>On first use, WA Folders can suggest folders from the chat names on screen. Nothing is filed until you press Add these. The free plan includes 5 folders.</p>
+          <p><a href="https://dev.to/wafolders/how-to-make-folders-in-whatsapp-web-1gbp">How to make folders in WhatsApp Web</a></p>
+        </div>
+        <figure class="pic narrow" style="margin:0 auto">
+          <img src="assets/folder-tabs.webp" width="798" height="660" loading="lazy" alt="Folder tabs All, Family, Work, Clients and Home. The Family tab is open with three demo chats and reply and question markers.">
+        </figure>
+      </article>
+
+      <article class="feat flip" id="today">
+        <div class="txt">
+          <span class="tag">Today line</span>
+          <h3>Waiting on them, and Questions for me</h3>
+          <p>One line at the top of the panel shows what's due, who is waiting for your reply, who asked you a question, and who you're still waiting on.</p>
+          <p>Click it for two lists. <strong>Waiting on them</strong> shows one-to-one chats where you spoke last and heard nothing back. <strong>Questions for me</strong> shows chats whose last message asks you something.</p>
+        </div>
+        <div class="pair">
+          <figure class="pic" style="margin:0"><img src="assets/waiting-on-them.webp" width="700" height="840" loading="lazy" alt="Waiting on them list with four demo chats and how long ago you wrote."></figure>
+          <figure class="pic" style="margin:0"><img src="assets/questions-for-me.webp" width="700" height="840" loading="lazy" alt="Questions for me list with four demo chats whose last message asks something."></figure>
+        </div>
+      </article>
+
+      <article class="feat" id="search">
+        <div class="txt">
+          <span class="tag">Search</span>
+          <h3>Search chats, notes and messages</h3>
+          <p>Search chat names, including chats you haven't opened yet, plus your notes and the messages WA Folders has seen while you had chats open. Filter by folder, notes or links, and save a search.</p>
+          <p>The free plan shows 5 results per search. With Pro, press Load whole chat and search covers that chat's entire history.</p>
+          <p><a href="https://dev.to/wafolders/how-to-search-whatsapp-web-messages-and-why-some-dont-show-up-3h6j">Why some messages don't show up in search</a></p>
+        </div>
+        <figure class="pic narrow" style="margin:0 auto">
+          <img src="assets/search-results.webp" width="560" height="716" loading="lazy" alt="WA Folders search for &quot;saturday&quot; with results from a note and two demo chats.">
+        </figure>
+      </article>
+
+      <article class="feat flip" id="export">
+        <div class="txt">
+          <span class="tag">Export</span>
+          <h3>Export a chat to HTML, CSV, Markdown or JSON</h3>
+          <p>Export the open chat in one click. CSV opens cleanly in Excel, including on Windows. Photos, files and voice messages are labelled, for example [photo] and [voice message].</p>
+          <p>Free: 3 exports a day of the messages loaded on screen. Pro exports the whole chat from the start, a whole folder in one file, or a password-protected file that opens in any browser with the password.</p>
+          <p><a href="https://dev.to/wafolders/how-to-export-a-whatsapp-web-chat-and-what-ends-up-in-the-file-46lm">What ends up in the export file</a></p>
+        </div>
+        <figure class="pic" style="margin:0">
+          <img src="assets/export-html.webp" width="1000" height="780" loading="lazy" alt="An HTML export of a demo chat with Rosa's Bakery, including your note and a [photo] label.">
+        </figure>
+      </article>
+
+      <article class="feat" id="notes">
+        <div class="txt">
+          <span class="tag">Notes and reminders</span>
+          <h3>Private notes and follow-ups that clear themselves</h3>
+          <p>Write a note on any chat, like "owes me $40". It is saved only on your computer.</p>
+          <p>Sent something and need an answer? Choose "Remind me if they don't reply in 1 day." If they answer, the reminder disappears. If they don't, the chat comes back under Due with a badge on the toolbar icon and an optional desktop notification. The free plan allows 2 reminders at a time.</p>
+        </div>
+        <figure class="pic narrow" style="margin:0 auto">
+          <img src="assets/note-reminder.webp" width="560" height="550" loading="lazy" alt="WA Folders panel for a demo chat with a private note about a meter reading and a reminder set for Wednesday 9:00 AM.">
+        </figure>
+      </article>
+
+      <article class="feat flip" id="blur">
+        <div class="txt">
+          <span class="tag">Privacy blur</span>
+          <h3>Blur your chats, or hide WhatsApp Web at once</h3>
+          <p>Blur hides names, photos and messages. Hover over one to peek. Turn it on with the eye button in the panel or press <span class="nw"><kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>U</kbd></span>. You can change the key at <code>chrome://extensions/shortcuts</code>.</p>
+          <p><span class="nw"><kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>H</kbd></span> hides WhatsApp Web at once. Pro adds a PIN lock screen for when you step away.</p>
+        </div>
+        <div class="keys" aria-hidden="true">
+          <div><div class="row"><span class="nw"><kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>U</kbd></span></div>Blur on or off</div>
+          <div><div class="row"><span class="nw"><kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>H</kbd></span></div>Hide WhatsApp Web</div>
+        </div>
+      </article>
+
+      <div class="also">
+        <p><strong>Also in 1.2.4:</strong> quick replies that fill in the person's name and go into the message box without sending; a private AI catch-up and reply draft that runs on your computer with Chrome's built-in AI (Chrome 138 or newer on a supported computer) or with your own OpenAI, Anthropic, Gemini or Ollama key; a deal board for customer chats; a command palette (<span class="nw"><kbd>Ctrl</kbd>+<kbd>K</kbd></span>); auto-file rules; backup and restore; light and dark themes. Available in English, Español, Português (Brasil), हिन्दी, Bahasa Indonesia and العربية.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="pricing" class="alt">
+    <div class="wrap">
+      <h2>Free vs Pro</h2>
+      <p class="intro">The free plan has no time limit. Every limit message in the extension has an Upgrade link that opens checkout.</p>
+      <div class="plans">
+        <div class="plan">
+          <h3>Free</h3>
+          <div class="price">$0</div>
+          <ul>
+            <li>5 folders</li>
+            <li>5 search results</li>
+            <li>3 exports a day</li>
+            <li>2 reminders at a time</li>
+            <li>3 quick replies</li>
+            <li>1 auto-file rule</li>
+            <li>3 AI answers a day</li>
+            <li>5 chats on the deal board</li>
+            <li>1 saved search</li>
+          </ul>
+          <a class="btn ghost" href="https://chromewebstore.google.com/detail/hahfpdlfieloofgjhanljbbnakinfhil">Add to Chrome</a>
+        </div>
+        <div class="plan pro">
+          <h3>Pro</h3>
+          <div class="price">$9.99 <small>a month</small></div>
+          <div><strong>or $99 lifetime</strong>, paid through Polar</div>
+          <ul>
+            <li>No plan limits: unlimited folders, search results, exports, reminders, quick replies, rules, AI answers, deal-board chats and saved searches</li>
+            <li>Load whole chat, with search across its full history</li>
+            <li>Whole-folder and password-protected exports</li>
+            <li>PIN lock screen</li>
+            <li>Sync between your Chrome browsers</li>
+          </ul>
+          <a class="btn" href="https://buy.polar.sh/polar_cl_G9whvyGzkqeyynwPWBNIqmGZQ8Jvvu6MSDcom3jXKd0">Get Pro on Polar</a>
+          <p class="fine">After checkout, paste your license key (it starts with WAF-) in the WA Folders toolbar popup.</p>
+        </div>
+      </div>
+      <p class="small">A few technical limits apply on every plan: Load whole chat stops at 20,000 messages, one export of the open chat keeps the newest 5,000 loaded messages, and a whole-folder export opens up to 100 chats in one run.</p>
+    </div>
+  </section>
+
+  <section id="privacy">
+    <div class="wrap">
+      <h2>Privacy</h2>
+      <p class="intro">Your folders, notes, reminders and search index are stored in <code>chrome.storage.local</code> in your Chrome profile on this computer.</p>
+      <ul class="priv">
+        <li>No account, analytics, ads or trackers, and no WA Folders server.</li>
+        <li>It never sends messages for you. No bulk sending, broadcasts, auto-replies or contact scraping.</li>
+        <li>It does not use the WhatsApp Business API. It runs only on web.whatsapp.com.</li>
+        <li>The private AI runs on your computer by default. If you add your own API key, only the messages you ask about go to the provider you chose, and only when you click.</li>
+        <li>If you buy Pro, the extension checks your license key with Polar. No chat content goes with it.</li>
+        <li>Sync (Pro, off by default) copies folders, quick replies and rules through Chrome Sync. Messages and notes are never synced.</li>
+      </ul>
+      <p><a href="https://docs.google.com/document/d/e/2PACX-1vQN_YtNbLysl_tnmwefXKMtEm1V9wEoix6lwcEt_bPAR70F18GtbPPG4qgW9XqSkMOlqt8bKtt0vScU/pub">Read the full privacy policy</a></p>
+    </div>
+  </section>
+
+  <section id="faq" class="alt">
+    <div class="wrap">
+      <h2>Questions</h2>
+      <div class="faq">
+        <div class="q">
+          <h3>How do I make folders in WhatsApp Web?</h3>
+          <p>Install the WA Folders extension from the Chrome Web Store and open web.whatsapp.com. In the WA Folders panel, type a folder name and press Add. Then open a chat and press Add chat on that folder. Each folder appears as a tab above your chat list. The free plan includes 5 folders.</p>
+        </div>
+        <div class="q">
+          <h3>Can I search WhatsApp Web messages?</h3>
+          <p>Yes. WA Folders searches chat names (including chats you haven't opened yet), your private notes, and messages in chats you have opened while it was running. You can filter by folder, notes or links. The free plan shows 5 results per search. Pro shows all results, and after Load whole chat it searches that chat's full history.</p>
+        </div>
+        <div class="q">
+          <h3>How do I find chats where I'm waiting on a reply?</h3>
+          <p>Open the WA Folders panel on WhatsApp Web and click "waiting" in the Today line at the top. The Waiting on them list shows one-to-one chats where you sent the last message and got no reply. Next to it, Questions for me lists chats whose last message asks you something.</p>
+        </div>
+        <div class="q">
+          <h3>Can I export a WhatsApp Web chat?</h3>
+          <p>Yes. Open the chat and press HTML, CSV, Markdown or JSON in the WA Folders panel. The file holds the messages loaded on screen, and photos, files and voice messages show as labels such as [photo] and [voice message]. The free plan allows 3 exports a day. Pro has no daily cap and can export the whole chat from the start, a whole folder in one file, or a password-protected file.</p>
+        </div>
+        <div class="q">
+          <h3>Is it free?</h3>
+          <p>Yes. The free plan has no time limit and includes 5 folders, 5 search results and 3 exports a day, plus small allowances for reminders, quick replies, rules, AI answers and the deal board. Pro has no plan limits and costs $9.99 a month or $99 for lifetime, paid through Polar.</p>
+        </div>
+        <div class="q">
+          <h3>Does it work on the phone app?</h3>
+          <p>No. WA Folders is a Chrome extension that runs only on WhatsApp Web (web.whatsapp.com) in Chrome on a computer. Your folders and notes do not appear in the WhatsApp phone app.</p>
+        </div>
+        <div class="q">
+          <h3>Where is my data stored?</h3>
+          <p>In your browser, in chrome.storage.local on your computer. WA Folders has no server and no account. Data leaves the browser only for features you turn on: Chrome Sync if you enable sync (Pro), the AI provider you chose if you add your own API key, and Polar when it checks a Pro license key.</p>
+        </div>
+        <div class="q">
+          <h3>Does it send messages for me?</h3>
+          <p>No. WA Folders never presses Send. Quick replies and AI drafts go into the message box and you press Enter yourself. It does no bulk sending or auto-replies, and it does not use the WhatsApp Business API.</p>
+        </div>
+        <div class="q">
+          <h3>Is WA Folders made by WhatsApp?</h3>
+          <p>No. WA Folders is an independent extension. It is not affiliated with WhatsApp or Meta.</p>
+        </div>
+      </div>
+      <div class="cta" style="margin-top:32px">
+        <a class="btn" href="https://chromewebstore.google.com/detail/hahfpdlfieloofgjhanljbbnakinfhil">Add WA Folders to Chrome</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <h4>WA Folders</h4>
+        <p style="margin:0">Folders, search, export and follow-ups for WhatsApp Web in Chrome. Version 1.2.4.</p>
+      </div>
+      <div>
+        <h4>Links</h4>
+        <ul>
+          <li><a href="https://chromewebstore.google.com/detail/hahfpdlfieloofgjhanljbbnakinfhil">Chrome Web Store</a></li>
+          <li><a href="https://buy.polar.sh/polar_cl_G9whvyGzkqeyynwPWBNIqmGZQ8Jvvu6MSDcom3jXKd0">Buy Pro on Polar</a></li>
+          <li><a href="https://docs.google.com/document/d/e/2PACX-1vQN_YtNbLysl_tnmwefXKMtEm1V9wEoix6lwcEt_bPAR70F18GtbPPG4qgW9XqSkMOlqt8bKtt0vScU/pub">Privacy policy</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>How-tos</h4>
+        <ul>
+          <li><a href="https://dev.to/wafolders/how-to-make-folders-in-whatsapp-web-1gbp">How to make folders in WhatsApp Web</a></li>
+          <li><a href="https://dev.to/wafolders/how-to-search-whatsapp-web-messages-and-why-some-dont-show-up-3h6j">How to search WhatsApp Web messages, and why some don't show up</a></li>
+          <li><a href="https://dev.to/wafolders/how-to-export-a-whatsapp-web-chat-and-what-ends-up-in-the-file-46lm">How to export a WhatsApp Web chat, and what ends up in the file</a></li>
+          <li><a href="https://dev.to/wafolders/how-to-organize-whatsapp-web-chats-into-folders-3374">How to organize WhatsApp Web chats into folders</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="legal">WhatsApp and WhatsApp Web are trademarks of their owners. WA Folders is an independent extension and is not affiliated with, endorsed by or sponsored by WhatsApp or Meta. Screenshots use demo chats with made-up names.</p>
+  </div>
+</footer>
+</body>
+</html>
