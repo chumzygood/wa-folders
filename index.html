@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>WA Folders: folders, search and export for WhatsApp Web (Chrome extension)</title>
-<meta name="description" content="Chrome extension for WhatsApp Web: folder tabs, message search, chat export, follow-ups and privacy blur. Free plan. Data stays in your browser.">
+<meta name="description" content="Chrome extension for WhatsApp Web: folder tabs, message search, chat export, follow-ups, voice-note transcription, message translation and a private AI catch-up. Free plan. Data stays in your browser.">
 <link rel="canonical" href="https://chumzygood.github.io/wa-folders/">
 <meta property="og:url" content="https://chumzygood.github.io/wa-folders/">
 <meta property="og:image" content="https://chumzygood.github.io/wa-folders/assets/og-image.jpg">
@@ -12,13 +12,13 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="WA Folders">
 <meta property="og:title" content="WA Folders: folders, search and export for WhatsApp Web">
-<meta property="og:description" content="Folder tabs, message search, chat export and a daily follow-up line for WhatsApp Web in Chrome. Free plan. No WA Folders server.">
+<meta property="og:description" content="Folder tabs, message search, chat export, voice notes to text and message translation for WhatsApp Web in Chrome. Free plan. No WA Folders server.">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="WA Folders panel on WhatsApp Web with folder tabs and demo chats">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="WA Folders: folders, search and export for WhatsApp Web">
-<meta name="twitter:description" content="Folder tabs, message search, chat export and a daily follow-up line for WhatsApp Web in Chrome. Free plan.">
+<meta name="twitter:description" content="Folder tabs, message search, chat export, voice notes to text and message translation for WhatsApp Web in Chrome. Free plan.">
 <meta name="theme-color" content="#008069">
 <link rel="icon" type="image/png" sizes="128x128" href="assets/icon-128.png">
 <link rel="apple-touch-icon" href="assets/icon-128.png">
@@ -30,8 +30,8 @@
   "applicationCategory": "BrowserApplication",
   "applicationSubCategory": "Productivity",
   "operatingSystem": "Google Chrome (desktop)",
-  "softwareVersion": "1.2.4",
-  "description": "Chrome extension for WhatsApp Web (web.whatsapp.com). Adds folder tabs, search, chat export, a Today line with Waiting on them and Questions for me lists, private notes, reminders and privacy blur. Data is stored in chrome.storage.local in the browser. There is no WA Folders server. It does not work in the WhatsApp phone app.",
+  "softwareVersion": "1.2.6",
+  "description": "Chrome extension for WhatsApp Web (web.whatsapp.com). Adds folder tabs, search, chat export, a Today line with Waiting on them and Questions for me lists, private notes, reminders, privacy blur, voice-note transcription, message translation (Portuguese, English, Spanish) and a private AI catch-up and reply draft. Data is stored in chrome.storage.local in the browser. There is no WA Folders server. It does not work in the WhatsApp phone app.",
   "installUrl": "https://chromewebstore.google.com/detail/hahfpdlfieloofgjhanljbbnakinfhil",
   "downloadUrl": "https://chromewebstore.google.com/detail/hahfpdlfieloofgjhanljbbnakinfhil",
   "privacyPolicy": "https://docs.google.com/document/d/e/2PACX-1vQN_YtNbLysl_tnmwefXKMtEm1V9wEoix6lwcEt_bPAR70F18GtbPPG4qgW9XqSkMOlqt8bKtt0vScU/pub",
@@ -41,7 +41,10 @@
     "Export the open chat to HTML, CSV, Markdown or JSON",
     "Today line with Waiting on them and Questions for me lists",
     "Private notes and follow-up reminders",
-    "Privacy blur (default shortcut Alt+Shift+U)"
+    "Privacy blur (default shortcut Alt+Shift+U)",
+    "Voice notes to text, on your computer by default",
+    "Translate messages and drafts between Portuguese, English and Spanish",
+    "Private AI catch-up and reply draft with Chrome's built-in AI or your own key"
   ],
   "offers": [
     {
@@ -49,7 +52,7 @@
       "name": "Free",
       "price": "0",
       "priceCurrency": "USD",
-      "description": "5 folders, 5 search results and 3 exports a day. No time limit.",
+      "description": "5 folders, 5 search results, 3 exports a day, 5 voice-note transcriptions a day and 20 translations a day. No time limit.",
       "url": "https://chromewebstore.google.com/detail/hahfpdlfieloofgjhanljbbnakinfhil"
     },
     {
@@ -57,8 +60,8 @@
       "name": "Pro (monthly)",
       "price": "9.99",
       "priceCurrency": "USD",
-      "description": "No plan limits. Billed monthly through Polar.",
-      "url": "https://buy.polar.sh/polar_cl_G9whvyGzkqeyynwPWBNIqmGZQ8Jvvu6MSDcom3jXKd0",
+      "description": "No plan limits. Upgrade inside the extension.",
+      "url": "https://chromewebstore.google.com/detail/hahfpdlfieloofgjhanljbbnakinfhil",
       "priceSpecification": {
         "@type": "UnitPriceSpecification",
         "price": "9.99",
@@ -71,8 +74,8 @@
       "name": "Pro (lifetime)",
       "price": "99",
       "priceCurrency": "USD",
-      "description": "No plan limits. One payment through Polar.",
-      "url": "https://buy.polar.sh/polar_cl_G9whvyGzkqeyynwPWBNIqmGZQ8Jvvu6MSDcom3jXKd0"
+      "description": "No plan limits. One payment. Upgrade inside the extension.",
+      "url": "https://chromewebstore.google.com/detail/hahfpdlfieloofgjhanljbbnakinfhil"
     }
   ]
 }
@@ -104,8 +107,18 @@
     },
     {
       "@type": "Question",
+      "name": "Can WA Folders transcribe WhatsApp Web voice notes?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Click Transcribe under a voice note to read it as text. By default the speech model runs on your computer and the audio stays there. The first time, WA Folders shows the download size and asks before it fetches the model once: Accurate (about 252 MB) or Light (about 80 MB). You can also use your own OpenAI or Google Gemini key. Transcripts stay on this device and show up in search and exports. The free plan includes 5 transcriptions a day." }
+    },
+    {
+      "@type": "Question",
+      "name": "Can it translate WhatsApp Web messages?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes, between Portuguese, English and Spanish. Click Translate next to a message, or under a voice-note transcript, and the translation appears under it. Translate draft turns what you typed into Portuguese, English or Spanish in the message box, and Undo puts your original back. It runs on your computer with Chrome's translator. WA Folders never sends it; you press Enter yourself. The free plan includes 20 translations a day." }
+    },
+    {
+      "@type": "Question",
       "name": "Is it free?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Yes. The free plan has no time limit and includes 5 folders, 5 search results and 3 exports a day, plus small allowances for reminders, quick replies, rules, AI answers and the deal board. Pro has no plan limits and costs $9.99 a month or $99 for lifetime, paid through Polar." }
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. The free plan has no time limit and includes 5 folders, 5 search results and 3 exports a day, plus 5 voice-note transcriptions and 20 translations a day and small allowances for reminders, quick replies, rules, AI answers and the deal board. Pro is unlimited and costs $9.99 a month or $99 for lifetime. You upgrade from inside the extension." }
     },
     {
       "@type": "Question",
@@ -115,7 +128,7 @@
     {
       "@type": "Question",
       "name": "Where is my data stored?",
-      "acceptedAnswer": { "@type": "Answer", "text": "In your browser, in chrome.storage.local on your computer. WA Folders has no server and no account. Data leaves the browser only for features you turn on: Chrome Sync if you enable sync (Pro), the AI provider you chose if you add your own API key, and Polar when it checks a Pro license key." }
+      "acceptedAnswer": { "@type": "Answer", "text": "In your browser, in chrome.storage.local on your computer. WA Folders has no server and no account. AI, voice-note transcription and translation run on your computer by default. Data leaves the browser only for features you turn on: Chrome Sync if you enable sync (Pro), the provider you chose if you add your own API key (only what you click on), and the license check when you enter a Pro key (no chat content)." }
     },
     {
       "@type": "Question",
@@ -194,6 +207,12 @@ code{font:15px ui-monospace,SFMono-Regular,Consolas,monospace;background:#eef1f2
 .also{margin-top:28px;padding:22px 24px;border:1px solid var(--line);border-radius:var(--r);background:#fff}
 .also p{margin:0}
 
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin:0 0 20px}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:24px;box-shadow:0 8px 28px rgba(17,27,33,.06)}
+.card h3{font-size:20px}
+.card p{margin:0 0 10px;font-size:16px}
+@media (max-width:860px){.cards{grid-template-columns:1fr}}
+
 /* pricing */
 .plans{display:grid;grid-template-columns:1fr 1fr;gap:22px;max-width:900px}
 .plan{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:28px}
@@ -255,7 +274,7 @@ footer .legal{border-top:1px solid #2a3942;margin-top:30px;padding-top:18px;font
       <a href="#privacy">Privacy</a>
       <a href="#faq">FAQ</a>
     </nav>
-    <a class="btn sm" href="https://chromewebstore.google.com/detail/hahfpdlfieloofgjhanljbbnakinfhil">Add to Chrome</a>
+    <a class="btn sm" href="https://chromewebstore.google.com/detail/hahfpdlfieloofgjhanljbbnakinfhil?utm_source=site">Add to Chrome</a>
   </div>
 </header>
 
@@ -263,12 +282,12 @@ footer .legal{border-top:1px solid #2a3942;margin-top:30px;padding-top:18px;font
   <div class="hero">
     <div class="wrap">
       <h1>Folders, search and follow-ups for WhatsApp Web</h1>
-      <p class="lede">WA Folders is a Chrome extension for web.whatsapp.com. It adds folder tabs above your chat list, search across chats and notes, chat export, and one line each morning that shows who you owe a reply and who owes you one. Everything is kept in your browser. There is no WA Folders account or server.</p>
+      <p class="lede">WA Folders is a Chrome extension for web.whatsapp.com. It adds folder tabs above your chat list, search across chats and notes, chat export, voice notes to text, message translation, and one line each morning that shows who you owe a reply and who owes you one. Everything is kept in your browser. There is no WA Folders account or server.</p>
       <div class="cta">
-        <a class="btn" href="https://chromewebstore.google.com/detail/hahfpdlfieloofgjhanljbbnakinfhil">Add to Chrome, free</a>
+        <a class="btn" href="https://chromewebstore.google.com/detail/hahfpdlfieloofgjhanljbbnakinfhil?utm_source=site">Add to Chrome, free</a>
         <a class="btn ghost" href="#pricing">Free vs Pro</a>
       </div>
-      <p class="fine">Works on WhatsApp Web in Chrome on a computer. It does not work in the WhatsApp phone app. Current version: 1.2.4.</p>
+      <p class="fine">Works on WhatsApp Web in Chrome on a computer. It does not work in the WhatsApp phone app. Current version: 1.2.6.</p>
       <figure class="shot" style="margin-left:0;margin-right:0">
         <img src="assets/hero-folders-panel.webp" width="1400" height="917" alt="WhatsApp Web with WA Folders: folder tabs Family, Work, Clients and Home above the chat list, and the WA Folders panel showing the Today line, a private note and export buttons. All chats are demo contacts.">
       </figure>
@@ -280,6 +299,27 @@ footer .legal{border-top:1px solid #2a3942;margin-top:30px;padding-top:18px;font
     <div class="wrap">
       <h2>What it adds to WhatsApp Web</h2>
       <p class="intro">The WA Folders panel sits in the conversation area, so it doesn't cover your chat list. On a narrow window it folds into a tab.</p>
+
+      <div class="cards" id="voice-translate-ai">
+        <div class="card" id="voice">
+          <span class="tag">Voice notes</span>
+          <h3>Voice notes to text</h3>
+          <p>Click Transcribe under a voice note to read it as text. By default the speech model runs on your computer and the audio stays there. The first time, WA Folders shows the download size and asks before it fetches the model once from Hugging Face. You can pick Accurate (about 252 MB) or Light (about 80 MB, better for slower computers or metered connections).</p>
+          <p>You can also use your own OpenAI or Google Gemini key; then the audio of the note you click goes from your browser to that provider. Transcripts stay on this device and show up in search and exports. Free: 5 transcriptions a day.</p>
+        </div>
+        <div class="card" id="translate">
+          <span class="tag">Translate</span>
+          <h3>Translate messages: Portuguese, English, Spanish</h3>
+          <p>Click Translate next to a message, or under a voice-note transcript, and the translation appears under it with the language it came from. If that language is wrong, click change.</p>
+          <p>Translate draft turns what you typed into Portuguese, English or Spanish in the message box, and Undo puts your original back. WA Folders never sends it; you press Enter yourself. Translation runs on your computer with Chrome's translator. Free: 20 translations a day.</p>
+        </div>
+        <div class="card" id="ai">
+          <span class="tag">Private AI</span>
+          <h3>Catch me up, draft a reply</h3>
+          <p>One click summarizes a long chat and lists what's still waiting on you. Another drafts a reply you can edit. It goes into the message box, and you press Enter yourself. Drafts follow the chat's language.</p>
+          <p>By default it runs on your own computer with Chrome's built-in AI (Chrome 138 or newer on a supported computer), so the chat never leaves it. Optional: use your own OpenAI, Anthropic, Google Gemini or local (Ollama) key. Then the messages of the chat you ask about go straight from your browser to that provider, never to us. Claude Opus 5.5 with your own Anthropic key is coming in 1.2.7.</p>
+        </div>
+      </div>
 
       <article class="feat" id="folders">
         <div class="txt">
@@ -359,7 +399,7 @@ footer .legal{border-top:1px solid #2a3942;margin-top:30px;padding-top:18px;font
       </article>
 
       <div class="also">
-        <p><strong>Also in 1.2.4:</strong> quick replies that fill in the person's name and go into the message box without sending; a private AI catch-up and reply draft that runs on your computer with Chrome's built-in AI (Chrome 138 or newer on a supported computer) or with your own OpenAI, Anthropic, Gemini or Ollama key; a deal board for customer chats; a command palette (<span class="nw"><kbd>Ctrl</kbd>+<kbd>K</kbd></span>); auto-file rules; backup and restore; light and dark themes. Available in English, Español, Português (Brasil), हिन्दी, Bahasa Indonesia and العربية.</p>
+        <p><strong>Also in 1.2.6:</strong> quick replies that fill in the person's name and go into the message box without sending; a deal board for customer chats; a command palette (<span class="nw"><kbd>Ctrl</kbd>+<kbd>K</kbd></span>); auto-file rules; backup and restore; light and dark themes. Available in English, Español, Português (Brasil), हिन्दी, Bahasa Indonesia and العربية.</p>
       </div>
     </div>
   </section>
@@ -367,7 +407,7 @@ footer .legal{border-top:1px solid #2a3942;margin-top:30px;padding-top:18px;font
   <section id="pricing" class="alt">
     <div class="wrap">
       <h2>Free vs Pro</h2>
-      <p class="intro">The free plan has no time limit. Every limit message in the extension has an Upgrade link that opens checkout.</p>
+      <p class="intro">The free plan has no time limit. Every limit message in the extension has an Upgrade link, so you can upgrade from inside WA Folders whenever you need more.</p>
       <div class="plans">
         <div class="plan">
           <h3>Free</h3>
@@ -380,27 +420,29 @@ footer .legal{border-top:1px solid #2a3942;margin-top:30px;padding-top:18px;font
             <li>3 quick replies</li>
             <li>1 auto-file rule</li>
             <li>3 AI answers a day</li>
+            <li>5 voice-note transcriptions a day</li>
+            <li>20 translations a day</li>
             <li>5 chats on the deal board</li>
             <li>1 saved search</li>
           </ul>
-          <a class="btn ghost" href="https://chromewebstore.google.com/detail/hahfpdlfieloofgjhanljbbnakinfhil">Add to Chrome</a>
+          <a class="btn ghost" href="https://chromewebstore.google.com/detail/hahfpdlfieloofgjhanljbbnakinfhil?utm_source=site">Add to Chrome</a>
         </div>
         <div class="plan pro">
           <h3>Pro</h3>
           <div class="price">$9.99 <small>a month</small></div>
-          <div><strong>or $99 lifetime</strong>, paid through Polar</div>
+          <div><strong>or $99 lifetime</strong></div>
           <ul>
-            <li>No plan limits: unlimited folders, search results, exports, reminders, quick replies, rules, AI answers, deal-board chats and saved searches</li>
+            <li>No plan limits: unlimited folders, search results, exports, reminders, quick replies, rules, AI answers, voice-note transcriptions, translations, deal-board chats and saved searches</li>
             <li>Load whole chat, with search across its full history</li>
             <li>Whole-folder and password-protected exports</li>
             <li>PIN lock screen</li>
             <li>Sync between your Chrome browsers</li>
           </ul>
-          <a class="btn" href="https://buy.polar.sh/polar_cl_G9whvyGzkqeyynwPWBNIqmGZQ8Jvvu6MSDcom3jXKd0">Get Pro on Polar</a>
-          <p class="fine">After checkout, paste your license key (it starts with WAF-) in the WA Folders toolbar popup.</p>
+          <a class="btn" href="https://chromewebstore.google.com/detail/hahfpdlfieloofgjhanljbbnakinfhil?utm_source=site">Add to Chrome, then upgrade</a>
+          <p class="fine">Install WA Folders, then press Upgrade in any limit message or in the toolbar popup. After checkout, paste your license key (it starts with WAF-) in the popup.</p>
         </div>
       </div>
-      <p class="small">A few technical limits apply on every plan: Load whole chat stops at 20,000 messages, one export of the open chat keeps the newest 5,000 loaded messages, and a whole-folder export opens up to 100 chats in one run.</p>
+      <p class="small">A few technical limits apply on every plan: Load whole chat stops at 20,000 messages, one export of the open chat keeps the newest 5,000 loaded messages, a whole-folder export opens up to 100 chats in one run, and voice notes longer than 15 minutes are not transcribed.</p>
     </div>
   </section>
 
@@ -412,8 +454,9 @@ footer .legal{border-top:1px solid #2a3942;margin-top:30px;padding-top:18px;font
         <li>No account, analytics, ads or trackers, and no WA Folders server.</li>
         <li>It never sends messages for you. No bulk sending, broadcasts, auto-replies or contact scraping.</li>
         <li>It does not use the WhatsApp Business API. It runs only on web.whatsapp.com.</li>
-        <li>The private AI runs on your computer by default. If you add your own API key, only the messages you ask about go to the provider you chose, and only when you click.</li>
-        <li>If you buy Pro, the extension checks your license key with Polar. No chat content goes with it.</li>
+        <li>AI, voice-note transcription and translation run on your computer by default. If you add your own API key, only the messages you ask about, the voice note you click Transcribe on, or the text you click Translate on when Chrome can't translate it go to the provider you chose, and only when you click.</li>
+        <li>Translations are shown on screen and never saved, searched or exported. Transcripts stay on this device.</li>
+        <li>If you buy Pro, the extension checks your license key. No chat content goes with it.</li>
         <li>Sync (Pro, off by default) copies folders, quick replies and rules through Chrome Sync. Messages and notes are never synced.</li>
       </ul>
       <p><a href="https://docs.google.com/document/d/e/2PACX-1vQN_YtNbLysl_tnmwefXKMtEm1V9wEoix6lwcEt_bPAR70F18GtbPPG4qgW9XqSkMOlqt8bKtt0vScU/pub">Read the full privacy policy</a></p>
@@ -441,8 +484,16 @@ footer .legal{border-top:1px solid #2a3942;margin-top:30px;padding-top:18px;font
           <p>Yes. Open the chat and press HTML, CSV, Markdown or JSON in the WA Folders panel. The file holds the messages loaded on screen, and photos, files and voice messages show as labels such as [photo] and [voice message]. The free plan allows 3 exports a day. Pro has no daily cap and can export the whole chat from the start, a whole folder in one file, or a password-protected file.</p>
         </div>
         <div class="q">
+          <h3>Can WA Folders transcribe WhatsApp Web voice notes?</h3>
+          <p>Yes. Click Transcribe under a voice note to read it as text. By default the speech model runs on your computer and the audio stays there. The first time, WA Folders shows the download size and asks before it fetches the model once: Accurate (about 252 MB) or Light (about 80 MB). You can also use your own OpenAI or Google Gemini key. Transcripts stay on this device and show up in search and exports. The free plan includes 5 transcriptions a day.</p>
+        </div>
+        <div class="q">
+          <h3>Can it translate WhatsApp Web messages?</h3>
+          <p>Yes, between Portuguese, English and Spanish. Click Translate next to a message, or under a voice-note transcript, and the translation appears under it. Translate draft turns what you typed into Portuguese, English or Spanish in the message box, and Undo puts your original back. It runs on your computer with Chrome's translator. WA Folders never sends it; you press Enter yourself. The free plan includes 20 translations a day.</p>
+        </div>
+        <div class="q">
           <h3>Is it free?</h3>
-          <p>Yes. The free plan has no time limit and includes 5 folders, 5 search results and 3 exports a day, plus small allowances for reminders, quick replies, rules, AI answers and the deal board. Pro has no plan limits and costs $9.99 a month or $99 for lifetime, paid through Polar.</p>
+          <p>Yes. The free plan has no time limit and includes 5 folders, 5 search results and 3 exports a day, plus 5 voice-note transcriptions and 20 translations a day and small allowances for reminders, quick replies, rules, AI answers and the deal board. Pro is unlimited and costs $9.99 a month or $99 for lifetime. You upgrade from inside the extension.</p>
         </div>
         <div class="q">
           <h3>Does it work on the phone app?</h3>
@@ -450,7 +501,7 @@ footer .legal{border-top:1px solid #2a3942;margin-top:30px;padding-top:18px;font
         </div>
         <div class="q">
           <h3>Where is my data stored?</h3>
-          <p>In your browser, in chrome.storage.local on your computer. WA Folders has no server and no account. Data leaves the browser only for features you turn on: Chrome Sync if you enable sync (Pro), the AI provider you chose if you add your own API key, and Polar when it checks a Pro license key.</p>
+          <p>In your browser, in chrome.storage.local on your computer. WA Folders has no server and no account. AI, voice-note transcription and translation run on your computer by default. Data leaves the browser only for features you turn on: Chrome Sync if you enable sync (Pro), the provider you chose if you add your own API key (only what you click on), and the license check when you enter a Pro key (no chat content).</p>
         </div>
         <div class="q">
           <h3>Does it send messages for me?</h3>
@@ -462,7 +513,7 @@ footer .legal{border-top:1px solid #2a3942;margin-top:30px;padding-top:18px;font
         </div>
       </div>
       <div class="cta" style="margin-top:32px">
-        <a class="btn" href="https://chromewebstore.google.com/detail/hahfpdlfieloofgjhanljbbnakinfhil">Add WA Folders to Chrome</a>
+        <a class="btn" href="https://chromewebstore.google.com/detail/hahfpdlfieloofgjhanljbbnakinfhil?utm_source=site">Add WA Folders to Chrome</a>
       </div>
     </div>
   </section>
@@ -473,13 +524,12 @@ footer .legal{border-top:1px solid #2a3942;margin-top:30px;padding-top:18px;font
     <div class="cols">
       <div>
         <h4>WA Folders</h4>
-        <p style="margin:0">Folders, search, export and follow-ups for WhatsApp Web in Chrome. Version 1.2.4.</p>
+        <p style="margin:0">Folders, search, export and follow-ups for WhatsApp Web in Chrome. Version 1.2.6.</p>
       </div>
       <div>
         <h4>Links</h4>
         <ul>
-          <li><a href="https://chromewebstore.google.com/detail/hahfpdlfieloofgjhanljbbnakinfhil">Chrome Web Store</a></li>
-          <li><a href="https://buy.polar.sh/polar_cl_G9whvyGzkqeyynwPWBNIqmGZQ8Jvvu6MSDcom3jXKd0">Buy Pro on Polar</a></li>
+          <li><a href="https://chromewebstore.google.com/detail/hahfpdlfieloofgjhanljbbnakinfhil?utm_source=site">Chrome Web Store</a></li>
           <li><a href="https://docs.google.com/document/d/e/2PACX-1vQN_YtNbLysl_tnmwefXKMtEm1V9wEoix6lwcEt_bPAR70F18GtbPPG4qgW9XqSkMOlqt8bKtt0vScU/pub">Privacy policy</a></li>
         </ul>
       </div>
