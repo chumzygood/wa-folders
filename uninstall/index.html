@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noindex">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; script-src 'unsafe-inline'; connect-src https://docs.google.com; frame-src https://docs.google.com; form-action https://docs.google.com; img-src 'none'; base-uri 'none'">
+<title>WA Folders — why did you leave?</title>
+<!--
+  WA Folders uninstall page (1.2.8 plan). Live at
+  https://chumzygood.github.io/wa-folders/uninstall/
+  Chrome opens it after the extension is removed, as
+    ?v=<version>&lang=<ui language>&age=<h|d|w|o|u>&ck=<n|s|d|u>&pn=<y|n|u>&ai=<d|k|n|u>
+  (1.2.7.1 sends only v and lang; the four buckets arrive from 1.2.8.)
+  Nothing else is in the address: no ids, no install date, nothing from chats.
+
+  Static and self-contained: no external scripts, fonts, images, cookies or
+  analytics. The only network request is the answer POST to the developer's
+  Google Form (formResponse), made when the visitor taps a reason.
+  Spec: 1.2.8-plan/uninstall-page-spec.md
+-->
+<style>
+  :root { --bg:#f0f2f5; --card:#fff; --fg:#111b21; --muted:#667781; --line:#d1d7db; --accent:#008069; --accentFg:#fff; --sel:#e7f8ef; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#0b141a; --card:#111b21; --fg:#e9edef; --muted:#8696a0; --line:#2a3942; --accent:#00a884; --accentFg:#111b21; --sel:#103529; } }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.5 system-ui,-apple-system,"Segoe UI","Nirmala UI","Noto Sans",Tahoma,sans-serif; }
+  main { max-width:560px; margin:0 auto; padding:24px 14px 40px; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:20px 16px; }
+  h1 { font-size:21px; margin:0 0 6px; }
+  p { margin:0 0 14px; color:var(--muted); font-size:14px; }
+  label.lbl { display:block; font-size:14px; color:var(--muted); margin:0 0 4px; }
+  textarea { width:100%; min-height:72px; padding:10px; border:1px solid var(--line); border-radius:10px; background:var(--card); color:var(--fg); font:inherit; resize:vertical; }
+  .hint { font-size:12px; color:var(--muted); margin:4px 0 16px; }
+  h2 { font-size:17px; margin:0 0 10px; }
+  .reasons { list-style:none; margin:0; padding:0; }
+  .reasons li { margin:0 0 10px; }
+  .reasons button { display:block; width:100%; min-height:52px; text-align:start; padding:12px 14px; border:1px solid var(--line); border-radius:12px; background:var(--card); color:var(--fg); font:inherit; font-size:17px; cursor:pointer; }
+  .reasons button:hover, .reasons button:focus-visible { border-color:var(--accent); background:var(--sel); outline:none; }
+  .reasons button:disabled { opacity:.6; cursor:default; }
+  .done { text-align:center; padding:12px 0; }
+  .done .big { font-size:40px; }
+  .kept { font-size:12px; color:var(--muted); margin-top:10px; }
+  .foot { font-size:12px; color:var(--muted); margin-top:16px; text-align:center; }
+  .foot a { color:var(--accent); }
+  [hidden] { display:none !important; }
+</style>
+</head>
+<body>
+<main>
+  <div class="card">
+    <form id="f" novalidate>
+      <h1 data-t="title">Sorry to see you go</h1>
+      <p data-t="sub">One quick question helps us fix what went wrong. It's optional and anonymous.</p>
+      <label for="details" class="lbl" data-t="detailsLabel">Anything else? (optional, type it before you tap)</label>
+      <textarea id="details" maxlength="500"></textarea>
+      <div class="hint" data-t="noPersonal">Please don't include names, phone numbers or chat messages.</div>
+      <h2 id="q" data-t="q">Why did you remove WA Folders? Tap one to send.</h2>
+      <ul class="reasons" id="opts" aria-labelledby="q"></ul>
+
+      <!--
+        TODO(Grok Bot): these four hidden inputs carry the anonymous buckets.
+        They are NOT sent while their name is a placeholder (entry.INSTALL_AGE,
+        entry.CHECKLIST, entry.PANEL_SHOWN, entry.AI_AVAILABLE). After adding
+        the four optional short-answer questions to the Google Form, replace
+        each placeholder with that question's real id (entry.<digits>). Only
+        names matching entry.<digits> are posted; nothing else needs editing.
+      -->
+      <input type="hidden" id="b-age" data-bucket="age" name="entry.INSTALL_AGE">
+      <input type="hidden" id="b-ck" data-bucket="ck" name="entry.CHECKLIST">
+      <input type="hidden" id="b-pn" data-bucket="pn" name="entry.PANEL_SHOWN">
+      <input type="hidden" id="b-ai" data-bucket="ai" name="entry.AI_AVAILABLE">
+    </form>
+    <div id="thanks" class="done" hidden>
+      <div class="big">🙏</div>
+      <h1 data-t="thanks">Thank you</h1>
+      <p data-t="thanksSub">Your answer was sent. We read every one.</p>
+      <div id="kept" class="kept" hidden></div>
+    </div>
+  </div>
+  <div class="foot">
+    <span data-t="sentNote">This page sends only your answer, the WA Folders version, your language and four rough buckets (how long it was installed, checklist progress, whether the panel showed, AI availability). No chats, names, numbers or ids.</span>
+    <br><span data-t="dataGone">WA Folders kept your folders and notes only in your browser, and Chrome removed them with the extension.</span>
+    <br><a id="reinstall" href="https://chromewebstore.google.com/detail/wa-folders/hahfpdlfieloofgjhanljbbnakinfhil?utm_source=uninstall-page" rel="noopener" data-t="reinstall">Reinstall WA Folders</a>
+  </div>
+</main>
+
+<script>
+/* ===================== SURVEY_CONFIG ===================== */
+var SURVEY_CONFIG = {
+  /* "post": the answer is POSTed to the form in the background and the page says thanks.
+   * "link": the page opens the Google Form itself, prefilled (fallback if POST ever stops working). */
+  mode: "post",
+  formAction: "https://docs.google.com/forms/d/e/1FAIpQLScsQdg6y3x4FfsIi438jUVf0qyUonQneYazKpqq6sCH1cUlxA/formResponse",
+  viewForm: "https://docs.google.com/forms/d/e/1FAIpQLScsQdg6y3x4FfsIi438jUVf0qyUonQneYazKpqq6sCH1cUlxA/viewform",
+  /* Existing, live form questions: reason, details, version, language. */
+  fields: { reason: "entry.1163647015", details: "entry.961818", version: "entry.3160108", lang: "entry.1847406046" },
+  /* The Google Form's multiple-choice options, character for character. Do not edit. */
+  reasonValues: {
+    broke: "Didn't work or broke WhatsApp Web's layout / Não funcionou ou atrapalhou o WhatsApp Web",
+    setup: "Too hard to set up or understand / Difícil de configurar ou entender",
+    notneeded: "Didn't need it, WhatsApp's own lists are enough / Não precisei, as listas do WhatsApp bastam",
+    feature: "Missing a feature I need / Falta um recurso que eu preciso",
+    privacy: "Privacy worry / Preocupação com privacidade",
+    other: "Other / Outro"
+  }
+};
+/* The four buckets: short code in the address -> text stored in the form. Anything else -> "unknown". */
+var BUCKETS = {
+  age: { h: "under 1 hour", d: "same day", w: "2-7 days", o: "over 7 days", u: "unknown" },
+  ck: { n: "none", s: "started", d: "done", u: "unknown" },
+  pn: { y: "yes", n: "no", u: "unknown" },
+  ai: { d: "on-device", k: "own-key", n: "neither", u: "unknown" }
+};
+/* ========================================================= */
+
+var REASONS = ["broke", "setup", "notneeded", "feature", "privacy", "other"];
+var I18N = {
+  en: {
+    title: "Sorry to see you go", sub: "One quick question helps us fix what went wrong. It's optional and anonymous.",
+    q: "Why did you remove WA Folders? Tap one to send.",
+    broke: "It didn't work, or it broke WhatsApp Web's layout", setup: "Too hard to set up or understand", notneeded: "I didn't need it — WhatsApp's own lists are enough",
+    feature: "A feature I need is missing", privacy: "I had a privacy worry", other: "Something else",
+    detailsLabel: "Anything else? (optional, type it before you tap)", ph: "What went wrong, or what would have kept you?",
+    noPersonal: "Please don't include names, phone numbers or chat messages.",
+    thanks: "Thank you", thanksSub: "Your answer was sent. We read every one.",
+    kept: "Not sent yet, shown here only:", k_age: "installed for", k_ck: "checklist", k_pn: "panel shown", k_ai: "AI",
+    sentNote: "This page sends only your answer, the WA Folders version, your language and four rough buckets (how long it was installed, checklist progress, whether the panel showed, AI availability). No chats, names, numbers or ids.",
+    dataGone: "WA Folders kept your folders and notes only in your browser, and Chrome removed them with the extension.", reinstall: "Reinstall WA Folders"
+  },
+  "pt-BR": {
+    title: "Que pena que você saiu", sub: "Uma pergunta rápida nos ajuda a corrigir o que deu errado. É opcional e anônima.",
+    q: "Por que você removeu o WA Folders? Toque em uma opção para enviar.",
+    broke: "Não funcionou ou bagunçou o layout do WhatsApp Web", setup: "Difícil de configurar ou de entender", notneeded: "Não precisei — as listas do próprio WhatsApp bastam",
+    feature: "Falta um recurso de que eu preciso", privacy: "Tive uma preocupação com a privacidade", other: "Outro motivo",
+    detailsLabel: "Quer contar mais? (opcional, escreva antes de tocar)", ph: "O que deu errado, ou o que faria você ficar?",
+    noPersonal: "Por favor, não inclua nomes, números de telefone nem mensagens de conversas.",
+    thanks: "Obrigado", thanksSub: "Sua resposta foi enviada. Lemos todas.",
+    kept: "Ainda não enviado, mostrado só aqui:", k_age: "instalado há", k_ck: "checklist", k_pn: "painel exibido", k_ai: "IA",
+    sentNote: "Esta página envia só a sua resposta, a versão do WA Folders, o seu idioma e quatro faixas aproximadas (há quanto tempo estava instalado, progresso do checklist, se o painel apareceu, disponibilidade de IA). Nenhuma conversa, nome, número ou identificador.",
+    dataGone: "O WA Folders guardava suas pastas e notas só no seu navegador, e o Chrome as apagou junto com a extensão.", reinstall: "Reinstalar o WA Folders"
+  },
+  es: {
+    title: "Lamentamos que te vayas", sub: "Una pregunta rápida nos ayuda a arreglar lo que falló. Es opcional y anónima.",
+    q: "¿Por qué quitaste WA Folders? Toca una opción para enviar.",
+    broke: "No funcionó o rompió el diseño de WhatsApp Web", setup: "Difícil de configurar o de entender", notneeded: "No lo necesitaba: las listas de WhatsApp me bastan",
+    feature: "Falta una función que necesito", privacy: "Me preocupaba la privacidad", other: "Otro motivo",
+    detailsLabel: "¿Algo más? (opcional, escríbelo antes de tocar)", ph: "¿Qué falló, o qué te habría hecho quedarte?",
+    noPersonal: "Por favor, no incluyas nombres, números de teléfono ni mensajes de chats.",
+    thanks: "Gracias", thanksSub: "Tu respuesta se envió. Leemos todas.",
+    kept: "Aún no enviado, solo se muestra aquí:", k_age: "instalado durante", k_ck: "lista de pasos", k_pn: "panel mostrado", k_ai: "IA",
+    sentNote: "Esta página solo envía tu respuesta, la versión de WA Folders, tu idioma y cuatro rangos aproximados (cuánto tiempo estuvo instalado, avance de la lista de pasos, si se mostró el panel, disponibilidad de IA). Ningún chat, nombre, número ni identificador.",
+    dataGone: "WA Folders guardaba tus carpetas y notas solo en tu navegador, y Chrome las borró junto con la extensión.", reinstall: "Volver a instalar WA Folders"
+  },
+  id: {
+    title: "Sayang sekali Anda pergi", sub: "Satu pertanyaan singkat membantu kami memperbaiki yang salah. Opsional dan anonim.",
+    q: "Kenapa Anda menghapus WA Folders? Ketuk satu untuk mengirim.",
+    broke: "Tidak berfungsi, atau merusak tampilan WhatsApp Web", setup: "Terlalu sulit diatur atau dipahami", notneeded: "Tidak butuh — daftar bawaan WhatsApp sudah cukup",
+    feature: "Fitur yang saya perlukan tidak ada", privacy: "Saya khawatir soal privasi", other: "Alasan lain",
+    detailsLabel: "Ada yang lain? (opsional, tulis sebelum mengetuk)", ph: "Apa yang salah, atau apa yang akan membuat Anda bertahan?",
+    noPersonal: "Mohon jangan tulis nama, nomor telepon, atau isi chat.",
+    thanks: "Terima kasih", thanksSub: "Jawaban Anda sudah terkirim. Kami membaca semuanya.",
+    kept: "Belum dikirim, hanya ditampilkan di sini:", k_age: "terpasang selama", k_ck: "daftar langkah", k_pn: "panel tampil", k_ai: "AI",
+    sentNote: "Halaman ini hanya mengirim jawaban Anda, versi WA Folders, bahasa Anda, dan empat kelompok kasar (berapa lama terpasang, kemajuan daftar langkah, apakah panel tampil, ketersediaan AI). Tanpa chat, nama, nomor, atau ID.",
+    dataGone: "WA Folders menyimpan folder dan catatan Anda hanya di browser Anda, dan Chrome menghapusnya bersama ekstensi.", reinstall: "Pasang lagi WA Folders"
+  },
+  hi: {
+    title: "आपका जाना अच्छा नहीं लगा", sub: "एक छोटा सा सवाल हमें गलती सुधारने में मदद करता है। यह वैकल्पिक और गुमनाम है।",
+    q: "आपने WA Folders क्यों हटाया? भेजने के लिए एक पर टैप करें।",
+    broke: "यह काम नहीं किया, या WhatsApp Web का लेआउट बिगड़ गया", setup: "सेट अप करना या समझना मुश्किल था", notneeded: "ज़रूरत नहीं थी — WhatsApp की अपनी लिस्ट काफ़ी हैं",
+    feature: "मुझे जिस फ़ीचर की ज़रूरत है, वह नहीं है", privacy: "प्राइवेसी की चिंता थी", other: "कोई और वजह",
+    detailsLabel: "कुछ और बताना चाहेंगे? (वैकल्पिक, टैप करने से पहले लिखें)", ph: "क्या गड़बड़ हुई, या क्या होता तो आप रुकते?",
+    noPersonal: "कृपया नाम, फ़ोन नंबर या चैट मैसेज न लिखें।",
+    thanks: "धन्यवाद", thanksSub: "आपका जवाब भेज दिया गया। हम हर जवाब पढ़ते हैं।",
+    kept: "अभी भेजा नहीं गया, सिर्फ़ यहाँ दिखाया गया:", k_age: "कितने समय इंस्टॉल रहा", k_ck: "चेकलिस्ट", k_pn: "पैनल दिखा", k_ai: "AI",
+    sentNote: "यह पेज सिर्फ़ आपका जवाब, WA Folders का वर्ज़न, आपकी भाषा और चार मोटे अनुमान भेजता है (कितने समय इंस्टॉल रहा, चेकलिस्ट की प्रगति, पैनल दिखा या नहीं, AI उपलब्ध था या नहीं)। कोई चैट, नाम, नंबर या आईडी नहीं।",
+    dataGone: "WA Folders आपके फ़ोल्डर और नोट्स सिर्फ़ आपके ब्राउज़र में रखता था, और Chrome ने उन्हें एक्सटेंशन के साथ हटा दिया।", reinstall: "WA Folders फिर से इंस्टॉल करें"
+  },
+  ar: {
+    title: "يؤسفنا رحيلك", sub: "سؤال سريع واحد يساعدنا على إصلاح ما حدث. الإجابة اختيارية ومجهولة الهوية.",
+    q: "لماذا أزلت WA Folders؟ اضغط على خيار واحد للإرسال.",
+    broke: "لم يعمل، أو أفسد تخطيط WhatsApp Web", setup: "صعب الإعداد أو الفهم", notneeded: "لم أحتج إليه — قوائم WhatsApp نفسها تكفي",
+    feature: "تنقصه ميزة أحتاج إليها", privacy: "كان لديّ قلق بشأن الخصوصية", other: "سبب آخر",
+    detailsLabel: "هل من شيء آخر؟ (اختياري، اكتبه قبل الضغط)", ph: "ما الذي حدث، أو ما الذي كان سيُبقيك؟",
+    noPersonal: "يُرجى عدم كتابة أسماء أو أرقام هواتف أو رسائل محادثات.",
+    thanks: "شكرًا لك", thanksSub: "تم إرسال إجابتك. نقرأ كل الإجابات.",
+    kept: "لم يُرسل بعد، معروض هنا فقط:", k_age: "مدة التثبيت", k_ck: "قائمة الخطوات", k_pn: "ظهرت اللوحة", k_ai: "الذكاء الاصطناعي",
+    sentNote: "ترسل هذه الصفحة إجابتك فقط، وإصدار WA Folders، ولغتك، وأربع فئات تقريبية (مدة التثبيت، والتقدم في قائمة الخطوات، وهل ظهرت اللوحة، وتوفر الذكاء الاصطناعي). لا محادثات ولا أسماء ولا أرقام ولا معرّفات.",
+    dataGone: "كان WA Folders يحفظ مجلداتك وملاحظاتك في متصفحك فقط، وقد حذفها Chrome مع الإضافة.", reinstall: "إعادة تثبيت WA Folders"
+  }
+};
+
+(function () {
+  "use strict";
+  var params = new URLSearchParams(location.search);
+  var version = /^[0-9]+(\.[0-9]+){0,3}$/.test(params.get("v") || "") ? params.get("v") : "";
+  function pickLang(raw) {
+    var l = String(raw || "").replace("_", "-").toLowerCase();
+    if (l.indexOf("pt") === 0) return "pt-BR";
+    var base = l.split("-")[0];
+    return I18N[base] ? base : "";
+  }
+  var lang = pickLang(params.get("lang")) || pickLang(navigator.language) || "en";
+  var S = I18N[lang];
+  function tr(k) { return S[k] || I18N.en[k] || k; }
+
+  document.documentElement.lang = lang;
+  document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
+  document.title = "WA Folders — " + tr("title");
+  Array.prototype.forEach.call(document.querySelectorAll("[data-t]"), function (el) { el.textContent = tr(el.getAttribute("data-t")); });
+
+  var details = document.getElementById("details");
+  details.placeholder = tr("ph");
+
+  /* Fill the hidden bucket inputs from the address; unknown codes become "unknown". */
+  var bucketInputs = Array.prototype.slice.call(document.querySelectorAll("input[data-bucket]"));
+  bucketInputs.forEach(function (inp) {
+    var key = inp.getAttribute("data-bucket");
+    var map = BUCKETS[key] || {};
+    var code = params.get(key) || "u";
+    inp.value = Object.prototype.hasOwnProperty.call(map, code) ? map[code] : "unknown";
+  });
+  function realId(name) { return /^entry\.[0-9]+$/.test(String(name || "")); }
+
+  function payload(reason) {
+    var f = SURVEY_CONFIG.fields;
+    var p = new URLSearchParams();
+    p.append(f.reason, SURVEY_CONFIG.reasonValues[reason]);
+    p.append(f.details, details.value.trim().slice(0, 500));
+    p.append(f.version, version);
+    p.append(f.lang, lang);
+    /* Bucket inputs are posted only once their name is a real form entry id. */
+    bucketInputs.forEach(function (inp) { if (realId(inp.name)) p.append(inp.name, inp.value); });
+    return p;
+  }
+
+  /* Fallback when fetch isn't allowed: a normal form POST into a hidden frame. */
+  function postViaFrame(p) {
+    var frame = document.createElement("iframe");
+    frame.name = "waf-sink"; frame.hidden = true;
+    document.body.appendChild(frame);
+    var form = document.createElement("form");
+    form.method = "POST"; form.action = SURVEY_CONFIG.formAction; form.target = "waf-sink"; form.hidden = true;
+    p.forEach(function (v, k) {
+      var i = document.createElement("input");
+      i.type = "hidden"; i.name = k; i.value = v;
+      form.appendChild(i);
+    });
+    document.body.appendChild(form);
+    form.submit();
+  }
+
+  /* Buckets that have a value but no form question yet are listed in the thanks
+   * state, so they are never dropped silently. */
+  function thanks() {
+    document.getElementById("f").hidden = true;
+    document.getElementById("thanks").hidden = false;
+    var held = bucketInputs.filter(function (inp) { return !realId(inp.name) && inp.value !== "unknown"; });
+    if (held.length) {
+      var kept = document.getElementById("kept");
+      kept.textContent = tr("kept") + " " + held.map(function (inp) { return tr("k_" + inp.getAttribute("data-bucket")) + ": " + inp.value; }).join(" · ");
+      kept.hidden = false;
+    }
+  }
+
+  var sent = false;
+  function send(reason) {
+    if (sent || REASONS.indexOf(reason) < 0) return;
+    sent = true;
+    Array.prototype.forEach.call(document.querySelectorAll(".reasons button"), function (b) { b.disabled = true; });
+    var p = payload(reason);
+    if (SURVEY_CONFIG.mode === "link") {
+      location.href = SURVEY_CONFIG.viewForm + "?usp=pp_url&" + p.toString();
+      return;
+    }
+    /* Google Forms sends no CORS headers: a "no-cors" POST is delivered, the reply just can't be read. */
+    fetch(SURVEY_CONFIG.formAction, { method: "POST", mode: "no-cors", body: p, credentials: "omit", referrerPolicy: "no-referrer" })
+      .catch(function () { postViaFrame(p); })
+      .then(thanks);
+  }
+
+  var opts = document.getElementById("opts");
+  REASONS.forEach(function (r) {
+    var li = document.createElement("li");
+    var b = document.createElement("button");
+    b.type = "button";
+    b.setAttribute("data-reason", r);
+    b.textContent = tr(r);
+    b.addEventListener("click", function () { send(r); });
+    li.appendChild(b);
+    opts.appendChild(li);
+  });
+  document.getElementById("f").addEventListener("submit", function (e) { e.preventDefault(); });
+})();
+</script>
+</body>
+</html>
