@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WA Folders: pastas, lembretes e áudio em texto no WhatsApp Web (extensão do Chrome)</title>
+<meta name="description" content="Extensão do Chrome para o WhatsApp Web: veja quem espera sua resposta, lembretes que somem quando a pessoa responde, áudio em texto no seu computador, tradução, pastas, busca e exportação. Plano grátis. Os dados ficam no seu navegador.">
+<link rel="canonical" href="https://chumzygood.github.io/wa-folders/pt-br/">
+<link rel="alternate" hreflang="en" href="https://chumzygood.github.io/wa-folders/">
+<link rel="alternate" hreflang="pt-BR" href="https://chumzygood.github.io/wa-folders/pt-br/">
+<link rel="alternate" hreflang="x-default" href="https://chumzygood.github.io/wa-folders/">
+<meta property="og:url" content="https://chumzygood.github.io/wa-folders/pt-br/">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:image" content="https://chumzygood.github.io/wa-folders/assets/og-image.jpg">
+<meta name="twitter:image" content="https://chumzygood.github.io/wa-folders/assets/og-image.jpg">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="WA Folders">
+<meta property="og:title" content="WA Folders: pastas, lembretes e áudio em texto no WhatsApp Web">
+<meta property="og:description" content="Veja quem espera sua resposta, transforme áudio em texto no seu computador e organize as conversas em pastas. Extensão do Chrome para o WhatsApp Web. Plano grátis, sem servidor do WA Folders.">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Painel do WA Folders no WhatsApp Web com abas de pastas e conversas de demonstração">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="WA Folders: pastas, lembretes e áudio em texto no WhatsApp Web">
+<meta name="twitter:description" content="Quem espera sua resposta, lembretes que somem sozinhos, áudio em texto no PC, tradução, pastas, busca e exportação. Plano grátis.">
+<meta name="theme-color" content="#008069">
+<link rel="icon" type="image/png" sizes="128x128" href="../assets/icon-128.png">
+<link rel="apple-touch-icon" href="../assets/icon-128.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "WA Folders",
+  "inLanguage": "pt-BR",
+  "url": "https://chumzygood.github.io/wa-folders/pt-br/",
+  "applicationCategory": "BrowserApplication",
+  "applicationSubCategory": "Productivity",
+  "operatingSystem": "Google Chrome (desktop)",
+  "softwareVersion": "1.2.6",
+  "description": "Extensão do Chrome para o WhatsApp Web (web.whatsapp.com). Mostra quem espera sua resposta e de quem você espera retorno, lembretes que somem quando a pessoa responde, transcrição de mensagens de voz e tradução (português, inglês e espanhol) no seu computador, pastas em abas, notas privadas, busca e exportação. Os dados ficam no chrome.storage.local do navegador. Não existe servidor do WA Folders. Não funciona no app do WhatsApp no celular.",
+  "installUrl": "https://chromewebstore.google.com/detail/hahfpdlfieloofgjhanljbbnakinfhil?hl=pt-BR",
+  "offers": [
+    { "@type": "Offer", "name": "Grátis", "price": "0", "priceCurrency": "USD", "description": "5 pastas, 5 resultados de busca, 3 exportações por dia, 5 transcrições de áudio por dia e 20 traduções por dia. Sem prazo." },
+    { "@type": "Offer", "name": "Pro (mensal)", "price": "9.99", "priceCurrency": "USD", "description": "Sem limites do plano. Assinatura dentro da extensão." },
+    { "@type": "Offer", "name": "Pro (vitalício)", "price": "99", "priceCurrency": "USD", "description": "Sem limites do plano. Pagamento único dentro da extensão." }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "inLanguage": "pt-BR",
+  "mainEntity": [
+    { "@type": "Question", "name": "Dá para transformar áudio do WhatsApp Web em texto?", "acceptedAnswer": { "@type": "Answer", "text": "Sim. Clique em Transcrever embaixo da mensagem de voz. Por padrão o modelo de fala roda no seu computador e o áudio não sai dele. Na primeira vez, o WA Folders mostra o tamanho do download e pergunta antes de baixar o modelo: Preciso (cerca de 252 MB) ou Leve (cerca de 80 MB). O plano grátis inclui 5 transcrições por dia." } },
+    { "@type": "Question", "name": "Como vejo quem está esperando minha resposta?", "acceptedAnswer": { "@type": "Answer", "text": "Abra o painel do WA Folders no WhatsApp Web e clique na linha Hoje, no topo. Aguardando resposta deles mostra conversas individuais em que você mandou a última mensagem e ninguém respondeu. Perguntas para mim mostra conversas cuja última mensagem te pergunta algo. Na versão atual, essas listas se formam com as conversas que você abre com a extensão ligada." } },
+    { "@type": "Question", "name": "Dá para criar pastas no WhatsApp Web?", "acceptedAnswer": { "@type": "Answer", "text": "Sim. Instale o WA Folders, abra o web.whatsapp.com, digite o nome da pasta no painel e clique em Adicionar. Depois abra uma conversa e clique em Adicionar conversa na pasta. Cada pasta vira uma aba acima da lista de conversas. O plano grátis inclui 5 pastas." } },
+    { "@type": "Question", "name": "É grátis?", "acceptedAnswer": { "@type": "Answer", "text": "Sim, sem prazo: 5 pastas, 5 resultados de busca, 3 exportações por dia, 5 transcrições e 20 traduções por dia. O Pro não tem esses limites e custa US$ 9,99 por mês ou US$ 99 vitalício, cobrados em dólar." } },
+    { "@type": "Question", "name": "Funciona no celular?", "acceptedAnswer": { "@type": "Answer", "text": "Não. O WA Folders é uma extensão do Chrome e só funciona no WhatsApp Web (web.whatsapp.com), no computador." } },
+    { "@type": "Question", "name": "Ele envia mensagens por mim?", "acceptedAnswer": { "@type": "Answer", "text": "Não. O WA Folders nunca aperta Enviar. Respostas rápidas, rascunhos da IA e traduções vão para a caixa de mensagem, e quem envia é você. Não faz envio em massa nem resposta automática." } }
+  ]
+}
+</script>
+<style>
+:root{
+  --green:#008069; --green-d:#006652; --green-l:#e7f5f1;
+  --ink:#111b21; --muted:#54656f; --line:#e3e8ea; --bg:#ffffff; --soft:#f6f8f9;
+  --r:14px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font:17px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,"Noto Sans",Arial,sans-serif;color:var(--ink);background:var(--bg);-webkit-text-size-adjust:100%}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--green-d)}
+a:hover{color:var(--ink)}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+.skip{position:absolute;left:-999px}
+.skip:focus{left:12px;top:12px;background:#fff;padding:8px;z-index:9}
+
+/* header */
+.top{position:sticky;top:0;z-index:5;background:rgba(255,255,255,.94);border-bottom:1px solid var(--line);backdrop-filter:saturate(1.4) blur(6px)}
+.top .wrap{display:flex;align-items:center;gap:18px;height:62px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:18px;color:var(--ink);text-decoration:none}
+.brand img{width:30px;height:30px;border-radius:7px}
+.nav{display:flex;gap:18px;margin-left:auto;font-size:15px}
+.nav a{color:var(--muted);text-decoration:none}
+.nav a:hover{color:var(--ink)}
+.btn{display:inline-block;background:var(--green);color:#fff;text-decoration:none;font-weight:650;border-radius:999px;padding:12px 22px;line-height:1.2;border:2px solid var(--green)}
+.btn:hover{background:var(--green-d);border-color:var(--green-d);color:#fff}
+.btn.ghost{background:transparent;color:var(--green-d)}
+.btn.ghost:hover{background:var(--green-l);color:var(--green-d)}
+.btn.sm{padding:8px 16px;font-size:15px}
+
+/* hero */
+.hero{padding:56px 0 36px;background:linear-gradient(180deg,var(--green-l),#fff 70%)}
+.hero h1{font-size:clamp(32px,5vw,52px);line-height:1.1;letter-spacing:-.02em;margin:0 0 16px;max-width:820px}
+.hero .lede{font-size:clamp(17px,2vw,20px);color:var(--muted);max-width:720px;margin:0 0 26px}
+.cta{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.fine{font-size:14px;color:var(--muted);margin:14px 0 0}
+.shot{margin:36px 0 0;border-radius:var(--r);overflow:hidden;border:1px solid var(--line);box-shadow:0 18px 50px rgba(17,27,33,.12);background:#fff}
+figcaption,.cap{font-size:13px;color:var(--muted);margin-top:8px}
+
+/* sections */
+section{padding:64px 0}
+section.alt{background:var(--soft)}
+h2{font-size:clamp(26px,3.4vw,36px);line-height:1.15;letter-spacing:-.01em;margin:0 0 12px}
+.intro{color:var(--muted);max-width:700px;margin:0 0 36px}
+h3{font-size:22px;line-height:1.25;margin:0 0 10px}
+
+.feat{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;padding:36px 0;border-top:1px solid var(--line)}
+.feat:first-of-type{border-top:0}
+.feat.flip .txt{order:2}
+.feat p{margin:0 0 12px}
+.tag{display:inline-block;font-size:13px;font-weight:650;color:var(--green-d);background:var(--green-l);border-radius:999px;padding:3px 10px;margin-bottom:10px}
+.pic{border-radius:var(--r);overflow:hidden;border:1px solid var(--line);background:#fff;box-shadow:0 8px 28px rgba(17,27,33,.08)}
+.pic.narrow{max-width:420px;margin:0 auto}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.keys{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;align-items:center;padding:34px 20px;border-radius:var(--r);background:var(--ink);color:#e9edef}
+.keys div{text-align:center;font-size:14px;color:#aebac1}
+kbd{display:inline-block;font:600 15px/1 ui-monospace,SFMono-Regular,Consolas,monospace;background:#fff;color:var(--ink);border-radius:7px;padding:8px 10px;margin:2px;box-shadow:0 2px 0 #8696a0}
+.keys .row{margin-bottom:6px}
+.nw{white-space:nowrap}
+p kbd{font-size:13px;padding:2px 6px;margin:0 1px;box-shadow:0 1px 0 #8696a0;background:#eef1f2;vertical-align:1px}
+code{font:15px ui-monospace,SFMono-Regular,Consolas,monospace;background:#eef1f2;border-radius:5px;padding:1px 5px}
+.also{margin-top:28px;padding:22px 24px;border:1px solid var(--line);border-radius:var(--r);background:#fff}
+.also p{margin:0}
+
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin:0 0 20px}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:24px;box-shadow:0 8px 28px rgba(17,27,33,.06)}
+.card h3{font-size:20px}
+.card p{margin:0 0 10px;font-size:16px}
+@media (max-width:860px){.cards{grid-template-columns:1fr}}
+
+/* pricing */
+.plans{display:grid;grid-template-columns:1fr 1fr;gap:22px;max-width:900px}
+.plan{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:28px}
+.plan.pro{border:2px solid var(--green)}
+.price{font-size:34px;font-weight:750;margin:4px 0 2px}
+.price small{font-size:16px;font-weight:500;color:var(--muted)}
+.plan ul{padding-left:20px;margin:16px 0 22px}
+.plan li{margin:5px 0}
+.small{font-size:14px;color:var(--muted);max-width:900px;margin-top:18px}
+
+/* privacy */
+.priv{display:grid;grid-template-columns:repeat(2,1fr);gap:16px 28px;padding:0;list-style:none;margin:0 0 24px}
+.priv li{padding-left:30px;position:relative}
+.priv li::before{content:"";position:absolute;left:0;top:7px;width:16px;height:9px;border-left:3px solid var(--green);border-bottom:3px solid var(--green);transform:rotate(-45deg)}
+
+/* faq */
+.faq{max-width:820px}
+.faq .q{padding:20px 0;border-top:1px solid var(--line)}
+.faq h3{font-size:19px;margin:0 0 6px}
+.faq p{margin:0;color:#2a3942}
+
+/* footer */
+footer{background:var(--ink);color:#aebac1;padding:44px 0 36px;font-size:15px}
+footer .cols{display:grid;grid-template-columns:1.3fr 1fr 1.6fr;gap:28px}
+footer h4{color:#fff;font-size:15px;margin:0 0 10px}
+footer ul{list-style:none;padding:0;margin:0}
+footer li{margin:6px 0}
+footer a{color:#d1f4cc}
+footer a:hover{color:#fff}
+footer .legal{border-top:1px solid #2a3942;margin-top:30px;padding-top:18px;font-size:13px}
+
+@media (max-width:860px){
+  .nav{display:none}
+  .top .btn{margin-left:auto}
+  .feat{grid-template-columns:1fr;gap:20px}
+  .feat.flip .txt{order:0}
+  .plans{grid-template-columns:1fr}
+  .priv{grid-template-columns:1fr}
+  footer .cols{grid-template-columns:1fr}
+  section{padding:48px 0}
+  .hero{padding:40px 0 28px}
+}
+@media (max-width:420px){
+  body{font-size:16px}
+  .pair{grid-template-columns:1fr}
+  .brand span{display:none}
+}
+</style>
+<style>
+.lang{font-size:14px;font-weight:650;color:var(--green-d)!important;border:1px solid var(--line);border-radius:999px;padding:4px 10px}
+@media (max-width:860px){.lang-m{display:inline-block!important}}
+.lang-m{display:none;margin-left:auto;font-size:14px}
+</style>
+</head>
+<body>
+<a class="skip" href="#features">Pular para o conteúdo</a>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top"><img src="../assets/icon-128.png" alt="" width="30" height="30"><span>WA Folders</span></a>
+    <nav class="nav" aria-label="Seções">
+      <a href="#features">Recursos</a>
+      <a href="#pricing">Grátis e Pro</a>
+      <a href="#privacy">Privacidade</a>
+      <a href="#faq">Perguntas</a>
+      <a class="lang" href="../" hreflang="en" lang="en">English</a>
+    </nav>
+    <a class="lang-m" href="../" hreflang="en" lang="en">English</a>
+    <a class="btn sm" href="https://chromewebstore.google.com/detail/hahfpdlfieloofgjhanljbbnakinfhil?hl=pt-BR&amp;utm_source=site&amp;utm_medium=web&amp;utm_campaign=ptbr">Instalar</a>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <div class="wrap">
+      <h1>Ninguém fica sem resposta no seu WhatsApp Web</h1>
+      <p class="lede">O WA Folders é uma extensão do Chrome para o web.whatsapp.com. Ele mostra quem está esperando sua resposta e de quem você ainda espera retorno, cria lembretes que somem quando a pessoa responde e transforma mensagens de voz em texto no seu próprio computador. Também tem pastas em abas, busca, exportação e tradução. Tudo fica no seu navegador: não existe conta nem servidor do WA Folders.</p>
+      <div class="cta">
+        <a class="btn" href="https://chromewebstore.google.com/detail/hahfpdlfieloofgjhanljbbnakinfhil?hl=pt-BR&amp;utm_source=site&amp;utm_medium=web&amp;utm_campaign=ptbr">Instalar no Chrome, grátis</a>
+        <a class="btn ghost" href="#pricing">Grátis e Pro</a>
+      </div>
+      <p class="fine">Funciona no WhatsApp Web, no Chrome do computador. Não funciona no app do WhatsApp no celular. A interface da extensão aparece em português quando o Chrome está em português. Versão atual: 1.2.6.</p>
+      <figure class="shot" style="margin-left:0;margin-right:0">
+        <img src="../assets/hero-folders-panel.webp" width="1400" height="917" alt="WhatsApp Web com o WA Folders: abas de pastas acima da lista de conversas e o painel com a linha Hoje, uma nota privada e os botões de exportação. Todas as conversas são de demonstração.">
+      </figure>
+      <p class="cap">Conversas de demonstração com nomes inventados. As capturas mostram a interface em inglês.</p>
+    </div>
+  </div>
+
+  <section id="features">
+    <div class="wrap">
+      <h2>O que ele acrescenta ao WhatsApp Web</h2>
+      <p class="intro">O painel do WA Folders fica na área da conversa, sem cobrir a lista de conversas. Numa janela estreita, ele vira uma aba.</p>
+
+      <article class="feat" id="today">
+        <div class="txt">
+          <span class="tag">Hoje</span>
+          <h3>Quem espera você, e quem você espera</h3>
+          <p>Uma linha no topo do painel mostra o que venceu, quem está esperando sua resposta, quem te fez uma pergunta e de quem você ainda espera retorno.</p>
+          <p>Clique nela para ver duas listas. <strong>Aguardando resposta deles</strong> mostra conversas individuais em que você mandou a última mensagem e ninguém respondeu. <strong>Perguntas para mim</strong> mostra conversas cuja última mensagem te pergunta alguma coisa.</p>
+          <p>Na versão atual, as listas se formam com as conversas que você abre com a extensão ligada, então no primeiro dia elas ainda aparecem curtas.</p>
+        </div>
+        <div class="pair">
+          <figure class="pic" style="margin:0"><img src="../assets/waiting-on-them.webp" width="700" height="840" loading="lazy" alt="Lista Aguardando resposta deles com quatro conversas de demonstração e há quanto tempo você escreveu."></figure>
+          <figure class="pic" style="margin:0"><img src="../assets/questions-for-me.webp" width="700" height="840" loading="lazy" alt="Lista Perguntas para mim com quatro conversas de demonstração que terminam numa pergunta."></figure>
+        </div>
+      </article>
+
+      <article class="feat flip" id="notes">
+        <div class="txt">
+          <span class="tag">Lembretes e notas</span>
+          <h3>Lembretes que somem quando a pessoa responde</h3>
+          <p>Mandou um orçamento e precisa de retorno? Escolha "Me lembre se não responderem em 1 dia". Se a pessoa responder, o lembrete some. Se não, a conversa volta em Vencidos, com um número no ícone da extensão e, se você permitir, uma notificação no computador. O plano grátis permite 2 lembretes ao mesmo tempo.</p>
+          <p>Escreva uma nota em qualquer conversa, tipo "me deve R$ 40". Ela fica salva só no seu computador.</p>
+        </div>
+        <figure class="pic narrow" style="margin:0 auto">
+          <img src="../assets/note-reminder.webp" width="560" height="550" loading="lazy" alt="Painel do WA Folders numa conversa de demonstração, com uma nota privada e um lembrete marcado para quarta às 9:00.">
+        </figure>
+      </article>
+
+      <div class="cards" id="voice-translate-ai">
+        <div class="card" id="voice">
+          <span class="tag">Áudio em texto</span>
+          <h3>Leia o áudio em vez de ouvir</h3>
+          <p>Clique em Transcrever embaixo de uma mensagem de voz para ler o que a pessoa disse. Por padrão, o modelo de fala roda no seu computador e o áudio fica nele. Na primeira vez, o WA Folders mostra o tamanho do download e pergunta antes de baixar o modelo, uma vez só, do Hugging Face: Preciso (cerca de 252 MB) ou Leve (cerca de 80 MB, melhor para computador mais lento ou internet limitada).</p>
+          <p>Se preferir, use sua própria chave da OpenAI ou do Google Gemini; aí o áudio que você clicou vai do seu navegador para esse provedor. As transcrições ficam neste computador e entram na busca e nas exportações. Grátis: 5 transcrições por dia.</p>
+        </div>
+        <div class="card" id="translate">
+          <span class="tag">Tradução</span>
+          <h3>Português, inglês e espanhol</h3>
+          <p>Clique em Traduzir ao lado de uma mensagem, ou embaixo de uma transcrição, e a tradução aparece logo abaixo, com o idioma de origem. Se o idioma estiver errado, clique em trocar.</p>
+          <p>Traduzir rascunho passa o que você digitou para português, inglês ou espanhol na própria caixa de mensagem, e Desfazer volta o original. O WA Folders não envia nada; quem aperta Enter é você. A tradução usa o tradutor do Chrome, no seu computador. Grátis: 20 traduções por dia.</p>
+        </div>
+        <div class="card" id="ai">
+          <span class="tag">IA privada</span>
+          <h3>Me atualize, rascunhe a resposta</h3>
+          <p>Um clique resume uma conversa longa e mostra o que ainda depende de você. Outro escreve um rascunho de resposta, no idioma da conversa, que vai para a caixa de mensagem para você editar e enviar.</p>
+          <p>Por padrão usa a IA integrada do Chrome (Chrome 138 ou mais recente, em computador compatível), e a conversa não sai do computador. Essa IA ainda não está disponível em todo computador. Opcional: use sua própria chave da OpenAI, Anthropic, Google Gemini ou um modelo local (Ollama). Aí as mensagens da conversa que você pediu vão direto do seu navegador para esse provedor, nunca para nós. O Claude Opus 5.5 com sua própria chave da Anthropic chega na versão 1.2.7.</p>
+        </div>
+      </div>
+
+      <article class="feat" id="folders">
+        <div class="txt">
+          <span class="tag">Pastas</span>
+          <h3>Pastas em abas acima da lista de conversas</h3>
+          <p>Crie pastas como Família, Trabalho ou Clientes, com cor e emoji. Elas aparecem como abas acima da lista de conversas, com marcadores de não lidas, de quem espera resposta, de perguntas e de lembretes vencidos. Clique numa conversa da pasta e ela abre.</p>
+          <p>No primeiro uso, o WA Folders pode sugerir pastas a partir dos nomes que já estão na tela. Nada é arquivado até você clicar em Adicionar estas. O plano grátis inclui 5 pastas.</p>
+          <p>Se você só quer separar conversas em grupos, as listas do próprio WhatsApp podem bastar. <a href="../compare/">Veja a comparação (em inglês)</a>.</p>
+        </div>
+        <figure class="pic narrow" style="margin:0 auto">
+          <img src="../assets/folder-tabs.webp" width="798" height="660" loading="lazy" alt="Abas de pastas Todas, Família, Trabalho, Clientes e Casa, com a aba Família aberta e três conversas de demonstração.">
+        </figure>
+      </article>
+
+      <article class="feat flip" id="search">
+        <div class="txt">
+          <span class="tag">Busca</span>
+          <h3>Busque conversas, notas e mensagens</h3>
+          <p>Busque nomes de conversas, inclusive as que você ainda não abriu, suas notas e as mensagens que o WA Folders já viu enquanto você estava com as conversas abertas. Filtre por pasta, notas ou links, e salve uma busca.</p>
+          <p>O plano grátis mostra 5 resultados por busca. No Pro, clique em Carregar conversa inteira e a busca cobre todo o histórico daquela conversa que o WhatsApp Web conseguir carregar.</p>
+        </div>
+        <figure class="pic narrow" style="margin:0 auto">
+          <img src="../assets/search-results.webp" width="560" height="716" loading="lazy" alt="Busca do WA Folders por &quot;saturday&quot; com resultados de uma nota e de duas conversas de demonstração.">
+        </figure>
+      </article>
+
+      <article class="feat" id="export">
+        <div class="txt">
+          <span class="tag">Exportação</span>
+          <h3>Exporte uma conversa em HTML, CSV, Markdown ou JSON</h3>
+          <p>Exporte a conversa aberta com um clique. O CSV abre certinho no Excel, inclusive no Windows. Fotos, arquivos e áudios aparecem marcados, por exemplo [foto] e [mensagem de voz]; o conteúdo dos arquivos não vai junto.</p>
+          <p>Grátis: 3 exportações por dia das mensagens carregadas na tela. O Pro exporta a conversa inteira desde o começo, uma pasta inteira num arquivo só, ou um arquivo protegido por senha que abre em qualquer navegador.</p>
+        </div>
+        <figure class="pic" style="margin:0">
+          <img src="../assets/export-html.webp" width="1000" height="780" loading="lazy" alt="Exportação em HTML de uma conversa de demonstração, com uma nota e a marca [photo].">
+        </figure>
+      </article>
+
+      <article class="feat flip" id="blur">
+        <div class="txt">
+          <span class="tag">Desfoque</span>
+          <h3>Desfoque as conversas ou esconda o WhatsApp Web na hora</h3>
+          <p>O desfoque esconde nomes, fotos e mensagens; passe o mouse para espiar. Ligue pelo botão de olho no painel ou com <span class="nw"><kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>U</kbd></span>. Dá para trocar o atalho em <code>chrome://extensions/shortcuts</code>.</p>
+          <p><span class="nw"><kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>H</kbd></span> esconde o WhatsApp Web na hora. O Pro tem tela de bloqueio com PIN para quando você sai da mesa.</p>
+        </div>
+        <div class="keys" aria-hidden="true">
+          <div><div class="row"><span class="nw"><kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>U</kbd></span></div>Liga e desliga o desfoque</div>
+          <div><div class="row"><span class="nw"><kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>H</kbd></span></div>Esconde o WhatsApp Web</div>
+        </div>
+      </article>
+
+      <div class="also">
+        <p><strong>Também na 1.2.6:</strong> respostas rápidas que preenchem o nome da pessoa e vão para a caixa de mensagem sem enviar; um quadro de negócios para conversas de clientes (Lead, Orçado, Pago, Enviado, Concluído); paleta de comandos (<span class="nw"><kbd>Ctrl</kbd>+<kbd>K</kbd></span>); regras que arquivam conversas numa pasta pelo nome ou pelo começo do número (por exemplo, +55 11); backup e restauração; tema claro e escuro. A interface está em português, English, Español, हिन्दी, Bahasa Indonesia e العربية.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="pricing" class="alt">
+    <div class="wrap">
+      <h2>Grátis e Pro</h2>
+      <p class="intro">O plano grátis não tem prazo. Toda mensagem de limite na extensão tem um link para assinar o Pro, então você só paga se e quando precisar de mais.</p>
+      <div class="plans">
+        <div class="plan">
+          <h3>Grátis</h3>
+          <div class="price">R$ 0</div>
+          <ul>
+            <li>5 pastas</li>
+            <li>5 resultados por busca</li>
+            <li>3 exportações por dia</li>
+            <li>5 transcrições de áudio por dia</li>
+            <li>20 traduções por dia</li>
+            <li>2 lembretes ao mesmo tempo</li>
+            <li>3 respostas rápidas</li>
+            <li>1 regra de arquivamento</li>
+            <li>3 respostas de IA por dia</li>
+            <li>5 conversas no quadro de negócios</li>
+            <li>1 busca salva</li>
+          </ul>
+          <a class="btn ghost" href="https://chromewebstore.google.com/detail/hahfpdlfieloofgjhanljbbnakinfhil?hl=pt-BR&amp;utm_source=site&amp;utm_medium=web&amp;utm_campaign=ptbr">Instalar no Chrome</a>
+        </div>
+        <div class="plan pro">
+          <h3>Pro</h3>
+          <div class="price">US$ 9,99 <small>por mês</small></div>
+          <div><strong>ou US$ 99 vitalício</strong></div>
+          <ul>
+            <li>Sem limites do plano: pastas, buscas, exportações, transcrições, traduções, lembretes, respostas rápidas, regras, respostas de IA, quadro de negócios e buscas salvas ilimitados</li>
+            <li>Carregar conversa inteira, com busca em todo o histórico</li>
+            <li>Exportação de pasta inteira e protegida por senha</li>
+            <li>Tela de bloqueio com PIN</li>
+            <li>Sincronização entre seus navegadores Chrome</li>
+          </ul>
+          <a class="btn" href="https://chromewebstore.google.com/detail/hahfpdlfieloofgjhanljbbnakinfhil?hl=pt-BR&amp;utm_source=site&amp;utm_medium=web&amp;utm_campaign=ptbr">Instalar e assinar depois</a>
+          <p class="fine">Instale o WA Folders e clique em Atualizar numa mensagem de limite ou no popup do ícone da extensão. O pagamento é feito pela Polar, em dólar. Depois, cole sua chave de licença (começa com WAF-) no popup.</p>
+        </div>
+      </div>
+      <p class="small">Alguns limites técnicos valem em qualquer plano: Carregar conversa inteira para em 20.000 mensagens, uma exportação da conversa aberta guarda as 5.000 mensagens mais recentes carregadas, a exportação de pasta abre até 100 conversas por vez e áudios com mais de 15 minutos não são transcritos.</p>
+    </div>
+  </section>
+
+  <section id="privacy">
+    <div class="wrap">
+      <h2>Privacidade</h2>
+      <p class="intro">Suas pastas, notas, lembretes e o índice de busca ficam no <code>chrome.storage.local</code>, no seu perfil do Chrome, neste computador.</p>
+      <ul class="priv">
+        <li>Sem conta, sem análise de uso, sem anúncios, sem rastreadores e sem servidor do WA Folders.</li>
+        <li>Nunca envia mensagens por você. Nada de envio em massa, listas de transmissão, resposta automática ou coleta de contatos.</li>
+        <li>Não usa a API do WhatsApp Business. Funciona só no web.whatsapp.com.</li>
+        <li>IA, transcrição e tradução rodam no seu computador por padrão. Se você usar sua própria chave de API, só vai para o provedor escolhido o que você clicou: as mensagens da conversa que você pediu, o áudio que você mandou transcrever ou o texto que o Chrome não conseguiu traduzir.</li>
+        <li>As traduções aparecem na tela e não são salvas, buscadas nem exportadas. As transcrições ficam neste computador.</li>
+        <li>Se você assinar o Pro, a extensão confere sua chave de licença. Nenhum conteúdo de conversa vai junto.</li>
+        <li>A sincronização (Pro, desligada por padrão) copia pastas, respostas rápidas e regras pelo Chrome Sync. Mensagens e notas nunca são sincronizadas.</li>
+      </ul>
+      <p><a href="https://docs.google.com/document/d/e/2PACX-1vQN_YtNbLysl_tnmwefXKMtEm1V9wEoix6lwcEt_bPAR70F18GtbPPG4qgW9XqSkMOlqt8bKtt0vScU/pub" hreflang="en">Política de privacidade completa (em inglês)</a></p>
+    </div>
+  </section>
+
+  <section id="faq" class="alt">
+    <div class="wrap">
+      <h2>Perguntas</h2>
+      <div class="faq">
+        <div class="q">
+          <h3>Dá para transformar áudio do WhatsApp Web em texto?</h3>
+          <p>Sim. Clique em Transcrever embaixo da mensagem de voz. Por padrão o modelo de fala roda no seu computador e o áudio não sai dele. Para pegar o áudio, o WA Folders pode tocar a mensagem sem som por um instante, então o WhatsApp pode mostrar o áudio como ouvido. O plano grátis inclui 5 transcrições por dia.</p>
+        </div>
+        <div class="q">
+          <h3>Como vejo quem está esperando minha resposta?</h3>
+          <p>Abra o painel do WA Folders no WhatsApp Web e clique na linha Hoje, no topo. Aguardando resposta deles mostra quem ficou sem responder você; Perguntas para mim mostra conversas que terminam numa pergunta para você. As listas se formam com as conversas que você abre com a extensão ligada.</p>
+        </div>
+        <div class="q">
+          <h3>Dá para criar pastas no WhatsApp Web?</h3>
+          <p>Sim. No painel do WA Folders, digite o nome da pasta e clique em Adicionar. Depois abra uma conversa e clique em Adicionar conversa na pasta. Cada pasta vira uma aba acima da lista de conversas. As pastas ficam neste navegador e não aparecem no app do celular.</p>
+        </div>
+        <div class="q">
+          <h3>É grátis?</h3>
+          <p>Sim, sem prazo: 5 pastas, 5 resultados de busca, 3 exportações, 5 transcrições e 20 traduções por dia, além de cotas pequenas de lembretes, respostas rápidas, regras, IA e quadro de negócios. O Pro não tem limites e custa US$ 9,99 por mês ou US$ 99 vitalício, cobrados em dólar.</p>
+        </div>
+        <div class="q">
+          <h3>Funciona no celular?</h3>
+          <p>Não. O WA Folders é uma extensão do Chrome e só funciona no WhatsApp Web (web.whatsapp.com), no computador.</p>
+        </div>
+        <div class="q">
+          <h3>Ele envia mensagens por mim?</h3>
+          <p>Não. O WA Folders nunca aperta Enviar. Respostas rápidas, rascunhos da IA e traduções vão para a caixa de mensagem, e quem envia é você. Não faz envio em massa, resposta automática nem usa a API do WhatsApp Business.</p>
+        </div>
+        <div class="q">
+          <h3>O WA Folders é do WhatsApp?</h3>
+          <p>Não. É uma extensão independente, sem ligação com o WhatsApp ou a Meta.</p>
+        </div>
+      </div>
+      <div class="cta" style="margin-top:32px">
+        <a class="btn" href="https://chromewebstore.google.com/detail/hahfpdlfieloofgjhanljbbnakinfhil?hl=pt-BR&amp;utm_source=site&amp;utm_medium=web&amp;utm_campaign=ptbr">Instalar o WA Folders no Chrome</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <h4>WA Folders</h4>
+        <p style="margin:0">Lembretes, áudio em texto, pastas, busca e exportação para o WhatsApp Web no Chrome. Versão 1.2.6.</p>
+        <p style="margin:10px 0 0"><a href="../" hreflang="en" lang="en">English version</a></p>
+      </div>
+      <div>
+        <h4>Links</h4>
+        <ul>
+          <li><a href="https://chromewebstore.google.com/detail/hahfpdlfieloofgjhanljbbnakinfhil?hl=pt-BR&amp;utm_source=site&amp;utm_medium=web&amp;utm_campaign=ptbr">Chrome Web Store</a></li>
+          <li><a href="../compare/" hreflang="en">Comparação com as listas do WhatsApp e outras extensões (em inglês)</a></li>
+          <li><a href="https://docs.google.com/document/d/e/2PACX-1vQN_YtNbLysl_tnmwefXKMtEm1V9wEoix6lwcEt_bPAR70F18GtbPPG4qgW9XqSkMOlqt8bKtt0vScU/pub" hreflang="en">Política de privacidade (em inglês)</a></li>
+          <li><a href="mailto:ckamelhar@gmail.com?subject=WA%20Folders%20suporte">Suporte: ckamelhar@gmail.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="legal">WhatsApp e WhatsApp Web são marcas de seus respectivos donos. O WA Folders é uma extensão independente, sem ligação, aprovação ou patrocínio do WhatsApp ou da Meta. As capturas usam conversas de demonstração com nomes inventados.</p>
+  </div>
+</footer>
+</body>
+</html>

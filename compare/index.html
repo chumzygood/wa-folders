@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WA Folders vs WhatsApp Lists, WA Web Plus, Cooby, WAPlus CRM and WA Web Sender</title>
+<meta name="description" content="An honest comparison of WA Folders with WhatsApp's built-in Lists and four WhatsApp Web extensions, using each product's own public listing. Includes when Lists are enough and what WA Folders does not do.">
+<link rel="canonical" href="https://chumzygood.github.io/wa-folders/compare/">
+<meta property="og:url" content="https://chumzygood.github.io/wa-folders/compare/">
+<meta property="og:image" content="https://chumzygood.github.io/wa-folders/assets/og-image.jpg">
+<meta name="twitter:image" content="https://chumzygood.github.io/wa-folders/assets/og-image.jpg">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="WA Folders">
+<meta property="og:title" content="WA Folders vs WhatsApp Lists and other WhatsApp Web extensions">
+<meta property="og:description" content="What each tool says it does, from its own listing, checked October 8, 2026. When WhatsApp's own Lists are enough, and what WA Folders does not do.">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="WA Folders panel on WhatsApp Web with folder tabs and demo chats">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="WA Folders vs WhatsApp Lists and other WhatsApp Web extensions">
+<meta name="twitter:description" content="What each tool says it does, from its own listing, checked October 8, 2026.">
+<meta name="theme-color" content="#008069">
+<link rel="icon" type="image/png" sizes="128x128" href="../assets/icon-128.png">
+<style>
+:root{
+  --green:#008069; --green-d:#006652; --green-l:#e7f5f1;
+  --ink:#111b21; --muted:#54656f; --line:#e3e8ea; --bg:#ffffff; --soft:#f6f8f9;
+  --r:14px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font:17px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,"Noto Sans",Arial,sans-serif;color:var(--ink);background:var(--bg);-webkit-text-size-adjust:100%}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--green-d)}
+a:hover{color:var(--ink)}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+.skip{position:absolute;left:-999px}
+.skip:focus{left:12px;top:12px;background:#fff;padding:8px;z-index:9}
+
+/* header */
+.top{position:sticky;top:0;z-index:5;background:rgba(255,255,255,.94);border-bottom:1px solid var(--line);backdrop-filter:saturate(1.4) blur(6px)}
+.top .wrap{display:flex;align-items:center;gap:18px;height:62px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:18px;color:var(--ink);text-decoration:none}
+.brand img{width:30px;height:30px;border-radius:7px}
+.nav{display:flex;gap:18px;margin-left:auto;font-size:15px}
+.nav a{color:var(--muted);text-decoration:none}
+.nav a:hover{color:var(--ink)}
+.btn{display:inline-block;background:var(--green);color:#fff;text-decoration:none;font-weight:650;border-radius:999px;padding:12px 22px;line-height:1.2;border:2px solid var(--green)}
+.btn:hover{background:var(--green-d);border-color:var(--green-d);color:#fff}
+.btn.ghost{background:transparent;color:var(--green-d)}
+.btn.ghost:hover{background:var(--green-l);color:var(--green-d)}
+.btn.sm{padding:8px 16px;font-size:15px}
+
+/* hero */
+.hero{padding:56px 0 36px;background:linear-gradient(180deg,var(--green-l),#fff 70%)}
+.hero h1{font-size:clamp(32px,5vw,52px);line-height:1.1;letter-spacing:-.02em;margin:0 0 16px;max-width:820px}
+.hero .lede{font-size:clamp(17px,2vw,20px);color:var(--muted);max-width:720px;margin:0 0 26px}
+.cta{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.fine{font-size:14px;color:var(--muted);margin:14px 0 0}
+.shot{margin:36px 0 0;border-radius:var(--r);overflow:hidden;border:1px solid var(--line);box-shadow:0 18px 50px rgba(17,27,33,.12);background:#fff}
+figcaption,.cap{font-size:13px;color:var(--muted);margin-top:8px}
+
+/* sections */
+section{padding:64px 0}
+section.alt{background:var(--soft)}
+h2{font-size:clamp(26px,3.4vw,36px);line-height:1.15;letter-spacing:-.01em;margin:0 0 12px}
+.intro{color:var(--muted);max-width:700px;margin:0 0 36px}
+h3{font-size:22px;line-height:1.25;margin:0 0 10px}
+
+.feat{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;padding:36px 0;border-top:1px solid var(--line)}
+.feat:first-of-type{border-top:0}
+.feat.flip .txt{order:2}
+.feat p{margin:0 0 12px}
+.tag{display:inline-block;font-size:13px;font-weight:650;color:var(--green-d);background:var(--green-l);border-radius:999px;padding:3px 10px;margin-bottom:10px}
+.pic{border-radius:var(--r);overflow:hidden;border:1px solid var(--line);background:#fff;box-shadow:0 8px 28px rgba(17,27,33,.08)}
+.pic.narrow{max-width:420px;margin:0 auto}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.keys{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;align-items:center;padding:34px 20px;border-radius:var(--r);background:var(--ink);color:#e9edef}
+.keys div{text-align:center;font-size:14px;color:#aebac1}
+kbd{display:inline-block;font:600 15px/1 ui-monospace,SFMono-Regular,Consolas,monospace;background:#fff;color:var(--ink);border-radius:7px;padding:8px 10px;margin:2px;box-shadow:0 2px 0 #8696a0}
+.keys .row{margin-bottom:6px}
+.nw{white-space:nowrap}
+p kbd{font-size:13px;padding:2px 6px;margin:0 1px;box-shadow:0 1px 0 #8696a0;background:#eef1f2;vertical-align:1px}
+code{font:15px ui-monospace,SFMono-Regular,Consolas,monospace;background:#eef1f2;border-radius:5px;padding:1px 5px}
+.also{margin-top:28px;padding:22px 24px;border:1px solid var(--line);border-radius:var(--r);background:#fff}
+.also p{margin:0}
+
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin:0 0 20px}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:24px;box-shadow:0 8px 28px rgba(17,27,33,.06)}
+.card h3{font-size:20px}
+.card p{margin:0 0 10px;font-size:16px}
+@media (max-width:860px){.cards{grid-template-columns:1fr}}
+
+/* pricing */
+.plans{display:grid;grid-template-columns:1fr 1fr;gap:22px;max-width:900px}
+.plan{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:28px}
+.plan.pro{border:2px solid var(--green)}
+.price{font-size:34px;font-weight:750;margin:4px 0 2px}
+.price small{font-size:16px;font-weight:500;color:var(--muted)}
+.plan ul{padding-left:20px;margin:16px 0 22px}
+.plan li{margin:5px 0}
+.small{font-size:14px;color:var(--muted);max-width:900px;margin-top:18px}
+
+/* privacy */
+.priv{display:grid;grid-template-columns:repeat(2,1fr);gap:16px 28px;padding:0;list-style:none;margin:0 0 24px}
+.priv li{padding-left:30px;position:relative}
+.priv li::before{content:"";position:absolute;left:0;top:7px;width:16px;height:9px;border-left:3px solid var(--green);border-bottom:3px solid var(--green);transform:rotate(-45deg)}
+
+/* faq */
+.faq{max-width:820px}
+.faq .q{padding:20px 0;border-top:1px solid var(--line)}
+.faq h3{font-size:19px;margin:0 0 6px}
+.faq p{margin:0;color:#2a3942}
+
+/* footer */
+footer{background:var(--ink);color:#aebac1;padding:44px 0 36px;font-size:15px}
+footer .cols{display:grid;grid-template-columns:1.3fr 1fr 1.6fr;gap:28px}
+footer h4{color:#fff;font-size:15px;margin:0 0 10px}
+footer ul{list-style:none;padding:0;margin:0}
+footer li{margin:6px 0}
+footer a{color:#d1f4cc}
+footer a:hover{color:#fff}
+footer .legal{border-top:1px solid #2a3942;margin-top:30px;padding-top:18px;font-size:13px}
+
+@media (max-width:860px){
+  .nav{display:none}
+  .top .btn{margin-left:auto}
+  .feat{grid-template-columns:1fr;gap:20px}
+  .feat.flip .txt{order:0}
+  .plans{grid-template-columns:1fr}
+  .priv{grid-template-columns:1fr}
+  footer .cols{grid-template-columns:1fr}
+  section{padding:48px 0}
+  .hero{padding:40px 0 28px}
+}
+@media (max-width:420px){
+  body{font-size:16px}
+  .pair{grid-template-columns:1fr}
+  .brand span{display:none}
+}
+</style>
+<style>
+.cmp{width:100%;border-collapse:collapse;font-size:15px;background:#fff;border:1px solid var(--line);border-radius:var(--r)}
+.cmp th,.cmp td{text-align:left;vertical-align:top;padding:12px 14px;border-top:1px solid var(--line)}
+.cmp thead th{background:var(--soft);border-top:0;font-size:14px}
+.cmp td:first-child{font-weight:650;white-space:nowrap}
+.tw{overflow-x:auto;margin:0 0 18px}
+.src{font-size:13px;color:var(--muted)}
+.prod{padding:28px 0;border-top:1px solid var(--line)}
+.prod:first-of-type{border-top:0}
+.prod ul{margin:8px 0 12px;padding-left:20px}
+.prod li{margin:4px 0}
+blockquote{margin:10px 0;padding:8px 14px;border-left:3px solid var(--green);background:var(--soft);color:#2a3942}
+.lang{font-size:14px;font-weight:650;color:var(--green-d)!important;border:1px solid var(--line);border-radius:999px;padding:4px 10px}
+</style>
+</head>
+<body>
+<a class="skip" href="#lists">Skip to content</a>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="../"><img src="../assets/icon-128.png" alt="" width="30" height="30"><span>WA Folders</span></a>
+    <nav class="nav" aria-label="Sections">
+      <a href="../">Home</a>
+      <a href="#lists">WhatsApp Lists</a>
+      <a href="#extensions">Extensions</a>
+      <a href="#table">Table</a>
+      <a class="lang" href="../pt-br/" hreflang="pt-BR" lang="pt-BR">Português</a>
+    </nav>
+    <a class="btn sm" href="https://chromewebstore.google.com/detail/hahfpdlfieloofgjhanljbbnakinfhil?utm_source=site&amp;utm_medium=web&amp;utm_campaign=compare">Add to Chrome</a>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <div class="wrap">
+      <h1>WA Folders compared with WhatsApp Lists and other WhatsApp Web extensions</h1>
+      <p class="lede">We make WA Folders, so read this with that in mind. Everything said here about another product comes from that product's own public page: its Chrome Web Store listing, or WhatsApp's Help Center for Lists. Each claim has the date we checked and a link, so you can see the source yourself.</p>
+      <p class="fine">Checked on October 8, 2026. Listings change; if one of these says something different today, the listing is right and this page is out of date. Corrections: <a href="mailto:ckamelhar@gmail.com?subject=WA%20Folders%20compare%20page">ckamelhar@gmail.com</a>.</p>
+    </div>
+  </div>
+
+  <section id="lists">
+    <div class="wrap">
+      <h2>WhatsApp's built-in Lists</h2>
+      <p class="intro">Start here. If Lists do what you need, you don't need an extension.</p>
+
+      <p>WhatsApp's Help Center describes Lists as <q>customizable filters that can help you keep your chats organized</q>. There are four default lists (All, Unread, Favorites and Groups), and you can create custom lists, add or remove chats, rename, reorder and delete them. A separate Help Center page explains how to mute every chat in a list.</p>
+      <p class="src">Sources, checked October 8, 2026: <a href="https://faq.whatsapp.com/1470216183498937/">About lists</a> · <a href="https://faq.whatsapp.com/1102928584767164/">How to use lists</a> · <a href="https://faq.whatsapp.com/797069521522888/">How to manage your notifications</a> (WhatsApp Help Center).</p>
+      <p>Those Help Center steps are written for the phone apps. On WhatsApp Web, which lists you can see and create depends on your account. On the account we test with, the filter row above the chats included All, Unread, Favorites and Groups on October 8, 2026.</p>
+
+      <h3 style="margin-top:28px">When Lists are enough</h3>
+      <ul>
+        <li>You want to put chats into groups like Work, Family or Clients, and that's all.</li>
+        <li>You want the same grouping on your phone. Lists are part of WhatsApp. WA Folders' folders live in one Chrome profile on one computer and never show on the phone.</li>
+        <li>You'd rather not install an extension that can read WhatsApp Web. That's a fair choice for any extension, ours included.</li>
+      </ul>
+
+      <h3 style="margin-top:28px">What WA Folders adds on top of Lists</h3>
+      <ul>
+        <li><strong>Waiting on them</strong> and <strong>Questions for me</strong>: one-to-one chats where you spoke last and heard nothing back, and chats whose last message asks you something.</li>
+        <li>A reminder that clears itself when the person replies ("Remind me if they don't reply in 1 day").</li>
+        <li>Private notes on a chat, and search across chat names, your notes and messages WA Folders has seen.</li>
+        <li>Export of the open chat to HTML, CSV, Markdown or JSON.</li>
+        <li>Voice notes to text and message translation (Portuguese, English, Spanish), run on your computer by default.</li>
+      </ul>
+      <p>WA Folders works alongside Lists. It doesn't change or read your Lists.</p>
+    </div>
+  </section>
+
+  <section id="extensions" class="alt">
+    <div class="wrap">
+      <h2>Other WhatsApp Web extensions</h2>
+      <p class="intro">We picked four well-known extensions that do different jobs. For each one we only repeat what its own Chrome Web Store listing says. We haven't tested their features ourselves.</p>
+
+      <div class="prod" id="wa-web-plus">
+        <h3>WA Web Plus by Elbruz Technologies</h3>
+        <p>Its listing describes it in one line:</p>
+        <blockquote>Add more tools and options for WhatsApp Web for more privacy and reliability.</blockquote>
+        <p>The listing text says nothing more specific about features, so we won't either. If privacy tools for WhatsApp Web are what you want, read its listing and screenshots directly. WA Folders also has a privacy blur and a hide-everything key, but they are one part of it, not the main job.</p>
+        <p class="src">Source: <a href="https://chromewebstore.google.com/detail/ekcgkejcjdcmonfpmnljobemcbpnkamh">Chrome Web Store listing</a>, checked October 8, 2026 (listing shows version 5.2.4, updated September 15, 2026).</p>
+      </div>
+
+      <div class="prod" id="cooby">
+        <h3>Cooby</h3>
+        <p>Its listing says it is <q>best suited for teams that use individual WhatsApp numbers and HubSpot</q>. Features it lists include:</p>
+        <ul>
+          <li>Syncing WhatsApp conversations to HubSpot CRM, and CRM contact cards inside WhatsApp.</li>
+          <li>System tabs that auto-update, including Unread, Needs Reply, Groups and Awaiting Reply, plus custom tabs.</li>
+          <li>Notes and reminders on chats, and Google Calendar events.</li>
+          <li>Broadcasting to multiple chats at once, message templates, and contact import and export.</li>
+        </ul>
+        <p>Its privacy pledge says: <q>We do not collect your chat data. Your chat data will never leave your computer.</q></p>
+        <p><strong>Compared with WA Folders:</strong> Cooby's Needs Reply and Awaiting Reply tabs cover a similar job to our Questions for me and Waiting on them. If you work in a team on HubSpot, or you need broadcasts, Cooby's listing covers that and WA Folders doesn't. WA Folders has no CRM sync and never sends messages.</p>
+        <p class="src">Source: <a href="https://chromewebstore.google.com/detail/hcikfoejbgdmajlbhadhfchoekcoablm">Chrome Web Store listing</a>, checked October 8, 2026 (version 1.91.0, updated September 30, 2026).</p>
+      </div>
+
+      <div class="prod" id="waplus-crm">
+        <h3>WAPlus CRM</h3>
+        <p>Features its listing names include:</p>
+        <ul>
+          <li>Conversation management that automatically sorts chats into labels such as unread, waiting for a reply, require my response and @mentions.</li>
+          <li>An AI chatbot for auto-replies, trained on your material or keyword rules.</li>
+          <li>Contact cards, conversation sharing, and message translation.</li>
+          <li>HubSpot, Salesforce and Zoho integration, multiple WhatsApp accounts, and team features such as shared progress, conversation backup to a team space, and a dashboard.</li>
+        </ul>
+        <p><strong>Compared with WA Folders:</strong> WAPlus CRM's automatic labels overlap with our follow-up lists. If you want auto-replies, multiple accounts or a team CRM, its listing covers that and WA Folders doesn't. WA Folders has no auto-reply, no team space and no account.</p>
+        <p class="src">Source: <a href="https://chromewebstore.google.com/detail/jmjcgjmipjiklbnfbdclkdikplgajhgc">Chrome Web Store listing</a>, checked October 8, 2026 (version 1.8.17, updated September 25, 2026).</p>
+      </div>
+
+      <div class="prod" id="wa-web-sender">
+        <h3>WA Web Sender</h3>
+        <p>This is a different kind of tool. Its listing describes sending bulk WhatsApp messages, with features including:</p>
+        <ul>
+          <li>Bulk messages with personalized placeholders, and CSV upload of numbers and message data.</li>
+          <li>Attachments, scheduling and batching intervals.</li>
+          <li>Export of group contacts and delivery reports.</li>
+          <li>Quick replies and a WhatsApp chat link for your website.</li>
+        </ul>
+        <p><strong>Compared with WA Folders:</strong> WA Folders does not do bulk sending. It never sends any message for you, doesn't schedule messages and doesn't export contacts. If you need outbound campaigns, WA Folders is the wrong tool.</p>
+        <p class="src">Source: <a href="https://chromewebstore.google.com/detail/cmibkdkcjkhjinfeobpnfgpafbjdgbke">Chrome Web Store listing</a>, checked October 8, 2026 (version 4.6.3, updated October 5, 2026).</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="table">
+    <div class="wrap">
+      <h2>At a glance</h2>
+      <p class="intro">"Listed" means the product's own page names the feature. "Not listed" means we didn't find it on that page, not that the product lacks it.</p>
+      <div class="tw">
+        <table class="cmp">
+          <thead>
+            <tr><th scope="col">Feature</th><th scope="col">WA Folders</th><th scope="col">WhatsApp Lists</th><th scope="col">WA Web Plus</th><th scope="col">Cooby</th><th scope="col">WAPlus CRM</th><th scope="col">WA Web Sender</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Group chats into folders, tabs or lists</td><td>Yes (5 free)</td><td>Yes</td><td>Not listed</td><td>Listed (custom tabs)</td><td>Listed (labels)</td><td>Not listed</td></tr>
+            <tr><td>Shows on the phone</td><td>No</td><td>Yes</td><td>Not listed</td><td>Not listed</td><td>Not listed</td><td>Not listed</td></tr>
+            <tr><td>Waiting for reply / needs my reply views</td><td>Yes</td><td>Not in the Lists pages (Unread filter only)</td><td>Not listed</td><td>Listed</td><td>Listed</td><td>Not listed</td></tr>
+            <tr><td>Reminders</td><td>Yes, clears when they reply</td><td>Not in the Lists pages</td><td>Not listed</td><td>Listed</td><td>Not listed</td><td>Not listed</td></tr>
+            <tr><td>Notes on a chat</td><td>Yes</td><td>Not in the Lists pages</td><td>Not listed</td><td>Listed</td><td>Listed (contact cards)</td><td>Not listed</td></tr>
+            <tr><td>Voice notes to text</td><td>Yes, on your computer by default</td><td>Not in the Lists pages</td><td>Not listed</td><td>Not listed</td><td>Not listed</td><td>Not listed</td></tr>
+            <tr><td>Translate messages</td><td>Yes (PT, EN, ES)</td><td>Not in the Lists pages</td><td>Not listed</td><td>Not listed</td><td>Listed</td><td>Not listed</td></tr>
+            <tr><td>Export a chat</td><td>Yes (HTML, CSV, MD, JSON)</td><td>Not in the Lists pages</td><td>Not listed</td><td>Not listed (contacts only)</td><td>Not listed</td><td>Not listed (contacts and reports)</td></tr>
+            <tr><td>Sends messages for you</td><td>Never</td><td>n/a</td><td>Not listed</td><td>Listed (broadcasts, templates)</td><td>Listed (AI auto-reply)</td><td>Listed (bulk sending)</td></tr>
+            <tr><td>CRM sync</td><td>No</td><td>No</td><td>Not listed</td><td>Listed (HubSpot)</td><td>Listed (HubSpot, Salesforce, Zoho)</td><td>Not listed</td></tr>
+            <tr><td>Team features</td><td>No</td><td>No</td><td>Not listed</td><td>Listed</td><td>Listed</td><td>Not listed</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="src">Sources for every non-WA Folders cell: the listings and Help Center pages linked above, checked October 8, 2026. WA Folders cells describe version 1.2.6.</p>
+
+      <h3 style="margin-top:36px">Who WA Folders is for</h3>
+      <p>One person on WhatsApp Web who wants to see who they owe a reply and who owes them one, read voice notes as text, and keep notes, folders and exports in their own browser. There's no account and no WA Folders server, and it never presses Send. The free plan includes 5 folders, 5 search results per search, 3 exports a day, 5 voice-note transcriptions a day and 20 translations a day. Pro removes those limits.</p>
+      <div class="cta" style="margin-top:20px">
+        <a class="btn" href="https://chromewebstore.google.com/detail/hahfpdlfieloofgjhanljbbnakinfhil?utm_source=site&amp;utm_medium=web&amp;utm_campaign=compare">Add WA Folders to Chrome</a>
+        <a class="btn ghost" href="../">See all features</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <h4>WA Folders</h4>
+        <p style="margin:0">Folders, search, export and follow-ups for WhatsApp Web in Chrome. Version 1.2.6.</p>
+      </div>
+      <div>
+        <h4>Links</h4>
+        <ul>
+          <li><a href="../">Home</a></li>
+          <li><a href="../pt-br/" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a></li>
+          <li><a href="https://chromewebstore.google.com/detail/hahfpdlfieloofgjhanljbbnakinfhil?utm_source=site&amp;utm_medium=web&amp;utm_campaign=compare">Chrome Web Store</a></li>
+          <li><a href="https://docs.google.com/document/d/e/2PACX-1vQN_YtNbLysl_tnmwefXKMtEm1V9wEoix6lwcEt_bPAR70F18GtbPPG4qgW9XqSkMOlqt8bKtt0vScU/pub">Privacy policy</a></li>
+          <li><a href="mailto:ckamelhar@gmail.com?subject=WA%20Folders%20support">Support: ckamelhar@gmail.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="legal">WhatsApp, WA Web Plus, Cooby, WAPlus CRM and WA Web Sender are names and trademarks of their owners. WA Folders is an independent extension and is not affiliated with, endorsed by or sponsored by WhatsApp, Meta or any product named on this page.</p>
+  </div>
+</footer>
+</body>
+</html>
