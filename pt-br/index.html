@@ -37,7 +37,7 @@
   "applicationCategory": "BrowserApplication",
   "applicationSubCategory": "Productivity",
   "operatingSystem": "Google Chrome (desktop)",
-  "softwareVersion": "1.2.7",
+  "softwareVersion": "1.2.8",
   "description": "Extensão do Chrome para o WhatsApp Web (web.whatsapp.com). Mostra quem espera sua resposta e de quem você espera retorno, lembretes que somem quando a pessoa responde, transcrição de mensagens de voz e tradução (português, inglês e espanhol) no seu computador, pastas em abas, notas privadas, busca e exportação. Os dados ficam no chrome.storage.local do navegador. Não existe servidor do WA Folders. Não funciona no app do WhatsApp no celular.",
   "installUrl": "https://chromewebstore.google.com/detail/hahfpdlfieloofgjhanljbbnakinfhil?hl=pt-BR",
   "offers": [
@@ -54,7 +54,7 @@
   "inLanguage": "pt-BR",
   "mainEntity": [
     { "@type": "Question", "name": "Dá para transformar áudio do WhatsApp Web em texto?", "acceptedAnswer": { "@type": "Answer", "text": "Sim. Clique em Transcrever embaixo da mensagem de voz. Por padrão o modelo de fala roda no seu computador e o áudio não sai dele. Na primeira vez, o WA Folders mostra o tamanho do download e pergunta antes de baixar o modelo: Preciso (cerca de 252 MB) ou Leve (cerca de 80 MB). O plano grátis inclui 5 transcrições por dia." } },
-    { "@type": "Question", "name": "Como vejo quem está esperando minha resposta?", "acceptedAnswer": { "@type": "Answer", "text": "Abra o painel do WA Folders no WhatsApp Web e clique na linha Hoje, no topo. Aguardando resposta deles mostra conversas individuais em que você mandou a última mensagem e ninguém respondeu. Perguntas para mim mostra conversas cuja última mensagem te pergunta algo. Na versão atual, essas listas se formam com as conversas que você abre com a extensão ligada." } },
+    { "@type": "Question", "name": "Como vejo quem está esperando minha resposta?", "acceptedAnswer": { "@type": "Answer", "text": "Abra o painel do WA Folders no WhatsApp Web e clique na linha Hoje, no topo. Aguardando resposta deles mostra conversas individuais em que você mandou a última mensagem e ninguém respondeu. Perguntas para mim mostra conversas cuja última mensagem te pergunta algo. Na versão atual, elas já se preenchem no primeiro dia com a lista de conversas na tela, como o WhatsApp Web a mostra hoje: conversas individuais com mensagem não lida e conversas em que a sua mensagem, com os vistos, foi a última. As demais entram quando você abre a conversa com a extensão ligada." } },
     { "@type": "Question", "name": "Dá para criar pastas no WhatsApp Web?", "acceptedAnswer": { "@type": "Answer", "text": "Sim. Instale o WA Folders, abra o web.whatsapp.com, digite o nome da pasta no painel e clique em Adicionar. Depois abra uma conversa e clique em Adicionar conversa na pasta. Cada pasta vira uma aba acima da lista de conversas. O plano grátis inclui 5 pastas." } },
     { "@type": "Question", "name": "É grátis?", "acceptedAnswer": { "@type": "Answer", "text": "Sim, sem prazo: 5 pastas, 5 resultados de busca, 3 exportações por dia, 5 transcrições e 20 traduções por dia. O Pro não tem esses limites e custa US$ 9,99 por mês ou US$ 99 vitalício, cobrados em dólar." } },
     { "@type": "Question", "name": "Funciona no celular?", "acceptedAnswer": { "@type": "Answer", "text": "Não. O WA Folders é uma extensão do Chrome e só funciona no WhatsApp Web (web.whatsapp.com), no computador." } },
@@ -213,7 +213,7 @@ footer .legal{border-top:1px solid #2a3942;margin-top:30px;padding-top:18px;font
         <a class="btn" href="https://chromewebstore.google.com/detail/hahfpdlfieloofgjhanljbbnakinfhil?hl=pt-BR&amp;utm_source=site&amp;utm_medium=web&amp;utm_campaign=ptbr">Instalar no Chrome, grátis</a>
         <a class="btn ghost" href="#pricing">Grátis e Pro</a>
       </div>
-      <p class="fine">Funciona no WhatsApp Web, no Chrome do computador. Não funciona no app do WhatsApp no celular. A interface da extensão aparece em português quando o Chrome está em português. Versão atual: 1.2.7.</p>
+      <p class="fine">Funciona no WhatsApp Web, no Chrome do computador. Não funciona no app do WhatsApp no celular. A interface da extensão aparece em português quando o Chrome está em português. Versão atual: 1.2.8.</p>
       <figure class="shot" style="margin-left:0;margin-right:0">
         <img src="../assets/hero-folders-panel.webp" width="1400" height="917" alt="WhatsApp Web com o WA Folders: abas de pastas acima da lista de conversas e o painel com a linha Hoje, uma nota privada e os botões de exportação. Todas as conversas são de demonstração.">
       </figure>
@@ -232,7 +232,7 @@ footer .legal{border-top:1px solid #2a3942;margin-top:30px;padding-top:18px;font
           <h3>Quem espera você, e quem você espera</h3>
           <p>Uma linha no topo do painel mostra o que venceu, quem está esperando sua resposta, quem te fez uma pergunta e de quem você ainda espera retorno.</p>
           <p>Clique nela para ver duas listas. <strong>Aguardando resposta deles</strong> mostra conversas individuais em que você mandou a última mensagem e ninguém respondeu. <strong>Perguntas para mim</strong> mostra conversas cuja última mensagem te pergunta alguma coisa.</p>
-          <p>Na versão atual, as listas se formam com as conversas que você abre com a extensão ligada, então no primeiro dia elas ainda aparecem curtas.</p>
+          <p>Na versão atual, as listas já se preenchem no primeiro dia com a lista de conversas na tela, como o WhatsApp Web a mostra hoje; as demais conversas entram quando você as abre com a extensão ligada.</p>
         </div>
         <div class="pair">
           <figure class="pic" style="margin:0"><img src="../assets/waiting-on-them.webp" width="700" height="840" loading="lazy" alt="Lista Aguardando resposta deles com quatro conversas de demonstração e há quanto tempo você escreveu."></figure>
@@ -398,7 +398,7 @@ footer .legal{border-top:1px solid #2a3942;margin-top:30px;padding-top:18px;font
         </div>
         <div class="q">
           <h3>Como vejo quem está esperando minha resposta?</h3>
-          <p>Abra o painel do WA Folders no WhatsApp Web e clique na linha Hoje, no topo. Aguardando resposta deles mostra quem ficou sem responder você; Perguntas para mim mostra conversas que terminam numa pergunta para você. As listas se formam com as conversas que você abre com a extensão ligada.</p>
+          <p>Abra o painel do WA Folders no WhatsApp Web e clique na linha Hoje, no topo. Aguardando resposta deles mostra quem ficou sem responder você; Perguntas para mim mostra conversas que terminam numa pergunta para você. As listas já se preenchem com a lista de conversas na tela e com as conversas que você abre com a extensão ligada.</p>
         </div>
         <div class="q">
           <h3>Dá para criar pastas no WhatsApp Web?</h3>
@@ -433,7 +433,7 @@ footer .legal{border-top:1px solid #2a3942;margin-top:30px;padding-top:18px;font
     <div class="cols">
       <div>
         <h4>WA Folders</h4>
-        <p style="margin:0">Lembretes, áudio em texto, pastas, busca e exportação para o WhatsApp Web no Chrome. Versão 1.2.7.</p>
+        <p style="margin:0">Lembretes, áudio em texto, pastas, busca e exportação para o WhatsApp Web no Chrome. Versão 1.2.8.</p>
         <p style="margin:10px 0 0"><a href="../" hreflang="en" lang="en">English version</a></p>
       </div>
       <div>
