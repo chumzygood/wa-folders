@@ -43,7 +43,8 @@
   "offers": [
     { "@type": "Offer", "name": "Grátis", "price": "0", "priceCurrency": "USD", "description": "5 pastas, 5 resultados de busca, 3 exportações por dia, 5 transcrições de áudio por dia e 20 traduções por dia. Sem prazo." },
     { "@type": "Offer", "name": "Pro (mensal)", "price": "9.99", "priceCurrency": "USD", "description": "Sem limites do plano. Assinatura dentro da extensão." },
-    { "@type": "Offer", "name": "Pro (vitalício)", "price": "99", "priceCurrency": "USD", "description": "Sem limites do plano. Pagamento único dentro da extensão." }
+    { "@type": "Offer", "name": "Pro (vitalício)", "price": "99", "priceCurrency": "USD", "description": "Sem limites do plano. Pagamento único dentro da extensão." },
+    { "@type": "Offer", "name": "Pro (vitalício, oferta de fundador)", "price": "49", "priceCurrency": "USD", "priceValidUntil": "2026-10-31", "description": "Vitalício por US$ 49 para os 50 primeiros compradores, até 31 de outubro de 2026. Depois disso, ou quando os 50 forem vendidos, o vitalício custa US$ 99. Pagamento dentro da extensão." }
   ]
 }
 </script>
@@ -138,6 +139,7 @@ code{font:15px ui-monospace,SFMono-Regular,Consolas,monospace;background:#eef1f2
 .plan.pro{border:2px solid var(--green)}
 .price{font-size:34px;font-weight:750;margin:4px 0 2px}
 .price small{font-size:16px;font-weight:500;color:var(--muted)}
+.founding{margin:10px 0 0;padding:8px 10px;border-radius:8px;background:rgba(37,211,102,.12);font-size:14px;line-height:1.4}
 .plan ul{padding-left:20px;margin:16px 0 22px}
 .plan li{margin:5px 0}
 .small{font-size:14px;color:var(--muted);max-width:900px;margin-top:18px}
@@ -356,6 +358,7 @@ footer .legal{border-top:1px solid #2a3942;margin-top:30px;padding-top:18px;font
           <h3>Pro</h3>
           <div class="price">US$ 9,99 <small>por mês</small></div>
           <div><strong>ou US$ 99 vitalício</strong></div>
+          <p class="founding" data-founding-ends="2026-11-01T04:00:00Z"><strong>Oferta de fundador: vitalício por US$ 49 para os 50 primeiros compradores, até 31 de outubro (depois, US$ 99).</strong> O preço é em dólar. A oferta aparece no botão de upgrade e nas mensagens de limite dentro da extensão.</p>
           <ul>
             <li>Sem limites do plano: pastas, buscas, exportações, transcrições, traduções, lembretes, respostas rápidas, regras, respostas de IA, quadro de negócios e buscas salvas ilimitados</li>
             <li>Carregar conversa inteira, com busca em todo o histórico</li>
@@ -449,5 +452,8 @@ footer .legal{border-top:1px solid #2a3942;margin-top:30px;padding-top:18px;font
     <p class="legal">WhatsApp e WhatsApp Web são marcas de seus respectivos donos. O WA Folders é uma extensão independente, sem ligação, aprovação ou patrocínio do WhatsApp ou da Meta. As capturas usam conversas de demonstração com nomes inventados.</p>
   </div>
 </footer>
+<script>
+(function(){var n=Date.now();document.querySelectorAll("[data-founding-ends]").forEach(function(e){if(n>=Date.parse(e.getAttribute("data-founding-ends")))e.hidden=true;});})();
+</script>
 </body>
 </html>

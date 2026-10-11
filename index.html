@@ -81,6 +81,15 @@
       "priceCurrency": "USD",
       "description": "No plan limits. One payment. Upgrade inside the extension.",
       "url": "https://chromewebstore.google.com/detail/hahfpdlfieloofgjhanljbbnakinfhil"
+    },
+    {
+      "@type": "Offer",
+      "name": "Pro (lifetime, founding offer)",
+      "price": "49",
+      "priceCurrency": "USD",
+      "priceValidUntil": "2026-10-31",
+      "description": "Lifetime for $49 for the first 50 buyers, through Oct 31, 2026. After that, or once 50 are sold, lifetime is $99. Upgrade inside the extension.",
+      "url": "https://chromewebstore.google.com/detail/hahfpdlfieloofgjhanljbbnakinfhil"
     }
   ]
 }
@@ -224,6 +233,7 @@ code{font:15px ui-monospace,SFMono-Regular,Consolas,monospace;background:#eef1f2
 .plan.pro{border:2px solid var(--green)}
 .price{font-size:34px;font-weight:750;margin:4px 0 2px}
 .price small{font-size:16px;font-weight:500;color:var(--muted)}
+.founding{margin:10px 0 0;padding:8px 10px;border-radius:8px;background:rgba(37,211,102,.12);font-size:14px;line-height:1.4}
 .plan ul{padding-left:20px;margin:16px 0 22px}
 .plan li{margin:5px 0}
 .small{font-size:14px;color:var(--muted);max-width:900px;margin-top:18px}
@@ -442,6 +452,7 @@ footer .legal{border-top:1px solid #2a3942;margin-top:30px;padding-top:18px;font
           <h3>Pro</h3>
           <div class="price">$9.99 <small>a month</small></div>
           <div><strong>or $99 lifetime</strong></div>
+          <p class="founding" data-founding-ends="2026-11-01T04:00:00Z"><strong>Founding offer: Lifetime $49 for the first 50 buyers, through Oct 31 (then $99).</strong> The offer shows up on the Upgrade button and in the limit messages inside the extension.</p>
           <ul>
             <li>No plan limits: unlimited folders, search results, exports, reminders, quick replies, rules, AI answers, voice-note transcriptions, translations, deal-board chats and saved searches</li>
             <li>Load whole chat, with search across its full history</li>
@@ -560,5 +571,8 @@ footer .legal{border-top:1px solid #2a3942;margin-top:30px;padding-top:18px;font
     <p class="legal">WhatsApp and WhatsApp Web are trademarks of their owners. WA Folders is an independent extension and is not affiliated with, endorsed by or sponsored by WhatsApp or Meta. Screenshots use demo chats with made-up names.</p>
   </div>
 </footer>
+<script>
+(function(){var n=Date.now();document.querySelectorAll("[data-founding-ends]").forEach(function(e){if(n>=Date.parse(e.getAttribute("data-founding-ends")))e.hidden=true;});})();
+</script>
 </body>
 </html>
