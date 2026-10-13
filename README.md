@@ -4,7 +4,7 @@ Chrome extension for [WhatsApp Web](https://web.whatsapp.com): folder tabs, loca
 
 **Install:** [WA Folders on the Chrome Web Store](https://chromewebstore.google.com/detail/wa-folders/hahfpdlfieloofgjhanljbbnakinfhil)
 
-**Site:** [https://chumzygood.github.io/wa-folders/](https://chumzygood.github.io/wa-folders/) · [Português (Brasil)](https://chumzygood.github.io/wa-folders/pt-br/) · [vs WhatsApp Lists](https://chumzygood.github.io/wa-folders/compare/)
+**Site:** [https://wafolders.com/](https://wafolders.com/) · [Português (Brasil)](https://wafolders.com/pt-br/) · [vs WhatsApp Lists](https://wafolders.com/compare/)
 
 Current store version: **1.2.9** (updated Oct 11, 2026). Made by Chanoch Kamelhar (`ckamelhar@gmail.com`). Not affiliated with WhatsApp or Meta.
 
