@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy policy | WA Folders</title>
+<meta name="description" content="How the WA Folders Chrome extension and wafolders.com handle data: stored on your computer, no WA Folders server, no analytics.">
+<link rel="canonical" href="https://wafolders.com/privacy.html">
+<style>body{font:17px/1.6 system-ui,sans-serif;max-width:760px;margin:40px auto;padding:0 20px;color:#1b1f23}h1{font-size:32px}h2{margin-top:32px}table{border-collapse:collapse;width:100%;font-size:15px}td,th{border:1px solid #ccd;padding:6px 8px;text-align:left;vertical-align:top}code{background:#f2f4f6;padding:1px 4px;border-radius:4px}</style>
+</head><body>
+<h1>WA Folders privacy policy</h1>
+<p><b>Effective:</b> October 14, 2026 · <b>Applies to:</b> the WA Folders Chrome extension (version 1.2.9 and later) and the website wafolders.com.</p>
+
+<h2>The short version</h2>
+<ul>
+<li>WA Folders has no account and no server. Your folders, notes, reminders, search index and settings are stored in your Chrome profile on your computer.</li>
+<li>We don't collect, sell or share your chats. There are no analytics, ads or trackers in the extension or on wafolders.com.</li>
+<li>Data leaves your browser only for a feature you turn on, and only to the service that feature needs: Polar (license check), Chrome Sync (Pro sync, off by default), an AI or speech provider whose key you added, or Hugging Face (one-time speech model download).</li>
+<li>WA Folders never sends WhatsApp messages for you.</li>
+</ul>
+
+<h2>What the extension reads</h2>
+<p>WA Folders runs only on <code>https://web.whatsapp.com</code>. To show folders, markers, search and exports, it reads what WhatsApp Web shows on your screen: chat names, chat ids, message text and times in chats you open, and whether a message is unread or from you. It does not read your phone, your contacts list outside WhatsApp Web, or other websites.</p>
+
+<h2>What is stored, and where</h2>
+<table>
+<tr><th>Data</th><th>Where</th><th>Leaves your computer?</th></tr>
+<tr><td>Folders, chat-to-folder assignments, notes, reminders, quick replies, rules, deal board, settings</td><td><code>chrome.storage.local</code> in your Chrome profile</td><td>No (see Sync)</td></tr>
+<tr><td>Search index of messages WA Folders has seen, voice-note transcripts</td><td><code>chrome.storage.local</code></td><td>No</td></tr>
+<tr><td>Folders, quick replies and rules (Pro, only if you turn Sync on)</td><td><code>chrome.storage.sync</code></td><td>Yes, through Google's Chrome Sync to your other signed-in Chrome browsers. Messages and notes are never synced.</td></tr>
+<tr><td>License key (Pro) and its last check result</td><td><code>chrome.storage.local</code></td><td>The key is sent to Polar to check it (below).</td></tr>
+<tr><td>Your own AI or speech API keys</td><td><code>chrome.storage.local</code></td><td>Sent only to the provider the key belongs to, with each request you make.</td></tr>
+<tr><td>Downloaded speech model</td><td>Browser cache / extension storage</td><td>No</td></tr>
+<tr><td>Exports</td><td>Files in your Downloads folder</td><td>Only if you send them somewhere</td></tr>
+</table>
+
+<h2>When data leaves your browser</h2>
+<table>
+<tr><th>Feature (when)</th><th>Goes to</th><th>What is sent</th></tr>
+<tr><td>Pro license check: when you paste a key and press Confirm, then about every 3 days</td><td>Polar (api.polar.sh), our payment provider</td><td>The license key and WA Folders' public Polar organization id. No chat content. Chrome asks your permission for api.polar.sh first.</td></tr>
+<tr><td>Buying Pro</td><td>Polar checkout (buy.polar.sh), opened in a new tab</td><td>What you type at checkout (email, payment details) goes to Polar, not to WA Folders. See Polar's privacy policy.</td></tr>
+<tr><td>Voice notes to text, default on-device model: first use only</td><td>Hugging Face (huggingface.co)</td><td>A normal file download of the speech model (about 80 MB or 252 MB). No audio, no chat data. You are asked first.</td></tr>
+<tr><td>Voice notes with your own OpenAI or Google Gemini key: each time you click Transcribe</td><td>OpenAI (api.openai.com) or Google (generativelanguage.googleapis.com)</td><td>The audio of that one voice note, with your key.</td></tr>
+<tr><td>Catch me up / Draft a reply with your own Anthropic (Claude), OpenAI or Gemini key: each time you click</td><td>Anthropic (api.anthropic.com), OpenAI or Google</td><td>The messages of the chat you asked about, with your key. Default is Chrome's built-in on-device AI, where nothing leaves your computer.</td></tr>
+<tr><td>Local model (Ollama)</td><td>Your own computer (localhost)</td><td>The chat you asked about, to your local model only.</td></tr>
+<tr><td>Translation</td><td>Chrome's built-in translator, on your computer. Only if Chrome can't translate a message and you added an OpenAI or Gemini key: that provider</td><td>The text of the one message you clicked Translate on. Translations are not saved.</td></tr>
+<tr><td>Sync (Pro, off by default)</td><td>Google Chrome Sync</td><td>Folders, quick replies, rules.</td></tr>
+<tr><td>Uninstall page: when you remove the extension</td><td>wafolders.com/uninstall/ opens; an optional survey form is a Google Form</td><td>The page address carries the version, UI language and four one-letter buckets (install age, setup progress, panel shown, AI available). No ids, no chat data. Survey answers go to Google Forms only if you submit them.</td></tr>
+</table>
+<p>Requests to AI and speech providers go straight from your browser to them under your own account and their terms. WA Folders never sees them. Chrome asks your permission for each provider's address the first time.</p>
+
+<h2>The website (wafolders.com)</h2>
+<p>wafolders.com is a static site hosted on GitHub Pages. It sets no cookies and runs no analytics or ad scripts. Like any web host, GitHub (and the domain's DNS provider) may log technical data such as IP addresses to deliver and protect the site; see GitHub's privacy statement. Links to the Chrome Web Store and Polar carry campaign tags (utm_…) that those services may record.</p>
+
+<h2>Chrome Web Store and Limited Use</h2>
+<p>The use of information received from Google APIs and from WhatsApp Web pages will adhere to the <a href="https://developer.chrome.com/docs/webstore/program-policies/limited-use">Chrome Web Store User Data Policy, including the Limited Use requirements</a>. WA Folders uses data only to provide the features you see. It does not sell data, use it for advertising or credit decisions, or let humans read it. Data is transferred only as described above, to provide a feature you chose, or where the law requires.</p>
+<p>The Chrome Web Store itself (Google) handles installs, reviews and the store's own install statistics under Google's privacy policy.</p>
+
+<h2>Retention and deletion</h2>
+<ul>
+<li>Local data stays until you delete it. Delete a note, reminder or folder in the panel, or remove everything by uninstalling WA Folders (Chrome deletes its local storage). Export a backup first in Settings → Backup & restore if you want a copy.</li>
+<li>Synced data: turn Sync off in WA Folders settings, or clear it from Chrome Sync in your Google account.</li>
+<li>Polar keeps purchase and license records as a payment processor and under tax law. To ask about them, contact us or Polar.</li>
+<li>We hold no copy of your chats, so there is nothing on our side to delete. For other questions about your data, email us.</li>
+</ul>
+
+<h2>Your rights</h2>
+<p>Depending on where you live (for example under the GDPR or CCPA), you may have rights to access, correct or delete personal data. Because WA Folders stores your data on your own device, you can do this directly. For purchase records held by Polar, email us and we'll help.</p>
+
+<h2>Children</h2>
+<p>WA Folders is not directed to children under 13 (or the minimum age in your country) and we don't knowingly collect their data. WhatsApp itself sets a minimum age to use its service.</p>
+
+<h2>Security</h2>
+<p>Data stays in Chrome's extension storage. Password-protected exports use AES-GCM-256 with a PBKDF2-SHA-256 key (600,000 iterations); the PIN lock stores only a salted PBKDF2 hash.</p>
+
+<section id="ai-agent">
+<h2>AI agent access (version 1.3.1, off by default)</h2>
+<p>WA Folders can let an AI agent on your own computer (for example Claude Desktop, Cursor, Codex or another app that speaks the Model Context Protocol, "MCP") use folders you choose. It works only after you do all three: install the separate WA Folders agent bridge on your computer, turn on <em>Settings &gt; AI agent access</em> (Chrome then asks for its "communicate with cooperating native applications" permission), and tick the folders the agent may use.</p>
+<h3>How it connects</h3>
+<p>The extension talks to the bridge through Chrome native messaging. The bridge is a small program on your computer that your AI app starts; the two connect over a local pipe on your machine only. The bridge makes no internet connections, and there is no WA Folders server in between.</p>
+<h3>What the agent can read</h3>
+<p>Only the folders you ticked. From those: folder names, chat names, your private notes, reminder times, and short snippets (the last few lines, up to 300 characters each) of messages WA Folders has already indexed on your computer. Each allowed folder can also be offered to the agent as a short summary ("resource", capped at about 4,000 tokens) so the agent has it as context. Chats in folders you did not tick, and chats in no folder, are never shared.</p>
+<h3>What the agent can do</h3>
+<p>Read-only by default. If you also turn on the separate write switch, the agent can add a chat to an allowed folder and set a WA Folders reminder. It can never send, read aloud, delete or open WhatsApp messages, and never presses Send. "Summarize chat" uses the AI key you set in WA Folders (Private AI) and goes to that provider only.</p>
+<h3>Retention, consent and control</h3>
+<ul>
+<li>WA Folders keeps nothing new: the bridge stores no data, and the agent settings stay on this computer (never synced or put in backups).</li>
+<li>What you share with an agent is then handled by that agent's provider under its own privacy policy and retention rules.</li>
+<li>Revoke anytime: <em>Settings &gt; Revoke all agent access</em> turns it off, clears the folder list and removes Chrome's native-messaging permission. To remove the bridge, run the uninstall line its installer prints.</li>
+</ul>
+</section>
+<h2>Changes</h2>
+<p>If this policy changes, we'll update this page and the effective date. Significant changes will also be noted in the extension's what's-new card.</p>
+
+<h2>Contact</h2>
+<p>Email <a href="mailto:ckamelhar@gmail.com">ckamelhar@gmail.com</a>.</p>
+
+<p style="font-size:14px;color:#555">WhatsApp and WhatsApp Web are trademarks of their owners. WA Folders is an independent extension, not affiliated with, endorsed by or sponsored by WhatsApp or Meta.</p>
+</body></html>
