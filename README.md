@@ -23,7 +23,7 @@ Works only on WhatsApp Web in Chrome on a computer. It does not work in the What
 
 Free plan, no time limit: 5 folders, 5 search results, 3 exports a day, plus small daily allowances for transcription, translation, reminders, quick replies, rules, AI answers and the deal board.
 
-Pro is a one-time $4.99 unlock (paid through Polar, no subscription). Try Pro free for 7 days from inside the extension (no card). Upgrade from any limit message or the toolbar popup, then paste your license key (starts with `WAF-`).
+Pro is a one-time $4.99 unlock (paid through Polar, no subscription). Upgrade from any limit message or the toolbar popup, then paste your license key (starts with `WAF-`).
 
 ## Privacy in one line
 
