@@ -6,7 +6,7 @@ Chrome extension for [WhatsApp Web](https://web.whatsapp.com): folder tabs, loca
 
 **Site:** [https://wafolders.com/](https://wafolders.com/) · [Português (Brasil)](https://wafolders.com/pt-br/) · [vs WhatsApp Lists](https://wafolders.com/compare/)
 
-Current store version: **1.2.9** (updated Oct 11, 2026). Made by Chanoch Kamelhar (`ckamelhar@gmail.com`). Not affiliated with WhatsApp or Meta.
+Current store version: **1.2.9** (updated Oct 11, 2026). Made by Chanoch Kamelhar (`toolshed+wafolders@mail.grokbot.com`). Not affiliated with WhatsApp or Meta.
 
 ## What it does
 
@@ -41,4 +41,4 @@ This repo is the public website (GitHub Pages), not the extension source.
 | `sitemap.xml` / `robots.txt` | Crawl hints |
 | `uninstall/` | Optional one-tap feedback after remove (no chat content) |
 
-Questions or a bug: ckamelhar@gmail.com
+Questions or a bug: toolshed+wafolders@mail.grokbot.com
