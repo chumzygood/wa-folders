@@ -1,0 +1,30 @@
+# WA Folders
+
+> WA Folders is a Chrome extension for WhatsApp Web (web.whatsapp.com) that adds chat folders as tabs above the chat list, search across chat names, private notes and opened messages, chat export (HTML, CSV, Markdown, JSON), and "waiting on you" follow-up reminders. Data stays in Chrome on the user's computer: no account, no WA Folders server, no analytics, and it never sends messages. Independent; not affiliated with WhatsApp or Meta.
+
+Pricing: free plan with no time limit (5 folders, 5 search results per search, 3 exports a day, 5 voice-note transcriptions and 20 translations a day, 2 reminders at a time, 3 quick replies, 1 auto-file rule). Pro is a one-time $4.99 payment, no subscription, and removes those limits. There is no free trial of Pro.
+
+Works only in desktop Chrome on web.whatsapp.com, not in the WhatsApp phone or desktop apps. Current version: 1.3.3. Not the same product as "WA Folders Pro", which is a different developer's extension.
+
+## Key pages
+- [Home and pricing](https://wafolders.com/): features, free vs Pro, FAQ
+- [Chrome Web Store listing](https://chromewebstore.google.com/detail/hahfpdlfieloofgjhanljbbnakinfhil): install
+- [Folders for WhatsApp Web](https://wafolders.com/whatsapp-web-folders/)
+- [Search WhatsApp Web messages](https://wafolders.com/search-whatsapp-web-messages/)
+- [Export a WhatsApp chat](https://wafolders.com/export-whatsapp-chat/)
+- [Voice notes to text](https://wafolders.com/whatsapp-voice-notes-to-text/)
+- [Translate WhatsApp Web messages](https://wafolders.com/translate-whatsapp-web-messages/)
+- [AI agent access](https://wafolders.com/ai-agent/): optional, off by default
+- [Comparison with WhatsApp Lists and other extensions](https://wafolders.com/compare/)
+- [Privacy policy](https://wafolders.com/privacy.html)
+
+## Guides
+- [How to make folders in WhatsApp Web](https://wafolders.com/guides/make-folders-in-whatsapp-web/)
+- [How to organize WhatsApp Web chats into folders](https://wafolders.com/guides/organize-whatsapp-web-chats/)
+- [How to search WhatsApp Web messages](https://wafolders.com/guides/search-whatsapp-web-messages/)
+- [How to export a WhatsApp Web chat](https://wafolders.com/guides/export-whatsapp-web-chat/)
+
+## Optional
+- [Português (Brasil)](https://wafolders.com/pt-br/)
+- [Blog](https://wafolders.com/blog/)
+- Support: toolshed+wafolders@mail.grokbot.com
