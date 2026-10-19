@@ -120,4 +120,30 @@ footer{border-top:1px solid var(--line);padding:44px 0;color:var(--mut);font-siz
 <p><a href="https://chromewebstore.google.com/detail/hahfpdlfieloofgjhanljbbnakinfhil?utm_source=site&amp;utm_medium=web&amp;utm_campaign=footer">Chrome Web Store</a> · <a href="https://docs.google.com/document/d/e/2PACX-1vQN_YtNbLysl_tnmwefXKMtEm1V9wEoix6lwcEt_bPAR70F18GtbPPG4qgW9XqSkMOlqt8bKtt0vScU/pub">Privacy policy</a> · <a href="compare/">Compare</a> · <a href="changelog/">Changelog</a> · <a href="blog/">Blog</a> · <a href="blog/feed.xml">RSS</a> · <a href="pt-br/" hreflang="pt-BR" lang="pt-BR">Português</a> · <a href="mailto:toolshed+wafolders@mail.grokbot.com?subject=WA%20Folders%20support">Support</a></p></div>
 <div><h4>Features</h4><ul><li><a href="whatsapp-web-folders/">WhatsApp Web folders</a></li><li><a href="search-whatsapp-web-messages/">Search WhatsApp Web messages</a></li><li><a href="export-whatsapp-chat/">Export a WhatsApp chat</a></li><li><a href="whatsapp-voice-notes-to-text/">Voice notes to text</a></li><li><a href="translate-whatsapp-web-messages/">Translate WhatsApp Web messages</a></li></ul></div><div style="grid-column:span 2"><h4>Guides</h4><ul><li><a href="guides/make-folders-in-whatsapp-web/">How to make folders in WhatsApp Web</a></li><li><a href="guides/organize-whatsapp-web-chats/">How to organize WhatsApp Web chats into folders</a></li><li><a href="guides/search-whatsapp-web-messages/">How to search WhatsApp Web messages, and why some don&#x27;t show up</a></li><li><a href="guides/export-whatsapp-web-chat/">How to export a WhatsApp Web chat, and what ends up in the file</a></li></ul></div></div>
 <p>WhatsApp and WhatsApp Web are trademarks of their owners. WA Folders is an independent extension and is not affiliated with, endorsed by or sponsored by WhatsApp or Meta. Screenshots and the demo use made-up chats.</p></div></footer>
+<script>
+(function(){
+  // UTM pass-through for Chrome Web Store links. No cookies, no storage, no requests:
+  // if this page was opened with utm_* values, copy them onto the store links so the
+  // Chrome Web Store dashboard credits the real source instead of utm_source=site.
+  var q = new URLSearchParams(location.search);
+  var keys = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content'];
+  var clean = function(s){ return (s || '').replace(/[^A-Za-z0-9._-]/g, '').slice(0, 64); };
+  var incoming = {};
+  keys.forEach(function(k){ var v = clean(q.get(k)); if (v) incoming[k] = v; });
+  if (!incoming.utm_source) return;
+  var links = document.querySelectorAll('a[href*="chromewebstore.google.com/detail/"]');
+  Array.prototype.forEach.call(links, function(a){
+    try {
+      var u = new URL(a.href);
+      var spot = u.searchParams.get('utm_campaign');
+      keys.forEach(function(k){
+        if (incoming[k]) u.searchParams.set(k, incoming[k]); else u.searchParams.delete(k);
+      });
+      // Keep which button was clicked (hero, nav, footer...) in utm_term.
+      if (spot) u.searchParams.set('utm_term', clean(spot));
+      a.href = u.toString();
+    } catch (e) {}
+  });
+})();
+</script>
 </body></html>

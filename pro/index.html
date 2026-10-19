@@ -102,4 +102,30 @@ footer{border-top:1px solid var(--line);padding:30px 0;color:var(--mut);font-siz
   });
 })();
 </script>
+<script>
+(function(){
+  // UTM pass-through for Chrome Web Store links. No cookies, no storage, no requests:
+  // if this page was opened with utm_* values, copy them onto the store links so the
+  // Chrome Web Store dashboard credits the real source instead of utm_source=site.
+  var q = new URLSearchParams(location.search);
+  var keys = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content'];
+  var clean = function(s){ return (s || '').replace(/[^A-Za-z0-9._-]/g, '').slice(0, 64); };
+  var incoming = {};
+  keys.forEach(function(k){ var v = clean(q.get(k)); if (v) incoming[k] = v; });
+  if (!incoming.utm_source) return;
+  var links = document.querySelectorAll('a[href*="chromewebstore.google.com/detail/"]');
+  Array.prototype.forEach.call(links, function(a){
+    try {
+      var u = new URL(a.href);
+      var spot = u.searchParams.get('utm_campaign');
+      keys.forEach(function(k){
+        if (incoming[k]) u.searchParams.set(k, incoming[k]); else u.searchParams.delete(k);
+      });
+      // Keep which button was clicked (hero, nav, footer...) in utm_term.
+      if (spot) u.searchParams.set('utm_term', clean(spot));
+      a.href = u.toString();
+    } catch (e) {}
+  });
+})();
+</script>
 </body></html>
