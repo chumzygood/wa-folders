@@ -21,6 +21,7 @@ Works only in desktop Chrome on web.whatsapp.com, not in the WhatsApp phone or d
 - [Pro](https://wafolders.com/pro/): what Pro adds, the one-time $4.99 price, how to activate a license key
 
 ## Guides
+- [WhatsApp Web folders: your first minute with WA Folders](https://wafolders.com/guides/whatsapp-web-folders-first-minute/): install, Get started card, file a chat, search or export
 - [How to make folders in WhatsApp Web](https://wafolders.com/guides/make-folders-in-whatsapp-web/)
 - [How to organize WhatsApp Web chats into folders](https://wafolders.com/guides/organize-whatsapp-web-chats/)
 - [How to search WhatsApp Web messages](https://wafolders.com/guides/search-whatsapp-web-messages/)
