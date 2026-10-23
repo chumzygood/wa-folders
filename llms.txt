@@ -34,5 +34,6 @@ Works only in desktop Chrome on web.whatsapp.com, not in the WhatsApp phone or d
 - [Português (Brasil)](https://wafolders.com/pt-br/)
 - [Comparação em português](https://wafolders.com/pt-br/comparar/): a mesma comparação, em português
 - [Como exportar uma conversa do WhatsApp Web (pt-BR)](https://wafolders.com/pt-br/blog/como-exportar-conversa-whatsapp-web/)
+- [Como pesquisar mensagens antigas no WhatsApp Web (pt-BR)](https://wafolders.com/pt-br/blog/como-pesquisar-mensagens-antigas-whatsapp-web/)
 - [Blog](https://wafolders.com/blog/)
 - Support: toolshed+wafolders@mail.grokbot.com
