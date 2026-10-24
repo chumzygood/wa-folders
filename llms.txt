@@ -21,6 +21,7 @@ Works only in desktop Chrome on web.whatsapp.com, not in the WhatsApp phone or d
 - [Pro](https://wafolders.com/pro/): what Pro adds, the one-time $4.99 price, how to activate a license key
 
 ## Guides
+- [WhatsApp Web keyboard shortcuts for Windows and Mac, plus folder and note keys](https://wafolders.com/guides/whatsapp-web-keyboard-shortcuts/): the Help Center shortcut table (Windows and Mac), what WhatsApp has no key for, and the WA Folders Ctrl+K palette (Cmd+K on Mac; it takes over WhatsApp's Mac extended search unless you untick the setting)
 - [How to add private notes to WhatsApp Web chats](https://wafolders.com/guides/add-notes-to-whatsapp-web-chats/): what WhatsApp offers, workarounds, and a private note box per chat on web.whatsapp.com (free; saved only in Chrome)
 - [How to label chats on WhatsApp Web without WhatsApp Business](https://wafolders.com/guides/label-whatsapp-web-chats-without-business/): Business labels vs WhatsApp Lists vs folder tabs; tag and filter chats on web.whatsapp.com
 - [How to see who hasn't replied on WhatsApp Web](https://wafolders.com/guides/who-hasnt-replied-on-whatsapp-web/): Waiting on them list in the Today view, reminders that clear when they reply
