@@ -2,7 +2,7 @@
 
 > WA Folders is a Chrome extension for WhatsApp Web (web.whatsapp.com) that adds chat folders as tabs above the chat list, search across chat names, private notes and opened messages, chat export (HTML, CSV, Markdown, JSON), and "waiting on you" follow-up reminders. Data stays in Chrome on the user's computer: no account, no WA Folders server, no analytics, and it never sends messages. Independent; not affiliated with WhatsApp or Meta.
 
-Pricing: free plan with no time limit (5 folders, 5 search results per search, 3 exports a day, 5 voice-note transcriptions and 20 translations a day, 2 reminders at a time, 3 quick replies, 1 auto-file rule). Pro is a one-time $4.99 payment, no subscription, and removes those limits. There is no free trial of Pro.
+Pricing: free plan with no time limit (5 folders, 20 search results per search, 3 exports a day, 5 voice-note transcriptions and 20 translations a day, 2 reminders at a time, 3 quick replies, 1 auto-file rule). Pro is a one-time $4.99 payment, no subscription, and removes those limits. There is no free trial of Pro.
 
 Interface languages: English, Español, Português (Brasil), हिन्दी, Bahasa Indonesia, العربية.
 

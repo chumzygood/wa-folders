@@ -23,7 +23,7 @@ Site: https://wafolders.com/
 Data stays in Chrome's local storage on your computer. No account, no analytics, no ads, no WA Folders server. Optional Pro sync uses Chrome Sync on your own Google account.
 
 ## Pricing
-Free plan, no time limit: 5 folders, 5 search results per search, 3 exports a day, 2 reminders at a time, 3 quick replies, 1 auto-file rule, 3 AI answers a day, 5 deal-board chats, 1 saved search.
+Free plan, no time limit: 5 folders, 20 search results per search, 3 exports a day, 2 reminders at a time, 3 quick replies, 1 auto-file rule, 3 AI answers a day, 5 deal-board chats, 1 saved search.
 Pro: US$4.99 one-time payment, no subscription, no free trial.
 
 ## Languages of the extension
