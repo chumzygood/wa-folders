@@ -50,6 +50,7 @@ A: WA Folders lists individual chats where you sent the last message and gets ri
 - Keyboard shortcuts: https://wafolders.com/guides/whatsapp-web-keyboard-shortcuts/
 - Comparison with WhatsApp Lists and other extensions: https://wafolders.com/compare/
 - Spanish Q&A: https://wafolders.com/es/organizar-chats-whatsapp-web-carpetas/
+- Portuguese (Brazil) Q&A: https://wafolders.com/pt-br/organizar-conversas-whatsapp-web-pastas/
 - Portuguese (Brazil): https://wafolders.com/pt-br/
 - Changelog: https://wafolders.com/changelog/
 - Support: toolshed+wafolders@mail.grokbot.com
