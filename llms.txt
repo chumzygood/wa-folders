@@ -4,6 +4,8 @@
 
 Pricing: free plan with no time limit (5 folders, 5 search results per search, 3 exports a day, 5 voice-note transcriptions and 20 translations a day, 2 reminders at a time, 3 quick replies, 1 auto-file rule). Pro is a one-time $4.99 payment, no subscription, and removes those limits. There is no free trial of Pro.
 
+Interface languages: English, Español, Português (Brasil), हिन्दी, Bahasa Indonesia, العربية.
+
 Works only in desktop Chrome on web.whatsapp.com, not in the WhatsApp phone or desktop apps. Current version: 1.3.8. Not the same product as "WA Folders Pro", which is a different developer's extension.
 
 ## Key pages
@@ -21,6 +23,7 @@ Works only in desktop Chrome on web.whatsapp.com, not in the WhatsApp phone or d
 - [Pro](https://wafolders.com/pro/): what Pro adds, the one-time $4.99 price, how to activate a license key
 
 ## Guides
+- [How to search WhatsApp Web by date, and what to do when the date you need won't load](https://wafolders.com/guides/search-whatsapp-web-by-date/): the Help Center steps (calendar icon inside one chat), why older days can be missing on a linked device, and how WA Folders note search finds the chat first (WA Folders has no date filter)
 - [WhatsApp Web keyboard shortcuts for Windows and Mac, plus folder and note keys](https://wafolders.com/guides/whatsapp-web-keyboard-shortcuts/): the Help Center shortcut table (Windows and Mac), what WhatsApp has no key for, and the WA Folders Ctrl+K palette (Cmd+K on Mac; it takes over WhatsApp's Mac extended search unless you untick the setting)
 - [How to add private notes to WhatsApp Web chats](https://wafolders.com/guides/add-notes-to-whatsapp-web-chats/): what WhatsApp offers, workarounds, and a private note box per chat on web.whatsapp.com (free; saved only in Chrome)
 - [How to label chats on WhatsApp Web without WhatsApp Business](https://wafolders.com/guides/label-whatsapp-web-chats-without-business/): Business labels vs WhatsApp Lists vs folder tabs; tag and filter chats on web.whatsapp.com
@@ -31,10 +34,20 @@ Works only in desktop Chrome on web.whatsapp.com, not in the WhatsApp phone or d
 - [How to search WhatsApp Web messages](https://wafolders.com/guides/search-whatsapp-web-messages/)
 - [How to export a WhatsApp Web chat](https://wafolders.com/guides/export-whatsapp-web-chat/)
 
+## Common questions
+- Does WhatsApp Web have folders? Not as folders. WhatsApp has Lists (All, Unread, Favorites, Groups and custom lists) whose setup steps are written for the phone apps. WA Folders adds folder tabs above the chat list on web.whatsapp.com.
+- Is WA Folders free? Yes, the free plan has no time limit. Pro is US$4.99 once, no subscription, no free trial.
+- Does it send messages or use a server? It never sends messages. Data stays in Chrome's local storage; there is no account, analytics, ads or WA Folders server.
+- Does it work on the phone app or WhatsApp Desktop? No, only web.whatsapp.com in desktop Chrome.
+- Can WA Folders search by date? No. Use WhatsApp's own calendar search inside a chat; WA Folders searches chat names, private notes and messages from chats you opened.
+- Who makes it? Toolshed, an independent developer. Not affiliated with WhatsApp or Meta.
+
 ## Optional
+- [Organizar chats de WhatsApp Web en carpetas (español)](https://wafolders.com/es/organizar-chats-whatsapp-web-carpetas/): preguntas y respuestas con lo que ofrece WhatsApp y los pasos de WA Folders
 - [Português (Brasil)](https://wafolders.com/pt-br/)
 - [Comparação em português](https://wafolders.com/pt-br/comparar/): a mesma comparação, em português
 - [Como exportar uma conversa do WhatsApp Web (pt-BR)](https://wafolders.com/pt-br/blog/como-exportar-conversa-whatsapp-web/)
 - [Como pesquisar mensagens antigas no WhatsApp Web (pt-BR)](https://wafolders.com/pt-br/blog/como-pesquisar-mensagens-antigas-whatsapp-web/)
+- [Full facts for AI assistants](https://wafolders.com/llms-full.txt)
 - [Blog](https://wafolders.com/blog/)
 - Support: toolshed+wafolders@mail.grokbot.com
