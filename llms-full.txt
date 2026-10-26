@@ -43,6 +43,7 @@ Q: Who hasn't replied to me on WhatsApp Web?
 A: WA Folders lists individual chats where you sent the last message and gets rid of the reminder when they reply.
 
 ## Pages
+- [WhatsApp Business Reply Templates Pack, Vol. 1](https://wafolders.com/templates/whatsapp-business-reply-templates-pack-01/): a separate US$4.99 one-time download from Toolshed, 44 editable quick-reply messages for small businesses as a Markdown guide and a CSV file; not part of the WA Folders extension, not affiliated with WhatsApp or Meta
 - Folders: https://wafolders.com/whatsapp-web-folders/
 - Search: https://wafolders.com/search-whatsapp-web-messages/
 - Search by date: https://wafolders.com/guides/search-whatsapp-web-by-date/
