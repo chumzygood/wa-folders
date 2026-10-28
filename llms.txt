@@ -45,6 +45,7 @@ Works only in desktop Chrome on web.whatsapp.com, not in the WhatsApp phone or d
 
 ## Optional
 - [Organizar chats de WhatsApp Web en carpetas (español)](https://wafolders.com/es/organizar-chats-whatsapp-web-carpetas/): preguntas y respuestas con lo que ofrece WhatsApp y los pasos de WA Folders
+- [Buscar mensajes antiguos en WhatsApp Web (español)](https://wafolders.com/es/buscar-mensajes-whatsapp-web/): preguntas y respuestas sobre la búsqueda de WhatsApp Web y la búsqueda local de WA Folders
 - [Organizar conversas do WhatsApp Web em pastas (pt-BR)](https://wafolders.com/pt-br/organizar-conversas-whatsapp-web-pastas/): perguntas e respostas com o que a Central de Ajuda diz sobre as listas e os passos do WA Folders
 - [Cara membuat folder chat di WhatsApp Web (Bahasa Indonesia)](https://wafolders.com/id/folder-chat-whatsapp-web/): tanya jawab tentang Daftar WhatsApp menurut Pusat Bantuan dan langkah WA Folders
 - [Português (Brasil)](https://wafolders.com/pt-br/)
