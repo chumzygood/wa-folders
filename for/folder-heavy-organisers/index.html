@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Give work, family and customer conversations their own folders. Use the Today line and follow-ups to decide what needs attention, while keeping the free plan’s capacity in view.">
+  <meta name="theme-color" content="#0f172a">
+  <title>More conversations than one chat list can handle? — WA Folders</title>
+  <style>
+    :root { color-scheme: dark; --bg: #0f172a; --card: #1e293b; --text: #e2e8f0; --muted: #b0bdcf; --accent: #5eead4; --line: #334155; }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.65 system-ui, -apple-system, "Segoe UI", sans-serif; }
+    a { color: var(--accent); text-underline-offset: .22em; }
+    a:hover { color: #ccfbf1; }
+    a:focus-visible { outline: 3px solid var(--accent); outline-offset: 6px; }
+    .wrap { width: min(100% - 40px, 1000px); margin-inline: auto; }
+    .skip { position: absolute; top: -100px; left: 20px; padding: 12px; background: var(--card); }
+    .skip:focus { top: 12px; }
+    header { border-bottom: 1px solid var(--line); }
+    nav { display: flex; justify-content: space-between; align-items: center; gap: 20px; padding-block: 24px; }
+    .mark { display: inline-block; background: #0f766e; color: #fff; font-size: 13px; font-weight: 750; letter-spacing: .06em; padding: 5px 10px; border-radius: 6px; }
+    nav a { font-size: 14px; }
+    .eyebrow { color: var(--accent); font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: .13em; }
+    .hero { padding-block: 76px 64px; }
+    h1 { max-width: 820px; margin: 16px 0 24px; font-size: clamp(36px, 6vw, 64px); line-height: 1.12; letter-spacing: -.04em; font-weight: 650; }
+    .intro { max-width: 650px; font-size: 20px; color: var(--muted); }
+    .cta { display: inline-flex; justify-content: center; align-items: center; min-height: 48px; padding: 12px 22px; border-radius: 7px; background: var(--accent); color: var(--bg); font-weight: 750; text-decoration: none; }
+    .cta:hover { background: #99f6e4; color: var(--bg); }
+    .hero .cta { margin-top: 16px; }
+    .fine { color: var(--muted); font-size: 13px; }
+    .path { display: flex; flex-wrap: wrap; gap: 10px; padding: 22px 0; margin-top: 34px; border-block: 1px solid var(--line); }
+    .path span { background: var(--card); border: 1px solid var(--line); border-radius: 6px; padding: 6px 13px; font-size: 14px; }
+    .path .active { border-color: var(--accent); color: var(--accent); }
+    h2 { font-size: clamp(25px, 4vw, 35px); line-height: 1.25; font-weight: 650; letter-spacing: -.025em; }
+    .section-intro { color: var(--muted); max-width: 640px; }
+    .reasons { list-style: none; counter-reset: reason; padding: 0; margin: 32px 0 0; }
+    .reasons > li { counter-increment: reason; display: grid; grid-template-columns: 76px 1fr; gap: 24px; border-top: 1px solid var(--line); padding: 34px 0; }
+    .reasons > li::before { content: counter(reason, decimal-leading-zero); color: var(--accent); font-size: 35px; font-weight: 600; line-height: 1.3; }
+    h3 { font-size: 23px; font-weight: 650; line-height: 1.3; margin: 0 0 12px; letter-spacing: -.02em; }
+    .reasons p { max-width: 690px; margin: 0; color: var(--muted); }
+    .detail { display: inline-block; margin-top: 14px; padding: 5px 11px; border-left: 2px solid #0f766e; font-size: 14px; color: #ccfbf1; background: var(--card); }
+    .proof { margin: 32px 0 64px; padding: 32px; border: 1px solid var(--line); border-radius: 10px; background: var(--card); }
+    .proof h2 { margin: 10px 0 16px; }
+    .proof p { max-width: 750px; }
+    .closing { border-top: 1px solid var(--line); padding: 48px 0 64px; }
+    .closing h2 { max-width: 650px; margin-top: 0; }
+    .closing p { color: var(--muted); max-width: 650px; }
+    footer { border-top: 1px solid var(--line); padding-block: 24px; font-size: 13px; color: var(--muted); }
+    footer p { margin: 8px 0; }
+    @media (max-width: 600px) { .hero { padding-block: 44px 40px; } .intro { font-size: 18px; } .reasons > li { grid-template-columns: 42px 1fr; gap: 14px; padding-block: 26px; } .reasons > li::before { font-size: 27px; } h3 { font-size: 21px; } .proof { padding: 22px; } .cta { width: 100%; text-align: center; } }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  :root{--reason-line:#334155;--reason-muted:#b0bdcf}
+.reason-layout{display:grid;gap:22px;min-width:0}.reason-copy{min-width:0}.reason-media{margin:0;min-width:0}.reason-media img{display:block;width:100%;height:auto;border-radius:9px;border:1px solid var(--reason-line,#cbd5e1)}.reason-media a{display:block}.reason-media figcaption{font-size:12px;line-height:1.5;margin-top:9px;color:var(--reason-muted,#475569)}.review-signal{font-size:14px!important;line-height:1.6;max-width:660px}.offer-panel,.reviews-panel,.faq-panel{padding:28px;margin:35px 0;border:1px solid var(--reason-line,#cbd5e1);border-radius:10px}.offer-panel h2,.reviews-panel h2,.faq-panel h2{margin-top:0}.review-entry{padding:18px 0;border-top:1px solid var(--reason-line,#cbd5e1)}.review-entry p{margin:8px 0}.review-attribution{font-size:13px!important}.faq-panel details{padding:17px 0;border-top:1px solid var(--reason-line,#cbd5e1)}.faq-panel summary{font-weight:700;cursor:pointer;line-height:1.5}.faq-panel details p{margin:12px 0 0}.persona-links{padding-left:20px}.persona-links li{margin:9px 0}@media(min-width:800px){.reason-layout{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:30px;align-items:center}}@media(max-width:600px){.offer-panel,.reviews-panel,.faq-panel{padding:20px}.reason-layout{gap:18px}}
+</style>
+<meta name="robots" content="noindex,follow">
+<link rel="stylesheet" href="../../assets/wa21/candidate.css"><script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "WA Folders", "applicationCategory": "BrowserApplication", "operatingSystem": "Google Chrome (desktop)", "softwareVersion": "2.1.0", "inLanguage": ["en", "es", "pt-BR", "hi", "id", "ar", "de", "fr", "it", "tr", "ru", "pt-PT"], "installUrl": "https://chromewebstore.google.com/detail/hahfpdlfieloofgjhanljbbnakinfhil", "url": "https://wafolders.com/", "offers": [{"@type": "Offer", "name": "Free", "price": "0", "priceCurrency": "USD"}, {"@type": "Offer", "name": "Pro (one-time unlock)", "price": "4.99", "priceCurrency": "USD", "description": "Pay once, unlocks every Pro feature. Bought inside the extension."}], "applicationSubCategory": "Productivity", "privacyPolicy": "https://wafolders.com/privacy.html", "description": "2.1.0 release candidate; publication pending. WA Folders is a Chrome extension by Toolshed that adds folder tabs, search, chat export and follow-up reminders to WhatsApp Web, with your data kept in your browser.", "publisher": {"@id": "https://wafolders.com/#toolshed"}, "author": {"@id": "https://wafolders.com/#toolshed"}, "sameAs": ["https://chromewebstore.google.com/detail/wa-folders/hahfpdlfieloofgjhanljbbnakinfhil", "https://github.com/chumzygood/wa-folders"]}</script>
+</head>
+<body><aside class="release-status" role="note"><strong>2.1.0 candidate; publication pending</strong> · This page describes a release draft. Check the Chrome Web Store for the currently available version.</aside>
+  <a class="skip" href="#main">Skip to content</a>
+  <header>
+    <nav class="wrap" aria-label="Main navigation">
+      <a class="mark" href="../../index.html">WA FOLDERS</a>
+      <a href="#reasons">Why WA Folders?</a><a href="#pricing">Pricing</a><a href="../../guides/">Guides</a>
+    </nav>
+  </header>
+  <main id="main" class="wrap">
+    <section class="hero" aria-labelledby="headline">
+      <p class="eyebrow"><a href="../../index.html">WA Folders</a> · For people organising multiple chats</p>
+      <h1 id="headline">More conversations than one chat list can handle?</h1>
+      <p class="intro">Give work, family and customer conversations their own folders. Use the Today line and follow-ups to decide what needs attention, while keeping the free plan’s capacity in view.</p>
+      <p class="review-signal"><a href="https://chromewebstore.google.com/detail/wa-folders/hahfpdlfieloofgjhanljbbnakinfhil/reviews">Chrome Web Store: 1.0/5 from 3 ratings</a>, supplied snapshot dated November 4, 2026 (not rechecked). Read the critical feedback below before installing.</p>
+      <a class="cta" href="https://chromewebstore.google.com/detail/wa-folders/hahfpdlfieloofgjhanljbbnakinfhil">Add WA Folders to Chrome</a>
+      <p class="fine">Free plan available. Works on WhatsApp Web on your computer.</p>
+      <div class="path" role="group" aria-label="Available smart views">
+        <span class="active">Needs reply</span><span>Waiting on them</span><span>Due</span><span>Unfiled</span>
+      </div>
+    </section>
+    <section id="reasons" aria-labelledby="reasons-title">
+      <p class="eyebrow">A little order for your conversations</p>
+      <h2 id="reasons-title">7 ways to give a busy chat list some order.</h2>
+      <p class="section-intro">Keep using WhatsApp Web. Add folders, follow-ups and a way back to the things you need.</p>
+      <ol class="reasons"><li><div class="reason-layout"><div class="reason-copy">
+            <h3>Separate work, family and everything else.</h3>
+            <p>Put chats into your own folders, with colours and emoji. Folder tabs sit above the chat list, so you can focus on the conversations that belong together.</p>
+            <span class="detail">Your folders live in this Chrome profile.</span>
+          </div><figure class="reason-media"><a href="../../assets/wa21/folders.png"><img src="../../assets/wa21/folders.png" alt="Actual WA Folders candidate UI with fictional demo data" loading="lazy"></a><figcaption>Actual packaged 2.1.0 candidate UI · fictional demo data.</figcaption></figure></div></li><li><div class="reason-layout"><div class="reason-copy">
+            <h3>See who’s waiting on you.</h3>
+            <p>Needs reply, Questions for me and Waiting on them help you spot unfinished conversations. The Today line brings those counts together with your due reminders. Open chats to help WA Folders learn their latest state.</p>
+            <span class="detail">Based on the chats and messages the extension has seen.</span>
+          </div><figure class="reason-media"><a href="../../assets/wa21/chat-tools.png"><img src="../../assets/wa21/chat-tools.png" alt="Actual WA Folders candidate UI with fictional demo data" loading="lazy"></a><figcaption>Actual packaged 2.1.0 candidate UI · fictional demo data.</figcaption></figure></div></li><li><div class="reason-layout"><div class="reason-copy">
+            <h3>Let a follow-up come back when it matters.</h3>
+            <p>Choose “remind me if they don’t reply” after you send a message. The reminder clears when WA Folders sees their reply. If you’re still waiting, the chat appears under Due. You can also set a reminder for a time you pick.</p>
+            <span class="detail">Desktop notifications are optional.</span>
+          </div><figure class="reason-media"><a href="../../assets/wa21/chat-tools.png"><img src="../../assets/wa21/chat-tools.png" alt="Actual WA Folders candidate UI with fictional demo data" loading="lazy"></a><figcaption>Actual packaged 2.1.0 candidate UI · fictional demo data.</figcaption></figure></div></li><li><div class="reason-layout"><div class="reason-copy">
+            <h3>Find the detail without reopening every chat.</h3>
+            <p>Search chat names, private notes and message text WA Folders has seen. Filter by folder, notes or links. Keep a private note on a chat so the context you need is there next time.</p>
+            <span class="detail">Search is local. Both Free and Pro automatically index older messages in the open chat while idle. Coverage stays partial and depends on what WhatsApp returns.</span>
+          </div><figure class="reason-media"><a href="../../assets/wa21/search.png"><img src="../../assets/wa21/search.png" alt="Actual WA Folders candidate UI with fictional demo data" loading="lazy"></a><figcaption>Actual packaged 2.1.0 candidate UI · fictional demo data.</figcaption></figure></div></li><li><div class="reason-layout"><div class="reason-copy">
+            <h3>Write the familiar reply without starting over.</h3>
+            <p>Save quick replies and insert them into the message box when you need them. Name tokens can personalise the text. Read it, edit it and send it yourself.</p>
+            <span class="detail">WA Folders never presses Send.</span>
+          </div><figure class="reason-media"><a href="../../assets/wa21/chat-tools.png"><img src="../../assets/wa21/chat-tools.png" alt="Actual WA Folders candidate UI with fictional demo data" loading="lazy"></a><figcaption>Actual packaged 2.1.0 candidate UI · fictional demo data.</figcaption></figure></div></li><li><div class="reason-layout"><div class="reason-copy">
+            <h3>Keep a useful record outside the chat.</h3>
+            <p>Export the open conversation as HTML, CSV, Markdown or JSON. The export uses loaded messages; media is labelled. Pro adds Load whole chat, whole-folder exports and password-protected exports, subject to technical limits.</p>
+            <span class="detail">Choose a readable document or data for your spreadsheet.</span>
+          </div><figure class="reason-media"><a href="../../assets/wa21/chat-tools.png"><img src="../../assets/wa21/chat-tools.png" alt="Actual WA Folders candidate UI with fictional demo data" loading="lazy"></a><figcaption>Actual packaged 2.1.0 candidate UI · fictional demo data.</figcaption></figure></div></li><li><div class="reason-layout"><div class="reason-copy">
+            <h3>Organise your chats without another account.</h3>
+            <p>Folders, notes and the search index stay in this browser profile. There’s no WA Folders account, no WA Folders server and no analytics. Optional features, including your own AI provider and Pro Chrome Sync, move data only when you choose to use them.</p>
+            <span class="detail">The privacy policy explains what each optional feature shares.</span>
+          </div><figure class="reason-media"><a href="../../assets/wa21/first-run.png"><img src="../../assets/wa21/first-run.png" alt="Actual WA Folders candidate UI with fictional demo data" loading="lazy"></a><figcaption>Actual packaged 2.1.0 candidate UI · fictional demo data.</figcaption></figure></div></li></ol>
+    </section>
+    <section class="proof" aria-labelledby="proof-title">
+      <p class="eyebrow">Check it for yourself</p>
+      <h2 id="proof-title">Real features. A real store listing.</h2>
+      <p>WA Folders is listed on the <a href="https://chromewebstore.google.com/detail/wa-folders/hahfpdlfieloofgjhanljbbnakinfhil">Chrome Web Store</a>, where you can check its product details, permissions and available reviews before installing.</p>
+      <p>Read the <a href="../../privacy.html">privacy policy</a> for local storage, optional AI providers, Chrome Sync, exports and license checks. The 2.1.0 candidate includes 10 folders, 10 exports per day and 50 results per search on Free. Automatic older-message indexing is included in both plans.</p>
+    </section>
+<section id="automatic-history" class="history-coverage"><h2>Older messages, with clear limits</h2><p>Free and Pro both include automatic local history indexing. Leave a chat open in a visible, focused WhatsApp Web tab and idle for 45 seconds. Indexing scrolls that conversation to request older pages, with at least 15 seconds between attempts across tabs.</p><p>Coverage is partial: only messages WhatsApp returns can be indexed. It does not scan unopened chats or guarantee every past message. It pauses for activity, a draft, playing media, privacy cover, an offline or hidden tab, and manual loading or export. Pause indexing in Older messages, or clear the local index in Settings; clearing also pauses automatic indexing.</p><p>Search stays on this device. Pro still adds the manual Load whole chat action and whole-chat export, subject to what WhatsApp returns and local technical limits. WA Folders never sends messages for you.</p></section><section id="offer" class="offer-panel" aria-labelledby="offer-title"><h2 id="offer-title">Match the plan to the work you organise.</h2><p>Try folder tabs, smart views and reminders within the free limits. If your workload needs more capacity or Pro-only features, compare the extension’s current plan details first. Use the current limits to judge whether the plan fits your workload.</p></section>
+<section id="reviews" class="reviews-panel" aria-labelledby="reviews-title"><h2 id="reviews-title">Ratings before upgrades</h2><p>The Chrome Web Store showed <strong>1.0 out of 5 from 3 ratings</strong> in the supplied November 4, 2026 snapshot. The three accessible written reviews raise concerns about price, history search and free capacity.</p><div class="review-entry"><h3>Value and price</h3><p>Havillah Dishes challenged the value. The developer disputed the price described.</p><p class="review-attribution"><a href="https://chromewebstore.google.com/detail/wa-folders/hahfpdlfieloofgjhanljbbnakinfhil/reviews">Havillah Dishes · October 19, 2026 · Chrome Web Store</a></p></div><div class="review-entry"><h3>Finding older messages</h3><p>Hevron Yerotarnia wanted broader history search. The developer acknowledged the seen-message limitation.</p><p class="review-attribution"><a href="https://chromewebstore.google.com/detail/wa-folders/hahfpdlfieloofgjhanljbbnakinfhil/reviews">Hevron Yerotarnia · October 19, 2026 · Chrome Web Store</a></p></div><div class="review-entry"><h3>Free capacity</h3><p>Richchild Abayomi criticised free limits. The developer disputed the folder allowance cited.</p><p class="review-attribution"><a href="https://chromewebstore.google.com/detail/wa-folders/hahfpdlfieloofgjhanljbbnakinfhil/reviews">Richchild Abayomi · October 19, 2026 · Chrome Web Store</a></p></div><p>These are critical reviews, not endorsements. Read the reviews and developer responses together before deciding.</p><p><strong>This is a dated snapshot, not a fresh rating check.</strong> We do not claim the score has improved or that reviewers have changed their views.</p><h3>What the 2.1.0 candidate changes</h3><ul><li>Free capacity becomes 10 folders, 10 exports per day and 50 results per search.</li><li>Free and Pro gain automatic older-message indexing in the open idle chat, with partial coverage, clear pause controls and local index clearing.</li><li>A simpler first step, existing-tab reuse and a quieter workspace address setup friction. The candidate has controlled browser checks; that is not a live WhatsApp reliability guarantee.</li><li>Pro remains $4.99 once. Earlier billing wording corrections did not change the price or introduce a subscription.</li></ul><p>These changes are in the release candidate and await publication. Try the available Free version and read the full reviews before deciding whether to upgrade.</p></section>
+
+
+<section id="pricing" class="alt"><div class="wrap"><div style="text-align:center"><h2>Free to try. Pay once to unlock everything.</h2>
+<p class="lead" style="margin:0 auto">No subscription. Every limit message in the extension has an Upgrade button, so you can decide when you hit one.</p></div>
+<div class="plans">
+<div class="plan"><h3>Free</h3><div class="price">$0 <small>forever</small></div><p class="fine">Everything, with daily allowances.</p>
+<ul><li>10 folders</li><li>50 search results per search</li><li>10 exports a day</li><li>5 voice-note transcriptions a day</li><li>20 translations a day</li><li>Today line, Waiting on them, privacy blur</li></ul>
+<a class="btn ghost" href="https://chromewebstore.google.com/detail/hahfpdlfieloofgjhanljbbnakinfhil?utm_source=site&amp;utm_medium=web&amp;utm_campaign=pricing_free" data-goatcounter-click="install">Add to Chrome</a></div>
+<div class="plan pro"><span class="badge">One-time</span><h3>Pro</h3><div class="price">$4.99 <small>once</small></div>
+
+<ul><li>No limits on anything in the Free column</li><li>Manual Load whole chat and whole-chat export, subject to available history</li><li>Whole-folder and password-protected exports</li><li>PIN lock screen</li><li>Sync folders between your Chrome browsers</li><li>One-time $4.99, no subscription</li></ul>
+<a class="btn" href="../../pro/?src=home">Unlock Pro, $4.99 once</a>
+<p class="fine">No WA Folders yet? <a href="https://chromewebstore.google.com/detail/hahfpdlfieloofgjhanljbbnakinfhil?utm_source=site&amp;utm_medium=web&amp;utm_campaign=pricing_pro_install" data-goatcounter-click="install">Add it to Chrome free</a> first, then unlock.</p>
+<p class="fine">After checkout, paste your license key (starts with WAF-) in the WA Folders toolbar popup. <a href="../../pro/#after">How activation works</a>.</p></div></div>
+<p class="fine" style="text-align:center;margin-top:22px">Local only: your chats, folders and notes stay in Chrome on your computer (<a href="https://wafolders.com/privacy.html">privacy policy</a>). Every release is in the <a href="../../changelog/">open changelog</a>. Questions: <a href="mailto:toolshed+wafolders@mail.grokbot.com?subject=WA%20Folders%20support">toolshed+wafolders@mail.grokbot.com</a>.</p>
+<div class="tbl"><table class="cmp"><thead><tr><th>Free vs Pro</th><th>Free</th><th>Pro</th></tr></thead><tbody><tr><td>Automatic older-message indexing</td><td>Included, partial local coverage</td><td>Included, partial local coverage</td></tr><tr><td>Folders (tabs above the chat list)</td><td>10</td><td>Unlimited</td></tr><tr><td>Search results per search</td><td>50</td><td>All indexed results; manual whole-chat loading</td></tr><tr><td>Chat exports</td><td>10 a day, loaded messages</td><td>Unlimited, whole chat, whole folder, password-protected</td></tr><tr><td>Voice notes to text</td><td>5 a day</td><td>Unlimited</td></tr><tr><td>Translations</td><td>20 a day</td><td>Unlimited</td></tr><tr><td>Follow-up reminders</td><td>2 at a time</td><td>Unlimited</td></tr><tr><td>AI catch-up and reply drafts</td><td>3 a day</td><td>Unlimited</td></tr><tr><td>Quick replies / auto-file rules</td><td>3 / 1</td><td>Unlimited</td></tr><tr><td>Deal board chats / saved searches</td><td>5 / 1</td><td>Unlimited</td></tr><tr><td>PIN lock screen</td><td>—</td><td>✓</td></tr><tr><td>Sync between your Chrome browsers</td><td>—</td><td>✓ (off by default)</td></tr><tr><td>Today line, Waiting on them, Questions for me</td><td>✓</td><td>✓</td></tr><tr><td>Privacy blur and hide shortcut</td><td>✓</td><td>✓</td></tr><tr><td>Price</td><td>$0, no time limit</td><td>$4.99 once</td></tr></tbody></table></div>
+<p class="fine">Limits on every plan: Load whole chat stops at 20,000 messages, one export keeps the newest 5,000 loaded messages, a folder export opens up to 100 chats, and voice notes over 15 minutes aren't transcribed.</p></div></section><section id="faq" class="faq-panel " aria-labelledby="faq-title"><h2 id="faq-title">Questions before you start</h2><details><summary>Does this work in WhatsApp on my phone?</summary><p>WA Folders runs on WhatsApp Web in Chrome on a computer. Folders stay in this Chrome profile and do not appear in the phone app.</p></details><details><summary>Will it search every message I have ever sent?</summary><p>Search covers chat names, notes and message text WA Folders has seen. Both Free and Pro automatically index older messages in the open chat while idle. Coverage stays partial and depends on what WhatsApp returns. Pro’s Load whole chat can collect older messages, subject to technical limits.</p></details><details><summary>What happens to a follow-up when they reply?</summary><p>When WA Folders sees their reply, it clears a conditional follow-up. If the reply has not arrived by the chosen time, the chat appears under Due.</p></details><details><summary>Is the free plan unlimited?</summary><p>No. The 2.1.0 candidate includes 10 folders, 10 exports per day and 50 results per search. Other feature allowances and technical limits still apply.</p></details><details><summary>Does it send messages for me?</summary><p>No. Quick replies go into the message box for you to review and send yourself.</p></details><details><summary>Where is my data stored?</summary><p>Folders, notes and the search index stay in your browser profile. Optional AI providers, Chrome Sync and license checks can move specific data. See the <a href="../../privacy.html">privacy policy</a>.</p></details></section>
+    <section class="closing" aria-labelledby="closing-title">
+      <h2 id="closing-title">Give your next follow-up a place to land.</h2>
+      <p>Install WA Folders, open WhatsApp Web and start with the conversations waiting on you.</p>
+      <a class="cta" href="https://chromewebstore.google.com/detail/wa-folders/hahfpdlfieloofgjhanljbbnakinfhil">Add WA Folders to Chrome</a>
+      <p class="fine">For Chrome on a computer. Folders don’t appear in the WhatsApp phone app.</p>
+    </section>
+  </main>
+  <footer>
+    <div class="wrap">
+      <p>WA Folders · Local folders, search and export for WhatsApp Web. <a href="../../privacy.html">Privacy policy</a></p>
+      <p>WhatsApp and WhatsApp Web are trademarks of their owners. WA Folders is independent and is not affiliated with, endorsed by or sponsored by WhatsApp or Meta.</p>
+    </div>
+  </footer>
+</body>
+</html>

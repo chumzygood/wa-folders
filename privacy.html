@@ -36,6 +36,13 @@
 <tr><td>Exports, including the contact CSV export (Pro, 2.0)</td><td>Files in your Downloads folder</td><td>Only if you send them somewhere</td></tr>
 </table>
 
+<section id="automatic-history-21">
+<h2>Automatic older-message indexing — 2.1.0 candidate; publication pending</h2>
+<p>Automatic older-message indexing is included in both Free and Pro and is enabled by default when no saved history preference exists; an explicit pause or clear choice is preserved. It runs only in the chat you leave open in a visible, focused WhatsApp Web tab after 45 seconds without activity. It scrolls that conversation to request older messages, with attempts paced at least 15 seconds apart across tabs. Coverage is incomplete and depends on what WhatsApp returns; it does not scan unopened chats or guarantee all past messages.</p>
+<p>The index stores chat and message IDs, indexed message text, a progress cursor, retry timing and failure state, and the enabled/paused state locally in <code>chrome.storage.local</code>. This history index and its control state are not included in Chrome Sync or extension backups. Automatic indexing does not upload messages to an AI provider or WA Folders server. Pause it in Older messages, or clear the local search index in Settings; clearing also stops automatic indexing and invalidates earlier pending batches. Activity, drafts, playing media, privacy cover, an offline or hidden tab, and manual loading or export suspend automatic indexing.</p>
+<p>Technical budgets apply to both plans: up to 20,000 indexed message identities and 400,000 characters of indexed text per chat, with a conservative 40 MiB local-storage budget checked before history writes. Reaching a limit stops additional indexing without removing older discoveries. The saved index remains partial. Pro retains the separate manual Load whole chat action and whole-chat export, subject to available messages and technical limits.</p>
+</section>
+
 <h2>When data leaves your browser</h2>
 <table>
 <tr><th>Feature (when)</th><th>Goes to</th><th>What is sent</th></tr>
