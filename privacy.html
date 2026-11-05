@@ -7,8 +7,16 @@
 <meta property="og:url" content="https://wafolders.com/privacy.html">
 <meta property="og:title" content="Privacy policy | WA Folders">
 <meta property="og:site_name" content="WA Folders">
-<style>body{font:17px/1.6 system-ui,sans-serif;max-width:760px;margin:40px auto;padding:0 20px;color:#1b1f23}h1{font-size:32px}h2{margin-top:32px}table{border-collapse:collapse;width:100%;font-size:15px}td,th{border:1px solid #ccd;padding:6px 8px;text-align:left;vertical-align:top}code{background:#f2f4f6;padding:1px 4px;border-radius:4px}</style>
+<style>body{font:17px/1.6 system-ui,sans-serif;max-width:760px;margin:40px auto;padding:0 20px;color:#1b1f23}h1{font-size:32px}h2{margin-top:32px}table{border-collapse:collapse;width:100%;font-size:15px}td,th{border:1px solid #ccd;padding:6px 8px;text-align:left;vertical-align:top}code{background:#f2f4f6;padding:1px 4px;border-radius:4px}
+*{box-sizing:border-box} :root{color-scheme:light dark;--bg:#f7f8fa;--fg:#162922;--line:#a0b5ac;--link:#176b50;--code:#edf4f1}
+body{background:var(--bg);color:var(--fg);overflow-wrap:anywhere} a{color:var(--link)} a:focus-visible,.table-scroll:focus-visible{outline:3px solid var(--link);outline-offset:3px} nav a,footer a{display:inline-flex;align-items:center;min-height:44px} td,th{border-color:var(--line)} code{background:var(--code)}
+.table-scroll{max-width:100%;overflow-x:auto;overscroll-behavior-x:contain}.table-scroll table{min-width:505px}
+@media(prefers-color-scheme:dark){:root{--bg:#0b141a;--fg:#e9edef;--line:#526b68;--link:#9ee9cf;--code:#203a35}}
+caption{text-align:left;font-weight:700;padding:0 0 8px}th{background:var(--code)}
+</style>
 </head><body>
+<nav aria-label="Main navigation"><a href="/">← WA Folders home</a></nav>
+<main id="main">
 <h1>WA Folders privacy policy</h1>
 <p><b>Last updated:</b> November 1, 2026 (adds version 2.0) · <b>Effective:</b> October 14, 2026 · <b>Applies to:</b> the WA Folders Chrome extension (version 1.2.9 and later) and the website wafolders.com.</p>
 
@@ -24,8 +32,9 @@
 <p>WA Folders runs only on <code>https://web.whatsapp.com</code>. To show folders, markers, search and exports, it reads what WhatsApp Web shows on your screen: chat names, chat ids, message text and times in chats you open, and whether a message is unread or from you. It does not read your phone, your contacts list outside WhatsApp Web, or other websites.</p>
 
 <h2>What is stored, and where</h2>
-<table>
-<tr><th>Data</th><th>Where</th><th>Leaves your computer?</th></tr>
+<div class="table-scroll" role="region" aria-label="Stored data table; scroll horizontally" tabindex="0"><table>
+<caption>What is stored, and where</caption>
+<thead><tr><th scope="col">Data</th><th scope="col">Where</th><th scope="col">Leaves your computer?</th></tr></thead><tbody>
 <tr><td>Folders, chat-to-folder assignments, notes, reminders, quick replies, rules, deal board, settings</td><td><code>chrome.storage.local</code> in your Chrome profile</td><td>No (see Sync)</td></tr>
 <tr><td>Deal values and currencies, boards, follow-up snooze dates, whether the last message in a chat was yours or theirs, and a daily count of briefings (2.0)</td><td><code>chrome.storage.local</code></td><td>No</td></tr>
 <tr><td>Search index of messages WA Folders has seen, voice-note transcripts</td><td><code>chrome.storage.local</code></td><td>No</td></tr>
@@ -34,7 +43,7 @@
 <tr><td>Your own AI or speech API keys</td><td><code>chrome.storage.local</code></td><td>Sent only to the provider the key belongs to, with each request you make.</td></tr>
 <tr><td>Downloaded speech model</td><td>Browser cache / extension storage</td><td>No</td></tr>
 <tr><td>Exports, including the contact CSV export (Pro, 2.0)</td><td>Files in your Downloads folder</td><td>Only if you send them somewhere</td></tr>
-</table>
+</tbody></table></div>
 
 <section id="automatic-history-21">
 <h2>Automatic older-message indexing — 2.1.0 candidate; publication pending</h2>
@@ -44,8 +53,9 @@
 </section>
 
 <h2>When data leaves your browser</h2>
-<table>
-<tr><th>Feature (when)</th><th>Goes to</th><th>What is sent</th></tr>
+<div class="table-scroll" role="region" aria-label="Data leaving your browser table; scroll horizontally" tabindex="0"><table>
+<caption>What leaves your browser, and when</caption>
+<thead><tr><th scope="col">Feature (when)</th><th scope="col">Goes to</th><th scope="col">What is sent</th></tr></thead><tbody>
 <tr><td>Pro license check: when you paste a key and press Confirm, then about every 3 days</td><td>Polar (api.polar.sh), our payment provider</td><td>The license key and WA Folders' public Polar organization id. No chat content. Chrome asks your permission for api.polar.sh first.</td></tr>
 <tr><td>Buying Pro</td><td>Polar checkout (buy.polar.sh), opened in a new tab</td><td>What you type at checkout (email, payment details) goes to Polar, not to WA Folders. See Polar's privacy policy.</td></tr>
 <tr><td>Voice notes to text, default on-device model: first use only</td><td>Hugging Face (huggingface.co)</td><td>A normal file download of the speech model (about 80 MB or 252 MB). No audio, no chat data. You are asked first.</td></tr>
@@ -56,7 +66,7 @@
 <tr><td>Translation</td><td>Chrome's built-in translator, on your computer. Only if Chrome can't translate a message and you added an OpenAI or Gemini key: that provider</td><td>The text of the one message you clicked Translate on. Translations are not saved.</td></tr>
 <tr><td>Sync (Pro, off by default)</td><td>Google Chrome Sync</td><td>Folders, quick replies, rules.</td></tr>
 <tr><td>Uninstall page: when you remove the extension</td><td>wafolders.com/uninstall/ opens; an optional survey form is a Google Form</td><td>The page address carries the version, UI language and four one-letter buckets (install age, setup progress, panel shown, AI available). No ids, no chat data. Survey answers go to Google Forms only if you submit them.</td></tr>
-</table>
+</tbody></table></div>
 <p>Requests to AI and speech providers go straight from your browser to them under your own account and their terms. WA Folders never sees them. Chrome asks your permission for each provider's address the first time.</p>
 
 <h2>The website (wafolders.com)</h2>
@@ -117,7 +127,8 @@
 <h2>Contact</h2>
 <p>Email <a href="mailto:toolshed+wafolders@mail.grokbot.com">toolshed+wafolders@mail.grokbot.com</a>.</p>
 
-<p style="font-size:14px;color:#555">WhatsApp and WhatsApp Web are trademarks of their owners. WA Folders is an independent extension, not affiliated with, endorsed by or sponsored by WhatsApp or Meta.</p>
+<p style="font-size:14px;color:var(--fg)">WhatsApp and WhatsApp Web are trademarks of their owners. WA Folders is an independent extension, not affiliated with, endorsed by or sponsored by WhatsApp or Meta.</p>
+</main>
 <footer style="margin-top:32px;font-size:14px"><p><a href="mailto:toolshed+wafolders@mail.grokbot.com?subject=WA%20Folders%20support">Support</a>: toolshed+wafolders@mail.grokbot.com</p></footer>
 <script data-goatcounter="https://wafolders.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body></html>
