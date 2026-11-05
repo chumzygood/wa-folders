@@ -22,7 +22,7 @@
   Spec: 1.2.8-plan/uninstall-page-spec.md
 -->
 <style>
-  :root { --bg:#f0f2f5; --card:#fff; --fg:#111b21; --muted:#667781; --line:#d1d7db; --accent:#008069; --accentFg:#fff; --sel:#e7f8ef; }
+  :root { color-scheme:light dark; --bg:#f0f2f5; --card:#fff; --fg:#111b21; --muted:#667781; --line:#d1d7db; --accent:#008069; --accentFg:#fff; --sel:#e7f8ef; }
   @media (prefers-color-scheme: dark) { :root { --bg:#0b141a; --card:#111b21; --fg:#e9edef; --muted:#8696a0; --line:#2a3942; --accent:#00a884; --accentFg:#111b21; --sel:#103529; } }
   * { box-sizing: border-box; }
   body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.5 system-ui,-apple-system,"Segoe UI","Nirmala UI","Noto Sans",Tahoma,sans-serif; }
@@ -46,15 +46,11 @@
   .foot a { color:var(--accent); }
   [hidden] { display:none !important; }
 
-/* WA Folders 2.1 candidate: ink, paper, mint, Arial. */
-:root{color-scheme:light;--bg:#f7f8fa;--bg2:#edf4f1;--card:#fff;--line:#d8e1de;--tx:#162922;--text:#162922;--fg:#162922;--mut:#52665d;--muted:#52665d;--g:#176b50;--g2:#176b50;--acc:#176b50;--accent:#176b50;--reason-line:#d8e1de;--reason-muted:#52665d;--accentFg:#fff;--sel:#e6f4ed}
-body{font-family:Arial,sans-serif;background:var(--bg);color:var(--tx);overflow-wrap:anywhere}a:hover{color:#104e3a}header.nav{background:#f7f8faf5}.hero,.final{background:none}h1 em{background:none;color:#176b50}.btn,.cta{background:#176b50;color:#fff!important;box-shadow:none;border-radius:7px}.cta:hover{background:#104e3a;color:#fff}.btn.ghost{color:var(--tx)!important}.shot{box-shadow:0 12px 30px #163d2714}.detail{color:#176b50}.mark{background:#176b50}.release-status{background:#e6f4ed;color:#173e2c;border-bottom:1px solid #c5dbd0;padding:12px 22px;text-align:center;font-size:14px}.release-status strong{font-weight:700}.reviews-panel,.history-coverage,.persona-paths{background:#fff;border:1px solid var(--line);border-radius:10px;padding:28px;margin:32px auto}.review-entry{border-top:1px solid var(--line);padding:14px 0}.review-entry p{margin:6px 0}.review-attribution,figcaption{font-size:13px;color:var(--muted)}.candidate-shot{margin:20px 0}.candidate-shot img{max-width:100%;height:auto;border:1px solid var(--line);border-radius:8px;display:block}.candidate-shot figcaption{margin-top:8px}.candidate-copy{max-width:850px}code,kbd{background:#edf4f1}select{max-width:100%;font:inherit}.plans{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}.plan{background:#fff;border:1px solid var(--line);padding:24px;border-radius:10px}.price{font-size:42px;font-weight:700}.price small{font-size:16px}.tbl{max-width:100%;overflow-x:auto}.cmp{width:100%;border-collapse:collapse}.cmp td,.cmp th{padding:10px;text-align:left;border-bottom:1px solid var(--line)}.plan.pro{border:2px solid #176b50}.plan .badge{background:#e6f4ed;color:#173e2c}.plan.pro .badge{position:static;display:inline-block}.plan li:before{color:#176b50}.plan ul{padding-left:20px}nav{flex-wrap:wrap}img{max-width:100%;height:auto}main,.wrap,.grid,.grid>*,.feat>*{min-width:0}
-@media(max-width:600px){.plans{grid-template-columns:1fr}.reviews-panel,.history-coverage,.persona-paths{padding:20px}.cards{grid-template-columns:1fr!important}.hero .grid{gap:24px}header.nav .wrap{height:auto;min-height:64px;flex-wrap:wrap;padding-top:10px;padding-bottom:10px}.wrap{max-width:100%}.reason-layout{min-width:0}}
-
 select{width:100%;padding:12px;border:1px solid var(--line);background:var(--card);color:var(--fg);border-radius:7px;margin-bottom:18px}#feedback-error{color:#9b3026;font-weight:bold}.foot{overflow-wrap:anywhere}
+@media (prefers-color-scheme: dark) { #feedback-error { color:#ffaaa1; } }
 </style>
 </head>
-<body><aside class="release-status">2.1.0 candidate; publication pending</aside>
+<body>
 <main>
   <div class="card">
     <form id="f" novalidate>
