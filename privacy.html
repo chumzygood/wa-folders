@@ -46,12 +46,10 @@ caption{text-align:left;font-weight:700;padding:0 0 8px}th{background:var(--code
 </tbody></table></div>
 
 <section id="automatic-history-21">
-<h2>Automatic older-message indexing — 2.1.0 candidate; publication pending</h2>
-<p>Automatic older-message indexing is included in both Free and Pro and is enabled by default when no saved history preference exists; an explicit pause or clear choice is preserved. It runs only in the chat you leave open in a visible, focused WhatsApp Web tab after 45 seconds without activity. It scrolls that conversation to request older messages, with attempts paced at least 15 seconds apart across tabs. Coverage is incomplete and depends on what WhatsApp returns; it does not scan unopened chats or guarantee all past messages.</p>
-<p>The index stores chat and message IDs, indexed message text, a progress cursor, retry timing and failure state, and the enabled/paused state locally in <code>chrome.storage.local</code>. This history index and its control state are not included in Chrome Sync or extension backups. Automatic indexing does not upload messages to an AI provider or WA Folders server. Pause it in Older messages, or clear the local search index in Settings; clearing also stops automatic indexing and invalidates earlier pending batches. Activity, drafts, playing media, privacy cover, an offline or hidden tab, and manual loading or export suspend automatic indexing.</p>
-<p>Technical budgets apply to both plans: up to 20,000 indexed message identities and 400,000 characters of indexed text per chat, with a conservative 40 MiB local-storage budget checked before history writes. Reaching a limit stops additional indexing without removing older discoveries. The saved index remains partial. Pro retains the separate manual Load whole chat action and whole-chat export, subject to available messages and technical limits.</p>
-</section>
-
+<h2>Local search index and Load whole chat</h2>
+<p>WA Folders keeps a local search index in <code>chrome.storage.local</code> on your computer. The index can include chat names, your notes, and message text from chats you open in WhatsApp Web. It does not upload that index to a WA Folders server.</p>
+<p>Pro includes <strong>Load whole chat</strong>, which scrolls the open chat so WhatsApp Web can load older pages into the local index and into exports. Coverage stops where WhatsApp Web stops. It does not scan unopened chats or pull history from your phone. You can stop loading at any time. Technical limits apply (including a cap around 20,000 messages per load).</p>
+<p>Optional features such as your own AI provider key, Pro Chrome Sync, and Pro license checks only move the data those features need, when you use them. See the sections above for those details.</p>
 <h2>When data leaves your browser</h2>
 <div class="table-scroll" role="region" aria-label="Data leaving your browser table; scroll horizontally" tabindex="0"><table>
 <caption>What leaves your browser, and when</caption>
