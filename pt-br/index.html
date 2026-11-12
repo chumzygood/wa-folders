@@ -179,6 +179,21 @@ footer .legal{border-top:1px solid #2a3942;margin-top:30px;padding-top:18px;font
   .pair{grid-template-columns:1fr}
   .brand span{display:none}
 }
+.signup{margin:0 auto;max-width:540px;text-align:left;background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:22px 24px;box-shadow:0 8px 28px rgba(17,27,33,.06)}
+.signup p{margin:0 0 12px;color:var(--muted);font-size:15px}
+.signup form{display:flex;gap:10px;flex-wrap:wrap;align-items:flex-end}
+.signup label{flex:1 1 220px;display:flex;flex-direction:column;gap:6px;font-size:13px;font-weight:650;color:var(--ink)}
+.signup input[type=email]{background:#fff;border:1px solid var(--line);border-radius:999px;color:var(--ink);padding:12px 16px;font:inherit;width:100%}
+.signup input[type=email]:focus{outline:2px solid var(--green);outline-offset:1px;border-color:var(--green)}
+.signup button[type=submit]{display:inline-block;background:var(--green);color:#fff;font:inherit;font-weight:650;padding:12px 22px;border:2px solid var(--green);border-radius:999px;cursor:pointer;line-height:1.2}
+.signup button[type=submit]:hover{background:var(--green-d);border-color:var(--green-d)}
+.signup button[type=submit]:focus{outline:2px solid var(--green-d);outline-offset:2px}
+.signup button[type=submit]:disabled{opacity:.6;cursor:wait}
+.signup .hp{position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden}
+.signup .status{margin:10px 0 0;font-size:14px;min-height:1.4em}
+.signup .status.ok{color:var(--green-d)}
+.signup .status.err{color:#b42318}
+section.signup-sec{padding:36px 0 56px}
 </style>
 <style>
 .lang{font-size:14px;font-weight:650;color:var(--green-d)!important;border:1px solid var(--line);border-radius:999px;padding:4px 10px}
@@ -436,6 +451,23 @@ footer .legal{border-top:1px solid #2a3942;margin-top:30px;padding-top:18px;font
       </div>
     </div>
   </section>
+  <section class="signup-sec" id="novidades" aria-labelledby="signup-heading">
+    <div class="wrap">
+      <div class="signup">
+        <h2 id="signup-heading" class="visually-hidden" style="position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden">Novidades</h2>
+        <p>Receba novidades do WA Folders — sem spam. <a href="https://wafolders.com/privacy.html" hreflang="en">Política de privacidade</a>.</p>
+        <form class="js-signup" data-source="pt-br" data-lang="pt-BR" action="https://wafolders-signup.netlify.app/api/subscribe" method="post">
+          <label for="signup-email">E-mail
+            <input id="signup-email" name="email" type="email" autocomplete="email" inputmode="email" required maxlength="254" placeholder="voce@exemplo.com" spellcheck="false" autocapitalize="off">
+          </label>
+          <div class="hp" aria-hidden="true"><label>Deixe em branco<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+          <button type="submit">Quero receber</button>
+        </form>
+        <p class="status" role="status" aria-live="polite"></p>
+        <noscript><p>Para se cadastrar sem JavaScript, escreva para <a href="mailto:toolshed+wafolders@mail.grokbot.com?subject=Novidades%20WA%20Folders">toolshed+wafolders@mail.grokbot.com</a>.</p></noscript>
+      </div>
+    </div>
+  </section>
 </main>
 
 <footer>
@@ -461,6 +493,7 @@ footer .legal{border-top:1px solid #2a3942;margin-top:30px;padding-top:18px;font
     <p class="legal">WhatsApp e WhatsApp Web são marcas de seus respectivos donos. O WA Folders é uma extensão independente, sem ligação, aprovação ou patrocínio do WhatsApp ou da Meta. As capturas usam conversas de demonstração com nomes inventados.</p>
   </div>
 </footer>
+<script src="../assets/signup.js" defer></script>
 <script data-goatcounter="https://wafolders.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
