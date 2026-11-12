@@ -6,7 +6,7 @@ Pricing: free plan with no time limit (10 folders, 50 search hits, 10 exports a 
 
 Interface languages: English, Español, Português (Brasil), हिन्दी, Bahasa Indonesia, العربية.
 
-Works only in desktop Chrome on web.whatsapp.com, not in the WhatsApp phone or desktop apps. Current version: 2.0.0. Not the same product as "WA Folders Pro", which is a different developer's extension.
+Works only in desktop Chrome on web.whatsapp.com, not in the WhatsApp phone or desktop apps. Current version: 2.2.1. Not the same product as "WA Folders Pro", which is a different developer's extension.
 
 ## Key pages
 - [Home and pricing](https://wafolders.com/): features, free vs Pro, FAQ
