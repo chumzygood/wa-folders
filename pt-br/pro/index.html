@@ -96,7 +96,7 @@ footer{border-top:1px solid var(--line);padding:30px 0;color:var(--mut);font-siz
     var id = 'DQyY5vhk1bzKKVdCbqG1HrksgA0dCHlhCrMcf42GYdr';
     var host = ['buy', 'polar', 'sh'];
     var u = 'https://' + host[0] + '.' + host[1] + '.' + host[2] + '/polar_cl_' + id +
-      '?utm_source=site&utm_medium=web&utm_campaign=ptbr_pro_page';
+      (function(c){var p=new URLSearchParams(location.search),o=new URLSearchParams();o.set('utm_source',p.get('utm_source')||'site');o.set('utm_medium',p.get('utm_medium')||'web');o.set('utm_campaign',p.get('utm_campaign')||c);var t=p.get('utm_content')||p.get('src');if(t)o.set('utm_content',t.slice(0,40));return '?'+o.toString();})('ptbr_pro_page');
     window.location.assign(u);
     setTimeout(function(){ btn.disabled = false; }, 4000);
   });
