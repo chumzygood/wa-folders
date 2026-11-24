@@ -52,7 +52,7 @@ a:focus-visible, .btn:focus-visible{outline:3px solid var(--green);outline-offse
 .btn.sm{padding:8px 16px;font-size:15px}
 
 main{padding:0 0 48px}
-.hero{padding:28px 0 8px}
+.hero{padding-top:28px;padding-bottom:8px}
 .crumb{font-size:15px;color:var(--muted);margin:0 0 10px}
 h1{font-size:clamp(28px,5vw,40px);line-height:1.15;letter-spacing:-.02em;margin:0 0 16px}
 .answer{font-size:18px;margin:0 0 16px;max-width:740px}
@@ -74,7 +74,7 @@ td:first-child{font-weight:650;min-width:120px}
 
 footer{background:var(--ink);color:#aebac1;padding:44px 0 36px;font-size:15px}
 footer .cols{display:grid;grid-template-columns:1.3fr 1fr;gap:28px}
-footer h4{color:#fff;font-size:15px;margin:0 0 10px}
+footer .fh{color:#fff;font-size:15px;margin:0 0 10px;font-weight:700}
 footer p{margin:0}
 footer ul{list-style:none;padding:0;margin:0}
 footer li{margin:6px 0}
@@ -89,12 +89,12 @@ footer .legal{border-top:1px solid #2a3942;margin-top:30px;padding-top:18px;font
 }
 @media (max-width:600px){
   body{font-size:16px}
-  .hero{padding:16px 0 4px}
+  .hero{padding-top:16px;padding-bottom:4px}
   .answer{font-size:17px;margin:0 0 12px}
   h1{font-size:26px;margin:0 0 10px}
-  .tw tr{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid var(--line)}
+  .tw tr{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);border-bottom:1px solid var(--line)}
   .tw thead{display:none}
-  .tw td{border:0;padding:4px 8px}
+  .tw td{border:0;padding:4px 8px;min-width:0;overflow-wrap:anywhere}
   .tw td:first-child{grid-column:1/-1;padding-top:12px;min-width:0}
   .tw td[data-c]::before{content:attr(data-c);display:block;font-size:14px;font-weight:650;color:var(--green-d)}
   footer .cols{grid-template-columns:1fr}
@@ -127,39 +127,39 @@ footer .legal{border-top:1px solid #2a3942;margin-top:30px;padding-top:18px;font
 <p class="note">Disclosure: WA Folders is our product. We read the Chrome Web Store listing for WA Folders Pro by boulify on 24 November 2026 and did not install the other extension, so its column describes what its maker says. <a href="#sources">See the sources we checked</a>. Features change, so check the linked pages before you choose. WA Folders is not affiliated with WhatsApp, Meta, or the other product named here.</p>
 <h2>Side by side</h2>
 <div class="tw"><table>
-<thead><tr><th scope="col"></th><th scope="col">WA Folders 2.2.2</th><th scope="col">WA Folders Pro</th></tr></thead>
+<thead><tr><th scope="col"></th><th scope="col">WA Folders 2.2.2 (Toolshed)</th><th scope="col">WA Folders Pro (boulify)</th></tr></thead>
 <tbody>
-<tr><td>Maker and store ID</td><td data-c="WA Folders">Toolshed. Store ID hahfpdlfieloofgjhanljbbnakinfhil</td><td data-c="WA Folders Pro">boulify. Store ID jagneiolloocbcddkodejmmbgknbgimg</td></tr>
-<tr><td>Version, checked 24 November 2026</td><td data-c="WA Folders">2.2.2, updated 18 November 2026</td><td data-c="WA Folders Pro">1.0.0, updated 2 February 2026. The listing shows 28 users and 5.0 from 5 ratings</td></tr>
-<tr><td>Account</td><td data-c="WA Folders">None</td><td data-c="WA Folders Pro">None. The listing says no account is required</td></tr>
-<tr><td>Where your data is kept</td><td data-c="WA Folders">Folders, notes and the search index stay in Chrome on your computer</td><td data-c="WA Folders Pro">The listing says all data is stored locally, with no data sent to external servers</td></tr>
-<tr><td>Folders</td><td data-c="WA Folders">Folder tabs above the chat list. 10 on the free plan, unlimited with Pro</td><td data-c="WA Folders Pro">Color-coded folders with drag and drop. 3 folders on the free plan, unlimited in their Pro plan</td></tr>
-<tr><td>Notes</td><td data-c="WA Folders">Private notes on a chat</td><td data-c="WA Folders Pro">Private notes. The free plan allows 1 note per contact; their Pro plan is listed as unlimited</td></tr>
-<tr><td>Privacy blur</td><td data-c="WA Folders">Blur for names, photos and messages, plus a hide-everything shortcut</td><td data-c="WA Folders Pro">Profile photo blur on the free plan. Their Pro plan lists full privacy mode for messages and conversations, with hover to reveal</td></tr>
-<tr><td>Quick replies</td><td data-c="WA Folders">3 on the free plan, unlimited with Pro. They go into the message box; you press Enter yourself</td><td data-c="WA Folders Pro">3 templates on the free plan, unlimited in their Pro plan</td></tr>
-<tr><td>Search</td><td data-c="WA Folders">Chat names, notes and messages it has seen. 50 results per search on the free plan</td><td data-c="WA Folders Pro">Not listed</td></tr>
-<tr><td>Export a chat</td><td data-c="WA Folders">HTML, CSV, Markdown or JSON</td><td data-c="WA Folders Pro">Not listed</td></tr>
-<tr><td>Follow-ups / who needs a reply</td><td data-c="WA Folders">Waiting on them, Questions for me, and reminders that clear when they answer</td><td data-c="WA Folders Pro">Not listed</td></tr>
-<tr><td>Voice notes to text</td><td data-c="WA Folders">Yes, on your computer by default (5 a day on the free plan)</td><td data-c="WA Folders Pro">Not listed</td></tr>
-<tr><td>Price</td><td data-c="WA Folders">Free plan with no time limit. Pro is $4.99 once, no subscription</td><td data-c="WA Folders Pro">Free version as listed above. The listing describes a Pro plan but does not state its price</td></tr>
+<tr><td>Maker and store ID</td><td data-c="WA Folders (Toolshed)">Toolshed. Store ID hahfpdlfieloofgjhanljbbnakinfhil</td><td data-c="WA Folders Pro (boulify)">boulify. Store ID jagneiolloocbcddkodejmmbgknbgimg</td></tr>
+<tr><td>Version, checked 24 November 2026</td><td data-c="WA Folders (Toolshed)">2.2.2, updated 18 November 2026</td><td data-c="WA Folders Pro (boulify)">1.0.0, updated 2 February 2026. The listing shows 28 users and 5.0 from 5 ratings</td></tr>
+<tr><td>Account</td><td data-c="WA Folders (Toolshed)">None</td><td data-c="WA Folders Pro (boulify)">None. The listing says no account is required</td></tr>
+<tr><td>Where your data is kept</td><td data-c="WA Folders (Toolshed)">Folders, notes and the search index stay in Chrome on your computer</td><td data-c="WA Folders Pro (boulify)">The listing says all data is stored locally, with no data sent to external servers</td></tr>
+<tr><td>Folders</td><td data-c="WA Folders (Toolshed)">Folder tabs above the chat list. 10 on the free plan, unlimited with Pro</td><td data-c="WA Folders Pro (boulify)">Color-coded folders with drag and drop. 3 folders on the free plan, unlimited in their Pro plan</td></tr>
+<tr><td>Notes</td><td data-c="WA Folders (Toolshed)">Private notes on a chat</td><td data-c="WA Folders Pro (boulify)">Private notes. The free plan allows 1 note per contact; their Pro plan is listed as unlimited</td></tr>
+<tr><td>Privacy blur</td><td data-c="WA Folders (Toolshed)">Blur for names, photos and messages, plus a hide-everything shortcut</td><td data-c="WA Folders Pro (boulify)">Profile photo blur on the free plan. Their Pro plan lists full privacy mode for messages and conversations, with hover to reveal</td></tr>
+<tr><td>Quick replies</td><td data-c="WA Folders (Toolshed)">3 on the free plan, unlimited with Pro. They go into the message box; you press Enter yourself</td><td data-c="WA Folders Pro (boulify)">3 templates on the free plan, unlimited in their Pro plan</td></tr>
+<tr><td>Search</td><td data-c="WA Folders (Toolshed)">Chat names, notes and messages it has seen. 50 results per search on the free plan</td><td data-c="WA Folders Pro (boulify)">Not listed</td></tr>
+<tr><td>Export a chat</td><td data-c="WA Folders (Toolshed)">HTML, CSV, Markdown or JSON</td><td data-c="WA Folders Pro (boulify)">Not listed</td></tr>
+<tr><td>Follow-ups / who needs a reply</td><td data-c="WA Folders (Toolshed)">Waiting on them, Questions for me, and reminders that clear when they answer</td><td data-c="WA Folders Pro (boulify)">Not listed</td></tr>
+<tr><td>Voice notes to text</td><td data-c="WA Folders (Toolshed)">Yes, on your computer by default (5 a day on the free plan)</td><td data-c="WA Folders Pro (boulify)">Not listed</td></tr>
+<tr><td>Price</td><td data-c="WA Folders (Toolshed)">Free plan with no time limit. Pro is $4.99 once, no subscription</td><td data-c="WA Folders Pro (boulify)">Free version as listed above. The listing describes a Pro plan but does not state its price</td></tr>
 </tbody>
 </table></div>
 <p class="src">"Not listed" means we could not find it on WA Folders Pro's pages. <a href="#sources">See sources</a>.</p>
 
-<h2>Where WA Folders Pro does more</h2>
-<p>Their listing is focused on a small set of tools: folders, notes, privacy blur and quick-reply templates. It describes drag-and-drop filing, color-coded folders, and a hover-to-reveal blur, including a Pro-only mode that blurs whole conversations. The listing also says no account is required and that nothing is sent to external servers.</p>
+<h2>What WA Folders Pro (boulify) covers</h2>
+<p>Their listing covers four tools: folders, notes, privacy blur and quick-reply templates. It describes color-coded folder tabs and drag-and-drop filing. Its free version blurs profile photos; its Pro plan blurs messages and whole conversations, with hover to reveal. The listing says no account is required and nothing is sent to external servers.</p>
 <h2>Where WA Folders does more</h2>
 <p>WA Folders can search chat names, your notes and messages it has seen, and export the open chat to HTML, CSV, Markdown or JSON. It has reply follow-ups, including a reminder that clears when the person answers, and it can turn voice notes into text on your computer. The free plan includes 10 folders, against 3 in their free version. Our Pro price is published: $4.99 once. Their listing does not state a Pro price.</p>
 <h2>How to pick</h2>
 <ul>
-<li>You searched for WA Folders and want the Toolshed product: our store ID ends in hahfpdlfieloofgjhanljbbnakinfhil, and Pro is $4.99 once.</li>
+<li>You searched for WA Folders and want the Toolshed product: our Chrome Web Store link ends in hahfpdlfieloofgjhanljbbnakinfhil, and Pro is $4.99 once.</li>
 <li>You only want a few folders, notes and blur: their listing matches that job.</li>
 <li>You want search, chat export or follow-up reminders: WA Folders.</li>
 <li>You want a published Pro price: only WA Folders lists one ($4.99 once).</li>
 </ul>
 
 <p class="cta-row"><a class="btn" data-goatcounter-click="install-wa-folders-vs-wa-folders-pro" href="https://chromewebstore.google.com/detail/hahfpdlfieloofgjhanljbbnakinfhil?utm_source=site&amp;utm_medium=web&amp;utm_campaign=vs-wa-folders-pro">Add WA Folders to Chrome, free</a></p>
-<p class="fine">Free plan with no time limit. Pro is $4.99 once, with no subscription. No account, and it never sends a message for you.</p>
+<p class="fine">Free plan with no time limit. Pro is $4.99 once, with no subscription. No account.</p>
 <h2>FAQ</h2>
 <h3>Is WA Folders Pro the paid plan of WA Folders?</h3>
 <p>No. It is a separate extension by boulify. Our paid plan is also called Pro, which is confusing. Our store ID is hahfpdlfieloofgjhanljbbnakinfhil.</p>
@@ -199,11 +199,11 @@ footer .legal{border-top:1px solid #2a3942;margin-top:30px;padding-top:18px;font
   <div class="wrap">
     <div class="cols">
       <div>
-        <h4>WA Folders</h4>
+        <p class="fh">WA Folders</p>
         <p>Folders, search, export and follow-ups for WhatsApp Web in Chrome. Version 2.2.2.</p>
       </div>
       <div>
-        <h4>Links</h4>
+        <p class="fh">Links</p>
         <ul>
           <li><a href="../">Home</a></li>
           <li><a href="../pt-br/" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a></li>
