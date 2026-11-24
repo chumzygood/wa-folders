@@ -18,6 +18,9 @@ Works only in desktop Chrome on web.whatsapp.com, not in the WhatsApp phone or d
 - [Translate WhatsApp Web messages](https://wafolders.com/translate-whatsapp-web-messages/)
 - [AI agent access](https://wafolders.com/ai-agent/): optional, off by default
 - [Comparison with WhatsApp Lists, WA Web Plus, Weka, Cooby, WAPlus CRM and WA Web Sender](https://wafolders.com/compare/): features, search and export, from each listing, re-checked Oct 20 2026
+- [WA Folders vs Weka](https://wafolders.com/wa-folders-vs-weka/): one-to-one comparison, listings checked 24 November 2026
+- [WA Folders vs WA Folders Pro (by boulify)](https://wafolders.com/wa-folders-vs-wa-folders-pro/): two different extensions, listings checked 24 November 2026
+- [WA Folders vs Cooby](https://wafolders.com/wa-folders-vs-cooby/): one-to-one comparison, listings checked 24 November 2026
 - [Privacy policy](https://wafolders.com/privacy.html)
 - [Changelog](https://wafolders.com/changelog/): every release from 1.2.3 through the current 2.2.2
 - [Pro](https://wafolders.com/pro/): what Pro adds, the one-time $4.99 price, how to activate a license key
