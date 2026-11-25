@@ -6,7 +6,7 @@ Pricing: free plan with no time limit (10 folders, the first 50 results for each
 
 Interface languages (12, matching the live Chrome Web Store listing checked November 19, 2026): English, Deutsch, español, français, italiano, Português (Brasil), Português (Portugal), Türkçe, русский, हिन्दी, Bahasa Indonesia, العربية.
 
-Works only on web.whatsapp.com in Chrome, Firefox or Microsoft Edge on a desktop computer, not in the WhatsApp phone or desktop apps. Current version: 2.2.2. Not the same product as "WA Folders Pro", which is a different developer's extension.
+Works only on web.whatsapp.com in Chrome, Firefox or Microsoft Edge on a desktop computer, not in the WhatsApp phone or desktop apps. Current version: 2.4.0. Not the same product as "WA Folders Pro", which is a different developer's extension.
 
 ## Features
 - What did I miss (Pro; Free preview of 3 items): local group recap since the unread line, no AI.
@@ -30,7 +30,7 @@ Works only on web.whatsapp.com in Chrome, Firefox or Microsoft Edge on a desktop
 - [WA Folders vs WA Folders Pro (by boulify)](https://wafolders.com/wa-folders-vs-wa-folders-pro/): two different extensions, listings checked 24 November 2026
 - [WA Folders vs Cooby](https://wafolders.com/wa-folders-vs-cooby/): one-to-one comparison, listings checked 24 November 2026
 - [Privacy policy](https://wafolders.com/privacy.html)
-- [Changelog](https://wafolders.com/changelog/): every release from 1.2.3 through the current 2.2.2
+- [Changelog](https://wafolders.com/changelog/): every release from 1.2.3 through the current 2.4.0
 - [Pro](https://wafolders.com/pro/): what Pro adds, the one-time $4.99 price, how to activate a license key
 - [WhatsApp Business Reply Templates Pack, Vol. 1](https://wafolders.com/templates/whatsapp-business-reply-templates-pack-01/): a separate US$4.99 one-time download from Toolshed, 44 editable quick-reply messages for small businesses as a Markdown guide and a CSV file; not part of the WA Folders extension, not affiliated with WhatsApp or Meta
 
