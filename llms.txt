@@ -11,6 +11,10 @@ Works only on web.whatsapp.com in Chrome, Firefox or Microsoft Edge on a desktop
 ## Features
 - What did I miss (Pro; Free preview of 3 items): local group recap since the unread line, no AI.
 - Import a phone chat export (.txt/.zip) into local search (Free: 1 chat).
+- Agreements: compare two messages (Free); saved orders and revisions (Pro).
+- Collect replies: group reply worksheet (Free, temporary; Pro saves rosters).
+- Change impact (Pro): linked commitment dates with what-if and apply.
+- Check details: translation quantity/unit/currency/product-code check (Free; Pro glossaries).
 
 ## Key pages
 - [Home and pricing](https://wafolders.com/): features, free vs Pro, FAQ
