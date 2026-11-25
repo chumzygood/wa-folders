@@ -8,6 +8,10 @@ Interface languages (12, matching the live Chrome Web Store listing checked Nove
 
 Works only on web.whatsapp.com in Chrome, Firefox or Microsoft Edge on a desktop computer, not in the WhatsApp phone or desktop apps. Current version: 2.2.2. Not the same product as "WA Folders Pro", which is a different developer's extension.
 
+## Features
+- What did I miss (Pro; Free preview of 3 items): local group recap since the unread line, no AI.
+- Import a phone chat export (.txt/.zip) into local search (Free: 1 chat).
+
 ## Key pages
 - [Home and pricing](https://wafolders.com/): features, free vs Pro, FAQ
 - [Chrome Web Store listing](https://chromewebstore.google.com/detail/hahfpdlfieloofgjhanljbbnakinfhil): install
