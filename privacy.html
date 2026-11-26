@@ -18,7 +18,7 @@ caption{text-align:left;font-weight:700;padding:0 0 8px}th{background:var(--code
 <nav aria-label="Main navigation"><a href="/">← WA Folders home</a></nav>
 <main id="main">
 <h1>WA Folders privacy policy</h1>
-<p><b>Last updated:</b> November 12, 2026 (optional email-updates signup on the website) · <b>Effective:</b> October 14, 2026 · <b>Applies to:</b> the WA Folders Chrome extension (version 1.2.9 and later) and the website wafolders.com.</p>
+<p><b>Last updated:</b> __WA241_LIVE_DATE__ (Files and Email as draft in WA Folders 2.4.1) · <b>Effective:</b> October 14, 2026 · <b>Applies to:</b> the WA Folders Chrome extension (version 1.2.9 and later) and the website wafolders.com.</p>
 
 <h2>The short version</h2>
 <ul>
@@ -43,6 +43,7 @@ caption{text-align:left;font-weight:700;padding:0 0 8px}th{background:var(--code
 <tr><td>Your own AI or speech API keys</td><td><code>chrome.storage.local</code></td><td>Sent only to the provider the key belongs to, with each request you make.</td></tr>
 <tr><td>Downloaded speech model</td><td>Browser cache / extension storage</td><td>No</td></tr>
 <tr><td>Exports, including the contact CSV export (Pro, 2.0)</td><td>Files in your Downloads folder</td><td>Only if you send them somewhere</td></tr>
+<tr><td>Files (Pro, 2.4.1): the list of files seen in chats you opened, and copies of files WhatsApp Web loaded, that you imported from a phone chat ZIP, or that you chose from your computer</td><td>Extension storage (IndexedDB) in your browser profile</td><td>No. Only if you save, zip or attach them yourself</td></tr>
 </tbody></table></div>
 
 <section id="automatic-history-21">
@@ -63,6 +64,7 @@ caption{text-align:left;font-weight:700;padding:0 0 8px}th{background:var(--code
 <tr><td>Local model (Ollama)</td><td>Your own computer (localhost)</td><td>The chat you asked about, to your local model only.</td></tr>
 <tr><td>Translation</td><td>Chrome's built-in translator, on your computer. Only if Chrome can't translate a message and you added an OpenAI or Gemini key: that provider</td><td>The text of the one message you clicked Translate on. Translations are not saved.</td></tr>
 <tr><td>Sync (Pro, off by default)</td><td>Google Chrome Sync</td><td>Folders, quick replies, rules.</td></tr>
+<tr><td>Email as draft (Pro, 2.4.1): only when you choose it for a file</td><td>Your own mail account in your browser (mail.google.com, outlook.live.com, outlook.office.com or mail.yahoo.com)</td><td>WA Folders opens a new draft and, after you click Attach, adds that one file to it in your mail tab. It never sends the email and never reads your other mail. Your browser asks your permission for the mail site first.</td></tr>
 <tr><td>Uninstall page: when you remove the extension</td><td>wafolders.com/uninstall/ opens; an optional survey form is a Google Form</td><td>The page address carries the version, UI language and four one-letter buckets (install age, setup progress, panel shown, AI available). No ids, no chat data. Survey answers go to Google Forms only if you submit them.</td></tr>
 </tbody></table></div>
 <p>Requests to AI and speech providers go straight from your browser to them under your own account and their terms. WA Folders never sees them. Chrome asks your permission for each provider's address the first time.</p>
