@@ -69,3 +69,33 @@ Works only on web.whatsapp.com in Chrome, Firefox or Microsoft Edge on a desktop
 - [Full facts for AI assistants](https://wafolders.com/llms-full.txt)
 - [Blog](https://wafolders.com/blog/)
 - Support: toolshed+wafolders@mail.grokbot.com
+
+## Features with how-to videos
+- [Folder tabs](https://wafolders.com/features/folder-tabs/): Sort chats into folders like Family, Work and Clients. Each folder is a tab above the WhatsApp Web chat list.
+- [Needs reply, Questions for me, Waiting on them](https://wafolders.com/features/needs-reply-waiting-on-them/): Lists of chats where you owe a reply, where someone asked you a question, and where you are waiting on the other person.
+- [Search chats, notes and messages](https://wafolders.com/features/search/): Search chat names, your private notes and the messages WA Folders has seen. Filter by folder, notes or links, and save searches.
+- [Older messages and Load whole chat](https://wafolders.com/features/older-messages-load-whole-chat/): Leave a chat open and WA Folders quietly adds its older messages to search. Pro can load the whole chat at once.
+- [Phone chat import](https://wafolders.com/features/import-phone-chat-export/): Bring in the chat export from your phone (.txt or .zip) so years of messages become searchable on WhatsApp Web.
+- [Export a chat](https://wafolders.com/features/export-chat/): Save the open chat as HTML, CSV (opens in Excel), Markdown or JSON.
+- [Private notes](https://wafolders.com/features/private-notes/): Write a private note on any chat. It is saved only on this computer and is searchable.
+- [Reminders and follow-ups](https://wafolders.com/features/reminders-follow-ups/): One-click reminders on a chat, and “remind me if they don’t reply” follow-ups that clear when they answer.
+- [Quick replies](https://wafolders.com/features/quick-replies/): Save replies you type every day. One click fills the message box. You press Send yourself.
+- [What did I miss](https://wafolders.com/features/what-did-i-miss/): Back to a busy group? Get one list of mentions, replies to you, questions, dates, links and files since the unread line.
+- [Morning briefing](https://wafolders.com/features/morning-briefing/): Press Briefing for four short lists: Reply first, Waiting on them, Deals to move and Due today.
+- [Command palette (Ctrl+K)](https://wafolders.com/features/command-palette/): Press Ctrl+K (Cmd+K on Mac) to jump to a chat or run any action from the keyboard.
+- [Privacy blur and panic hide](https://wafolders.com/features/privacy-blur-panic-hide/): Blur names and messages with one click, or hide the whole page with Alt+Shift+H.
+- [Compact mode](https://wafolders.com/features/compact-mode/): Show only the folder tabs and the Export button on WhatsApp Web. The panel stays out of the way.
+- [Deal board](https://wafolders.com/features/deal-board/): Give a chat a deal stage and value, and see every deal on a board: Lead, Quoted, Won and Paid, or your own stages.
+- [CRM table and contact cards](https://wafolders.com/features/crm-table-contact-cards/): A contact card per chat, and one sortable CRM table with stage, value, last contact and tags.
+- [Dates to calendar](https://wafolders.com/features/dates-to-calendar/): WA Folders finds dates and times in a chat and lists them with the message they came from. Pro exports them to your calendar.
+- [Watch words](https://wafolders.com/features/watch-words/): Pick words like a client’s name or “invoice”. Matching messages, even in muted groups, collect in one Matches list.
+- [Agreement Ledger](https://wafolders.com/features/agreement-ledger/): Compare two messages to see what changed in quantities, prices and dates. Pro keeps a ledger of what was agreed.
+- [Group Reply Matrix](https://wafolders.com/features/group-reply-matrix/): Asked a group a question? Collect each person’s answer in one worksheet.
+- [Change Impact Map](https://wafolders.com/features/change-impact-map/): Link the commitments in a project, try another date, and see what else moves before you promise anything.
+- [Translation Detail Check](https://wafolders.com/features/translation-detail-check/): Check a translation against the original for changed numbers, prices, units and product codes.
+- [Files, Rename and save, Email as draft](https://wafolders.com/features/files/): One place for the photos, voice notes, videos and documents in chats you open. Save a folder as a ZIP, rename files, or attach one to an email draft.
+- [Backup, restore and daily backup](https://wafolders.com/features/backup-daily-backup/): Download a backup of your folders, notes and reminders, and restore it later. Pro saves a daily HTML or CSV backup of chosen folders.
+- [Auto-file rules](https://wafolders.com/features/auto-file-rules/): Rules that put chats into a folder for you, based on the chat name.
+- [Catch me up and Draft a reply](https://wafolders.com/features/catch-me-up-draft-a-reply/): Summarize the open chat, or draft a reply, with Chrome’s on-device AI or your own API key.
+- [Voice notes to text and translation](https://wafolders.com/features/voice-notes-to-text-translate/): Turn voice notes into text and translate messages between Portuguese, English and Spanish, on your computer by default.
+- [Sync and AI agent access](https://wafolders.com/features/sync-ai-agent-access/): Pro syncs folders, quick replies and rules to your other Chrome browsers. AI agent access lets Claude Desktop or Cursor read folders you allow.
