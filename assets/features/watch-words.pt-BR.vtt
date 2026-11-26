@@ -1,0 +1,14 @@
+WEBVTT
+
+1
+00:00:00.200 --> 00:00:06.572
+Escolha palavras para vigiar, como o nome de um cliente ou “fatura”
+
+2
+00:00:06.572 --> 00:00:09.748
+Mensagens com essas palavras nas conversas carregadas vão para a lista Ocorrências
+
+3
+00:00:09.748 --> 00:00:15.615
+Quando uma mensagem nova menciona a palavra, ela aparece em Ocorrências
+

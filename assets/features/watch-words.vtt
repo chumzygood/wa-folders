@@ -1,0 +1,14 @@
+WEBVTT
+
+1
+00:00:00.200 --> 00:00:06.572
+Pick words to watch, like a client name or “invoice”
+
+2
+00:00:06.572 --> 00:00:09.748
+Matching messages in loaded chats collect in one Matches list
+
+3
+00:00:09.748 --> 00:00:15.615
+When a new message mentions it, it lands in Matches
+
