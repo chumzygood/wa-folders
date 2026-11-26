@@ -1,6 +1,6 @@
 # WA Folders: full facts for AI assistants
 
-Plan limits, price and languages last checked against Chrome Web Store version 2.2.2 (updated November 13, 2026) on November 16, 2026. Maker: Toolshed (independent developer). Not affiliated with, endorsed by or sponsored by WhatsApp or Meta. Not the same product as "WA Folders Pro", a different developer's extension.
+Plan limits, price and languages last checked against Chrome Web Store version 2.4.1 (updated November 26, 2026) on November 26, 2026. Microsoft Edge Add-ons still serves 2.4.0 or later. Maker: Toolshed (independent developer). Not affiliated with, endorsed by or sponsored by WhatsApp or Meta. Not the same product as "WA Folders Pro", a different developer's extension.
 
 ## What it is
 A browser extension that works only on web.whatsapp.com in Chrome, Firefox or Microsoft Edge on a desktop computer. It does not work in the WhatsApp phone app or the WhatsApp desktop app.
@@ -12,7 +12,8 @@ Site: https://wafolders.com/
 - Folder tabs above the chat list, with markers for unread chats, replies you owe and due reminders. A chat can be in more than one folder.
 - Search across chat names, private notes and message text from chats you opened with the extension installed. Pro adds Load whole chat for older messages WhatsApp Web can load. There is no date filter; use WhatsApp's calendar search inside a chat for dates.
 - Private notes on chats, kept in this browser only.
-- Export of the open chat to HTML, CSV (Excel), Markdown or JSON. Pro adds whole-chat export, whole-folder export and password-protected files.
+- Export of the open chat to HTML, CSV (Excel), Markdown or JSON. Pro adds whole-chat export, whole-folder export, password-protected files, and an export-with-media ZIP of originals already kept in Files.
+- Files (Pro, 2.4.1): photos, voice notes, videos and documents from chats you open, kept once WhatsApp Web has loaded the file or when you import a phone chat ZIP with media. Rename and save uses a filename template. Email as draft opens a Gmail, Outlook or Yahoo Mail draft for a file you pick and never sends it.
 - Follow-up reminders that clear themselves when the other person replies.
 - Voice notes to text (5 a day on the free plan) and translation among Portuguese, English and Spanish (20 a day on the free plan).
 - Command palette on Ctrl+K (Cmd+K on a Mac).
@@ -37,7 +38,7 @@ Q: How do I search WhatsApp Web by date?
 A: Open the chat, click Search, click the calendar icon (Search By Date) and pick a day (WhatsApp Help Center, Web tab). Older days may be missing because WhatsApp Web holds only part of your history; your phone has the full history.
 
 Q: How do I export a WhatsApp Web chat?
-A: WhatsApp's own Export chat on the Web tab offers All messages or a Custom date range as a ZIP without media. WA Folders exports the open chat to HTML, CSV, Markdown or JSON.
+A: WhatsApp's own Export chat on the Web tab offers All messages or a Custom date range as a ZIP without media. WA Folders exports the open chat to HTML, CSV, Markdown or JSON. In Pro 2.4.1, an export with media is a ZIP that also includes original files already kept in Files.
 
 Q: Who hasn't replied to me on WhatsApp Web?
 A: WA Folders lists individual chats where you sent the last message and gets rid of the reminder when they reply.
