@@ -6,7 +6,7 @@ Pricing: free plan with no time limit (10 folders, the first 50 results for each
 
 Interface languages (12, matching the live Chrome Web Store listing checked November 19, 2026): English, Deutsch, español, français, italiano, Português (Brasil), Português (Portugal), Türkçe, русский, हिन्दी, Bahasa Indonesia, العربية.
 
-Works only on web.whatsapp.com in Chrome, Firefox or Microsoft Edge on a desktop computer, not in the WhatsApp phone or desktop apps. Current version: 2.5.0 on the Chrome Web Store; Firefox still serves 2.4.1; Edge still serves 2.4.0 or later. Not the same product as "WA Folders Pro", which is a different developer's extension.
+Works only on web.whatsapp.com in Chrome, Firefox or Microsoft Edge on a desktop computer, not in the WhatsApp phone or desktop apps. Current version: 2.5.0 on the Chrome Web Store and Firefox Add-ons; Microsoft Edge Add-ons still serves 2.4.0 or later. Not the same product as "WA Folders Pro", which is a different developer's extension.
 
 ## Features
 - What did I miss (Pro; Free preview of 3 items): local group recap since the unread line, no AI.

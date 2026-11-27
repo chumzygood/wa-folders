@@ -1,6 +1,6 @@
 # WA Folders: full facts for AI assistants
 
-Plan limits, price and languages last checked against Chrome Web Store version 2.5.0 (updated November 26, 2026) on November 26, 2026. Microsoft Edge Add-ons still serves 2.4.0 or later. Maker: Toolshed (independent developer). Not affiliated with, endorsed by or sponsored by WhatsApp or Meta. Not the same product as "WA Folders Pro", a different developer's extension.
+Plan limits, price and languages last checked against Chrome Web Store and Firefox Add-ons version 2.5.0 (updated November 27, 2026) on November 27, 2026. Microsoft Edge Add-ons still serves 2.4.0 or later. Maker: Toolshed (independent developer). Not affiliated with, endorsed by or sponsored by WhatsApp or Meta. Not the same product as "WA Folders Pro", a different developer's extension.
 
 ## What it is
 A browser extension that works only on web.whatsapp.com in Chrome, Firefox or Microsoft Edge on a desktop computer. It does not work in the WhatsApp phone app or the WhatsApp desktop app.
