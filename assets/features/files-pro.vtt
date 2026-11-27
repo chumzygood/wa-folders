@@ -1,14 +1,26 @@
 WEBVTT
 
 1
-00:00:00.200 --> 00:00:02.469
-Files lists the photos, voice notes, videos and documents in your chats
+00:00:00.200 --> 00:00:02.837
+Files lists the photos, voice notes and documents saved from your chats
 
 2
-00:00:02.469 --> 00:00:04.792
-Filter by folder or search by file name or chat
+00:00:02.837 --> 00:00:05.304
+Filter by folder, or search by file name or chat
 
 3
-00:00:04.792 --> 00:00:09.190
-Save a whole folder as one ZIP. Rename and save, or Email as draft
+00:00:05.304 --> 00:00:07.588
+Save a whole folder as one ZIP
+
+4
+00:00:07.588 --> 00:00:09.711
+Open a file to download it, email it, or rename and save it
+
+5
+00:00:09.711 --> 00:00:12.986
+Email as draft opens a new draft with the file. You check it and send it
+
+6
+00:00:12.986 --> 00:00:17.805
+Rename and save names the file from a template, like date and chat
 

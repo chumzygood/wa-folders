@@ -1,14 +1,26 @@
 WEBVTT
 
 1
-00:00:00.200 --> 00:00:02.469
-Arquivos lista as fotos, áudios, vídeos e documentos das suas conversas
+00:00:00.200 --> 00:00:02.837
+Arquivos lista as fotos, áudios e documentos salvos das suas conversas
 
 2
-00:00:02.469 --> 00:00:04.792
+00:00:02.837 --> 00:00:05.304
 Filtre por pasta ou busque pelo nome do arquivo ou da conversa
 
 3
-00:00:04.792 --> 00:00:09.190
-Salve uma pasta inteira num ZIP. Renomear e salvar, ou Enviar como rascunho de e-mail
+00:00:05.304 --> 00:00:07.588
+Save a whole folder as one ZIP
+
+4
+00:00:07.588 --> 00:00:09.711
+Abra um arquivo para baixar, enviar por e-mail ou renomear e salvar
+
+5
+00:00:09.711 --> 00:00:12.986
+Criar rascunho de e-mail abre um rascunho com o arquivo. Você confere e envia
+
+6
+00:00:12.986 --> 00:00:17.805
+Renomear e salvar dá nome ao arquivo por um modelo, como data e conversa
 
