@@ -6,7 +6,7 @@ Pricing: free plan with no time limit (10 folders, the first 50 results for each
 
 Interface languages (12, matching the live Chrome Web Store listing checked November 19, 2026): English, Deutsch, español, français, italiano, Português (Brasil), Português (Portugal), Türkçe, русский, हिन्दी, Bahasa Indonesia, العربية.
 
-Works only on web.whatsapp.com in Chrome, Firefox or Microsoft Edge on a desktop computer, not in the WhatsApp phone or desktop apps. Current version: 2.4.1. Not the same product as "WA Folders Pro", which is a different developer's extension.
+Works only on web.whatsapp.com in Chrome, Firefox or Microsoft Edge on a desktop computer, not in the WhatsApp phone or desktop apps. Current version: 2.5.0 on the Chrome Web Store; Firefox still serves 2.4.1; Edge still serves 2.4.0 or later. Not the same product as "WA Folders Pro", which is a different developer's extension.
 
 ## Features
 - What did I miss (Pro; Free preview of 3 items): local group recap since the unread line, no AI.
@@ -33,7 +33,7 @@ Works only on web.whatsapp.com in Chrome, Firefox or Microsoft Edge on a desktop
 - [WA Folders vs WA Folders Pro (by boulify)](https://wafolders.com/wa-folders-vs-wa-folders-pro/): two different extensions, listings checked 24 November 2026
 - [WA Folders vs Cooby](https://wafolders.com/wa-folders-vs-cooby/): one-to-one comparison, listings checked 24 November 2026
 - [Privacy policy](https://wafolders.com/privacy.html)
-- [Changelog](https://wafolders.com/changelog/): every release from 1.2.3 through the current 2.4.1
+- [Changelog](https://wafolders.com/changelog/): every release from 1.2.3 through the current 2.5.0
 - [Pro](https://wafolders.com/pro/): what Pro adds, the one-time $4.99 price, how to activate a license key
 - [WhatsApp Business Reply Templates Pack, Vol. 1](https://wafolders.com/templates/whatsapp-business-reply-templates-pack-01/): a separate US$4.99 one-time download from Toolshed, 44 editable quick-reply messages for small businesses as a Markdown guide and a CSV file; not part of the WA Folders extension, not affiliated with WhatsApp or Meta
 
@@ -99,3 +99,11 @@ Works only on web.whatsapp.com in Chrome, Firefox or Microsoft Edge on a desktop
 - [Catch me up and Draft a reply](https://wafolders.com/features/catch-me-up-draft-a-reply/): Summarize the open chat, or draft a reply, with Chrome’s on-device AI or your own API key.
 - [Voice notes to text and translation](https://wafolders.com/features/voice-notes-to-text-translate/): Turn voice notes into text and translate messages between Portuguese, English and Spanish, on your computer by default.
 - [Sync and AI agent access](https://wafolders.com/features/sync-ai-agent-access/): Pro syncs folders, quick replies and rules to your other Chrome browsers. AI agent access lets Claude Desktop or Cursor read folders you allow.
+
+## New in 2.5.0
+
+- Pinned chats: Free includes 5 pins; Pro has no pin limit.
+- Folder filters: unread, mentions, unsaved numbers, replies you owe, groups. All five are free.
+- Snooze a chat: hides it from WA Folders views and pins; WhatsApp's own list still shows it. Pro can set a return time. A visible mention or a direct reply can bring it back early.
+- Reply nudges (Pro): write a reply now and set a reminder to insert it later. You press Send.
+- Keep board: keep messages locally, add tags, mark done, export CSV or Markdown. Free includes 20 items; Pro has no item limit.

@@ -1,6 +1,6 @@
 # WA Folders: full facts for AI assistants
 
-Plan limits, price and languages last checked against Chrome Web Store version 2.4.1 (updated November 26, 2026) on November 26, 2026. Microsoft Edge Add-ons still serves 2.4.0 or later. Maker: Toolshed (independent developer). Not affiliated with, endorsed by or sponsored by WhatsApp or Meta. Not the same product as "WA Folders Pro", a different developer's extension.
+Plan limits, price and languages last checked against Chrome Web Store version 2.5.0 (updated November 26, 2026) on November 26, 2026. Microsoft Edge Add-ons still serves 2.4.0 or later. Maker: Toolshed (independent developer). Not affiliated with, endorsed by or sponsored by WhatsApp or Meta. Not the same product as "WA Folders Pro", a different developer's extension.
 
 ## What it is
 A browser extension that works only on web.whatsapp.com in Chrome, Firefox or Microsoft Edge on a desktop computer. It does not work in the WhatsApp phone app or the WhatsApp desktop app.
@@ -57,3 +57,11 @@ A: WA Folders lists individual chats where you sent the last message and gets ri
 - Portuguese (Brazil): https://wafolders.com/pt-br/
 - Changelog: https://wafolders.com/changelog/
 - Support: toolshed+wafolders@mail.grokbot.com
+
+## New in 2.5.0
+
+- Pinned chats: Free includes 5 pins; Pro has no pin limit.
+- Folder filters: unread, mentions, unsaved numbers, replies you owe, groups. All five are free.
+- Snooze a chat: hides it from WA Folders views and pins; WhatsApp's own list still shows it. Pro can set a return time. A visible mention or a direct reply can bring it back early.
+- Reply nudges (Pro): write a reply now and set a reminder to insert it later. You press Send.
+- Keep board: keep messages locally, add tags, mark done, export CSV or Markdown. Free includes 20 items; Pro has no item limit.
